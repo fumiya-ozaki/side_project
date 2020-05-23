@@ -260,15 +260,13 @@ smartphoneで適用
 }
 
 .grobal-header .header-container .header-left {
-  background-color: #1f1f1d;
-  color: white;
   line-height: 50px;
   text-align: center;
   width: 100px;
 }
 
 .grobal-header .header-container .header-left .link-logo {
-  color: white;
+  color: #1f1f1d;
   display: inline-block;
   height: 100%;
   width: 100%;
@@ -1301,13 +1299,55 @@ footer .Rfooter .footer-icon {
 }
 
 .about-main-visual {
-  background-color: #f3f3f2;
   height: calc(100vh - 50px);
-  padding-top: 100px;
+  padding-top: 50px;
+  position: relative;
+}
+
+.about-main-visual .bg-img {
+  height: 100%;
+  background-image: url(../img/about-main.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.about-main-visual .under-arrow {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  animation-delay: 0s;
+  animation-direction: normal;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: flow;
+  animation-timing-function: ease;
+}
+
+.about-main-visual .under-arrow .arrow1 {
+  width: 30px;
+  height: 30px;
+  border: 5px solid;
+  border-color: transparent transparent #1f1f1d #1f1f1d;
+  transform: translateX(-50%);
+  transform: rotate(-45deg);
+  transform-origin: left bottom;
+}
+
+@keyframes flow {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 .about-nav {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(31, 31, 29, 0.8);
   position: sticky;
   z-index: 5;
   top: 50px;
@@ -1323,6 +1363,10 @@ footer .Rfooter .footer-icon {
 .about-nav .about-nav-lists .about-nav-list {
   display: inline-block;
   padding: 0 1rem;
+}
+
+.about-nav .about-nav-lists .about-nav-list .a-nav-text {
+  color: white;
 }
 
 .about-what-content {
@@ -1444,6 +1488,16 @@ footer .Rfooter .footer-icon {
   grid-template: "... .... .... .... ..." 1rem "... pic1 pic1 pic1 ..." 1fr "... .... .... .... ..." 1rem "... pic2 .... pic3 ..." 1fr "... .... .... .... ..." 1rem/1rem 1fr 1rem 1fr 1rem;
 }
 
+.about-gallery-content .g-picture .g-picture-text {
+  color: white;
+}
+
+.about-gallery-content .g-picture::before {
+  display: block;
+  content: '';
+  padding-top: 50%;
+}
+
 .about-gallery-content .picture1 {
   grid-area: pic1;
   position: relative;
@@ -1480,12 +1534,6 @@ footer .Rfooter .footer-icon {
   transform: translate(-50%, -50%);
   opacity: 0;
   transition: all .8s ease;
-}
-
-.about-gallery-content .picture1::before {
-  display: block;
-  content: '';
-  padding-top: 50%;
 }
 
 .about-gallery-content .picture2 {

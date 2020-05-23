@@ -26,13 +26,12 @@ $cWhite: white;
     width: 100%;
     display: flex;
     .header-left {
-      background-color:$cBlack;
-      color: $cWhite;
+      // background-color:$cBlack;
       line-height: 50px;
       text-align: center;
       width: 100px;
       .link-logo{
-        color: $cWhite;
+        color: $cBlack;
         display: inline-block;
         height: 100%;
         width: 100%;
@@ -381,14 +380,48 @@ footer {
 }
 
 //aboutstart********************************************************
+
 .about-main-visual{
-  background-color: $cLGray;
   height: calc(100vh - 50px);
-  padding-top: 100px;
-}
+  padding-top: 50px;
+  position: relative;
+  .bg-img{
+    height: 100%;
+    background-image: url(../img/about-main.jpg);
+    background-size: cover;
+    background-position: center;
+
+  }
+  .under-arrow{
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    @include animation(
+      $name:flow,
+      $iteration-count:infinite,
+      $duration:3s
+      );
+      .arrow1{
+        width: 30px;
+        height: 30px;
+        border: 5px solid;
+        border-color:  transparent transparent $cBlack $cBlack;
+        transform: translateX(-50%);
+        transform: rotate(-45deg);
+        transform-origin: (left bottom);
+    }
+    }
+    @keyframes flow {
+      0%{transform: translateY(0);}
+      50%{transform: translateY(-15px)}
+      100%{transform: translateY(0px)}
+    }
+  }
+
 
 .about-nav{
-  background-color: rgba(255, 255, 255, .8);
+  // background-color: rgba(255, 255, 255, .8);
+  background-color: rgba(31, 31, 29, .8);
   position: sticky;
   z-index: 5;
   top: 50px;
@@ -400,6 +433,9 @@ footer {
     .about-nav-list{
       display: inline-block;
       padding: 0 1rem;
+      .a-nav-text{
+        color: white;
+      }
     }
 
   }
@@ -507,14 +543,19 @@ footer {
     "... .... .... .... ..."1rem
     /1rem 1fr 1rem 1fr 1rem;
 
-    .picture1{
-      grid-area: pic1;
-      @include bgZoom(url(https://picsum.photos/seed/picsum/1350/900));
+    .g-picture{
+      .g-picture-text{
+        color: $cWhite;
+      }
       &::before{
         display: block;
         content:'';
         padding-top:50%;
       }
+    }
+    .picture1{
+      grid-area: pic1;
+      @include bgZoom(url(https://picsum.photos/seed/picsum/1350/900));
     }
     .picture2{
       grid-area: pic2;

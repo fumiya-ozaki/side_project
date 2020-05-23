@@ -35,6 +35,10 @@
     transition: all .8s ease;
     background-size: cover;
   }
+  &:hover .bg-zoom-content{
+    opacity: 1; //コンテンツの表示
+  }
+  
   &:hover:after {
     opacity: .3;
     transform: scale(1.05);
@@ -45,5 +49,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    opacity: 0; //コンテンツの非表示
+    transition: all .8s ease;
   }
 } 

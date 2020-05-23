@@ -13,6 +13,8 @@ $cGray:rgb(231, 228, 228);
 $cLGray:rgb(243, 243, 242);
 $cWhite: white;
 
+//headerstart********************************************************
+
 .grobal-header {
   background-color: rgba(255, 255, 255, 0.8);
   left: 0;
@@ -59,6 +61,11 @@ $cWhite: white;
   }
 }
 
+//headerend********************************************************
+
+
+
+//indexstart********************************************************
 .content {
   background-size: cover;
   background-position: center;
@@ -199,8 +206,13 @@ $cWhite: white;
   .banner-3{
     @include bgZoom(url(https://picsum.photos/1350/900?grayscale))
   }
-  
 }
+
+//indexend********************************************************
+
+
+//footerstart********************************************************
+
 
 footer {
   background-color: $cBlack;
@@ -225,6 +237,9 @@ footer {
     }
   }
 }
+//footerend********************************************************
+
+//contactstart********************************************************
 
 .contact-form{
   padding: 150px 0 50px 0;
@@ -340,6 +355,9 @@ footer {
   }
 }
 
+//contactend********************************************************
+
+
 .hover-Uline{
   position: relative;
   cursor: pointer;
@@ -361,3 +379,153 @@ footer {
     transform: scale(1);
   }
 }
+
+//aboutstart********************************************************
+.about-main-visual{
+  background-color: $cLGray;
+  height: calc(100vh - 50px);
+  padding-top: 100px;
+}
+
+.about-nav{
+  background-color: rgba(255, 255, 255, .8);
+  position: sticky;
+  z-index: 5;
+  top: 50px;
+  .about-nav-lists{
+    align-items: center;
+    display: flex;
+    height: 50px;
+    padding-left: 100px;
+    .about-nav-list{
+      display: inline-block;
+      padding: 0 1rem;
+    }
+
+  }
+}
+
+.about-what-content{
+  padding: 100px 0;
+  .about-what-grid{
+    display: grid;
+    grid-template:
+    "... .... ... .... ..."1rem
+    "... con1 ... con2 ..."1fr
+    "... .... ... .... ..."1rem
+    "... con3 ... con4 ..."1fr
+    "... .... ... .... ..."1rem
+    /1rem 1fr 1rem 1fr 1rem;
+  }
+  @for $i from 1 through 4 {
+    .about-con#{$i}{ grid-area:con#{$i};}
+  }
+
+  .what-con{
+    background-color:$cLGray;
+    padding: 1rem;
+    .text-wrapper{
+      display: flex;
+      margin-top: 1rem;
+      .what-conL{
+        width: 25%;
+        .textL{
+          line-height: 1.5rem;
+          margin-bottom: .5rem;
+          margin-left: 1rem ;
+        }
+      }
+      .what-conR{
+        width: 75%;
+        .textR{
+          line-height: 1.5rem;
+          margin-bottom: .5rem;
+          margin-left: 2rem;
+        }
+      }
+    }
+  }
+}
+
+.about-who-content{
+  padding:100px 0;
+  .prof-con-wrapper{
+    margin-top: 1rem;
+    display: flex;
+    .prof-conL{
+      flex-grow: 3;
+      .prof-conL-wrapper{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        .prof-picture{
+          display: block;
+          height: 250px;
+          margin: 0 auto;
+        }
+        .prof-name{
+          padding: 1rem 0;
+        }
+        .prof-text{
+        }
+      }
+    }
+    .prof-conR{
+      background-color: $cGray;
+      flex-grow: 7;
+      padding: 1rem;
+      .history-title{
+        margin-bottom: 1rem;
+      }
+      .history-wrapper{
+        display: flex;
+        .history-date{
+          margin-left: 1rem;
+          line-height: 2rem;
+        }
+        .history-text{
+          border-left: $cDGray solid 1px;
+          margin-left: 2rem;
+          line-height: 2rem;
+          padding-left: 2rem;
+        }
+      }
+    }
+  }
+}
+
+.about-gallery{
+  padding: 100px 0;
+  &-title{}
+  &-content{
+    display: grid;
+    grid-template: 
+    "... .... .... .... ..."1rem
+    "... pic1 pic1 pic1 ..."1fr
+    "... .... .... .... ..."1rem
+    "... pic2 .... pic3 ..."1fr
+    "... .... .... .... ..."1rem
+    /1rem 1fr 1rem 1fr 1rem;
+
+    .picture1{
+      grid-area: pic1;
+      @include bgZoom(url(https://picsum.photos/seed/picsum/1350/900));
+      &::before{
+        display: block;
+        content:'';
+        padding-top:50%;
+      }
+    }
+    .picture2{
+      grid-area: pic2;
+      @include bgZoom(url(https://picsum.photos/id/237/1350/900));
+    }
+    .picture3{
+      @include bgZoom(url(https://picsum.photos/seed/picsum/1350/900));
+      grid-area: pic3;
+    }
+  }
+}
+
+
+//aboutend********************************************************

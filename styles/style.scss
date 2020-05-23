@@ -1,0 +1,363 @@
+@import "venders/reset";
+@import "modules/variables";
+@import "modules/mixin";
+
+* a {
+  color: black;
+  text-decoration: none;
+}
+
+$cBlack: rgb(31, 31, 29);
+$cDGray:rgb(158, 156, 156);
+$cGray:rgb(231, 228, 228);
+$cLGray:rgb(243, 243, 242);
+$cWhite: white;
+
+.grobal-header {
+  background-color: rgba(255, 255, 255, 0.8);
+  left: 0;
+  position: fixed;
+  right: 0;
+  z-index: 10;
+
+  .header-container {
+    width: 100%;
+    display: flex;
+    .header-left {
+      background-color:$cBlack;
+      color: $cWhite;
+      line-height: 50px;
+      text-align: center;
+      width: 100px;
+      .link-logo{
+        color: $cWhite;
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+      }
+    }
+    .header-center {
+      align-items: center;
+      display: flex;
+      flex-grow: 5;
+      flex-wrap: wrap;
+      .link {
+        display: inline-block;
+        margin-left: 1rem;
+        text-align: center;
+      }
+    }
+    .header-right {
+      align-items: center;
+      display: flex;
+      flex-grow: 3;
+      flex-wrap: wrap;
+      .option-icon{
+        margin-left: 1rem;
+      }
+    }
+  }
+}
+
+.content {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  &__link {
+    color: $cWhite;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+  }
+  .category {
+    padding: .3rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .content-info {
+    bottom: 0;
+    left: 0;
+    padding: .3rem;
+    position: absolute;
+    &.small {
+      font-size: 0.7rem;
+    }
+  }
+}
+
+.contents {
+  display: grid;
+  height: 800px;
+  padding-top: 100px;
+  width: 100%;
+  grid-template:
+    "con1 con1 con1 .... con5 .... con6 " 1fr
+    "con1 con1 con1 .... .... .... .... " 10px
+    "con1 con1 con1 .... con9 .... con10 " 1fr
+    ".... .... .... .... .... .... .... " 10px
+    "con3 .... con4 .... con2 con2 con2 " 1fr
+    ".... .... .... .... con2 con2 con2 " 10px
+    "con7 .... con8 .... con2 con2 con2" 1fr
+    /1fr 10px 1fr 10px 1fr 10px 1fr;
+}
+@for $i from 1 through 15 {
+  .con#{$i}{
+    grid-area: con#{$i};
+    @include bgZoom(url(../img/business_0#{$i}.jpeg))
+  }
+}
+
+.news {
+  background-color: $cLGray;
+  padding: 100px 0;
+  .news-title {
+    letter-spacing: 3px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .news-lists {
+    margin-bottom: 50px;
+    margin-top: 50px;
+    .news-link {
+      display: block;
+      margin-bottom: 10px;
+    }
+    .news-link:last-child {
+      margin-bottom: 0;
+    }
+    .news-list {
+      background-color: $cWhite;
+      display: flex;
+      height: 150px;
+      padding: 1em;
+      .conL {
+        flex-grow: 1;
+        padding: 1em;
+      }
+      .conC {
+        flex-grow: 8;
+        padding: 1em;
+      }
+      .conR {
+        background-color: $cWhite;
+        flex-basis: 130px;
+        overflow: hidden;
+        .news-image{
+          height: 100%;
+          object-fit: cover;
+          transition: all 1s ease;
+          width: 100%;
+        }
+      }
+      transition: all 0.3s ease;
+      &:hover {
+        background-color: rgb(231, 228, 228);
+        .conR{
+          img{
+            opacity: 0.7;
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+  .news-btn {
+    border: solid 1px $cBlack;
+    border-radius: 3px;
+    box-shadow: $cBlack 0 0 8px;
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    margin: 0 auto;
+    text-align: center;
+    transition: all 0.5s ease;
+    width: 10rem;
+    &:hover {
+      background-color: $cBlack;
+      box-shadow: none;
+      color: white;
+    }
+  }
+}
+
+.bottom-banners {
+  display: flex;
+  .banner {
+    height: 300px;
+    width: 100%;
+    .banner-content {
+      color: $cWhite;
+    }
+  }
+  .banner-1{
+    @include bgZoom(url(https://picsum.photos/seed/picsum/1350/900))
+  }
+  .banner-2{
+    @include bgZoom(url(https://picsum.photos/id/237/1350/900))
+  }
+  .banner-3{
+    @include bgZoom(url(https://picsum.photos/1350/900?grayscale))
+  }
+  
+}
+
+footer {
+  background-color: $cBlack;
+  display: flex;
+  .content {
+    color: $cWhite;
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+    width: 100%;
+    a {
+      color: $cWhite;
+    }
+  }
+  .Lfooter {
+  }
+  .Cfooter {
+  }
+  .Rfooter {
+    .footer-icon{
+      margin: 0 .2rem;
+    }
+  }
+}
+
+.contact-form{
+  padding: 150px 0 50px 0;
+  &-title, &-message{
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+  }
+}
+.contact-form-grid{
+  display: grid;
+  grid-template: 
+  "... ....... ....... ....... ..."1rem
+  "... select  select  select  ..."1fr
+  "... ....... ....... ....... ..."
+  "... name    ....... belong  ..."1fr
+  "... ....... ....... ....... ..."1rem
+  "... email   ....... tel     ..."1fr
+  "... ....... ....... ....... ..."1rem
+  "... address ....... ....... ..."1fr
+  "... ....... ....... ....... ..."1rem
+  "... title   title   title   ..."1fr
+  "... ....... ....... ....... ..."1rem
+  "... message message message ..."
+   /1rem 1fr 1rem 1fr 1rem;
+}
+.select{grid-area: select;
+  .check-box{margin-left: 1rem;
+    &:first-child{margin-left: 0;}
+  }
+}
+.name{grid-area: name;}
+.email{grid-area: email;}
+.address{grid-area: address;}
+.title{grid-area: title;}
+.message{grid-area: message;}
+.belong{grid-area: belong;}
+.tel{grid-area: tel;}
+  
+.form-item{
+  padding: .5rem 0;
+  .ipt{
+    background-color: $cLGray;
+    border: none;
+    height: 3rem;
+    padding-left:.5rem;
+    width: 100%;
+  }
+  .ipt-lg{
+    background-color: $cLGray;
+    border: none;
+    height: 10rem;
+    padding-left:.5rem;
+    width: 100%;
+  }
+  .must{
+    &:after{
+      content: " * 必須";
+      color: red;
+      font-size: .7rem;
+    }
+  }
+}
+
+.cubic-btn {
+  color: $cBlack;
+  display: inline-block;
+  height: 50px;
+  margin: 1rem 0 0 1rem;
+  perspective: 300px;
+  position: relative;
+  transform-style: preserve-3d;
+  width: 250px;
+  & span {
+    border: solid 1px $cBlack;
+    height: 100%;
+    line-height: 48px;
+    position: absolute;
+    transition: all .2s;
+    width: 100%;
+  }
+  & .hovering {
+    transform: rotateX(90deg);
+    transform-origin: center center -25px;
+    & .submit-btn{
+      background-color:$cBlack;
+      border: none;
+      color: $cWhite;
+      display: inline-block;
+      font-weight: bold;
+      height: 100%;
+      width: 100%;
+    }
+  }
+  & .default {
+    color:$cBlack;
+    transform: rotateX(0);
+    transform-origin: center center -25px;
+    & .submit-btn{
+      border: none;
+      display: inline-block;
+      font-weight: bold;
+      height: 100%;
+      width: 100%;
+    }
+  }
+  &:hover {
+    & .hovering {
+      transform: rotateX(0);
+    }
+    & .default {
+      transform: rotateX(-90deg);
+    }
+  }
+}
+
+.hover-Uline{
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  &:before{
+    content: "";
+    background-color: $cDGray;
+    bottom: -5px; /*線の上下位置*/
+    height: 2px; /*線の太さ*/
+    left: 0;
+    position: absolute;
+    right: 0;
+    transform: scale(0,1);
+    transform-origin: center;
+    transition: transform .2s;
+    width: 100%; /*線の長さ*/
+  }
+  &:hover:before {
+    transform: scale(1);
+  }
+}

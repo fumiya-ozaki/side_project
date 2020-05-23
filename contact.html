@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Kameron&family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.min.css">
+    <link rel="stylesheet" href="styles/responsive.min.css">
+    <script src="https://kit.fontawesome.com/95c8546a29.js" crossorigin="anonymous"></script>
+    <title>SideLine Web</title>
+  </head>
+  <body>
+    <header class="grobal-header content-width font-md">
+      <nav class="header-container">
+        <div class="header-left"><a class="link-logo" href="./index.html">ロゴ</a></div>
+        <ul class="header-center">
+          <li class="link hover-Uline"><a href="#">WORKS</a></li>
+          <li class="link hover-Uline"><a href="./index.html#news">NEWS</a></li>
+          <li class="link hover-Uline"><a href="#">ABOUT</a></li>
+          <li class="link hover-Uline"><a href="#">TOOL</a></li>
+          <li class="link hover-Uline"><a href="./contact.html">CONTACT</a></li>
+          <li class="link hover-Uline"><a href="#">OTHERS</a></li>
+        </ul>
+        <div class="header-right">
+          <p class="option-icon hover-Uline"><i class="fas fa-globe fa-sm"></i> language</p>
+          <p class="option-icon hover-Uline"><i class="fas fa-search fa-sm"></i> search</p>
+        </div>
+      </nav>
+    </header>
+
+    <section class="contact-form content-width">
+      <p class="contact-form-title font-lg">contact</p>
+      <p class="contact-form-message">お問い合わせは、下記のフォームをご記入し<br>内容を確認の上、送信するボタンを押してください。</p>
+      <form action="">
+        <dl class="contact-form-grid">
+          <div class="form-item select">
+            <dt class="must">選択してください</dt>
+            <dd>
+              <label class="check-box"><input type="radio" name="select" value="デザイン">  デザイン</label>
+              <label class="check-box"><input type="radio" name="select" value="制作">  制作</label>
+              <label class="check-box"><input type="radio" name="select" value="見積">  見積</label>
+              <label class="check-box"><input type="radio" name="select" value="その他" checked>  その他</label>
+            </dd>
+          </div>
+          <div class="form-item name">
+            <label for="userName">
+              <dt class="must">名前</dt>
+              <dd><input id="userName" class="ipt" type="text" name="username"></dd>
+            </label>
+          </div>
+          <div class="form-item email">
+            <label for="email">
+              <dt class="must">メール</dt>
+              <dd><input id="email" class="ipt" type="email" name="userEmail"></dd>
+            </label>
+          </div>
+          <div class="form-item address">
+            <label for="address">
+              <dt>住所</dt>
+              <dd><input id="address" class="ipt" type="text" name="address"></dd>
+            </label>
+          </div>
+          <div class="form-item title">
+            <label for="title">
+              <dt class="must">お問い合わせ件名</dt>
+              <dd><input id="title" class="ipt" type="text" name="title"></dd>
+            </label>
+          </div>
+          <div class="form-item message">
+            <label for="message">
+              <dt class="must">お問い合わせ内容</dt>
+              <dd><textarea id="message" class="ipt-lg" name="message" id="message" cols="100" ></textarea></dd>
+            </label>
+          </div>
+          <div class="form-item belong">
+            <label for="belong">
+              <dt>会社名・学校名</dt>
+              <dd><input id="belong" class="ipt" type="text" name="belong"></dd>
+            </label>
+          </div>
+          <div class="form-item tel">
+            <label for="tel">
+              <dt>電話</dt>
+              <dd><input id="tel" class="ipt" type="tel" mame="tel"></dd>
+            </label>
+          </div>
+        </dl>
+        <div class="form-submit submit">
+          <span class="cubic-btn">
+            <span class="hovering">
+              <input class="submit-btn" type="submit" value="送       信">
+            </span>
+            <span class="default">
+              <input class="submit-btn" type="submit" value="送       信">
+            </span>
+          </span>
+          
+        </div>
+      </form>
+    </section>
+    
+
+    <footer>
+      <div class="content Lfooter">
+        <a class="hover-Uline" href="#"><i class="far fa-envelope fa-sm"></i> contact</a>
+      </div>
+      <div class="content Cfooter">
+        <p><a class="hover-Uline" href="#">privacy policy</a> &copy;company</p>
+      </div>
+      <div class="content Rfooter">
+        <a class="footer-icon hover-Uline" href=""><i class="fab fa-youtube fa-sm"></i></a>
+        <a class="footer-icon hover-Uline" href=""><i class="fab fa-facebook-square fa-sm"></i></a>
+        <a class="footer-icon hover-Uline" href="https://www.instagram.com/fumiya_ozaki_wd"><i class="fab fa-instagram fa-sm"></i></a>
+        <a class="footer-icon hover-Uline" href="https://twitter.com/fumiya0414"><i class="fab fa-twitter fa-sm"></i></a>
+        <a class="footer-icon hover-Uline" href="https://twitter.com/fumiya0414"><i class="fab fa-line fa-sm"></i></a>
+      </div>
+    </footer>
+
+  </body>
+</html>

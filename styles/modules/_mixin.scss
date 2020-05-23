@@ -1,0 +1,49 @@
+//animation
+@mixin animation(
+  $delay: 0s,
+  $direction: normal,
+  $duration: 1s,
+  $fill-mode: forwards,
+  $iteration-count: 1,
+  $name:'hoge',
+  $timing-function: ease
+) {
+  animation: {
+    delay: $delay;
+    direction: $direction;
+    duration: $duration;
+    fill-mode: $fill-mode;
+    iteration-count: $iteration-count;
+    name: $name;
+    timing-function: $timing-function;
+  }
+}
+
+//backgroud-image-zoom
+@mixin bgZoom($bgPath) {
+  position: relative;
+  overflow: hidden;
+  background: rgb(31, 31, 29);
+  &:after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background: $bgPath no-repeat center center;
+    transition: all .8s ease;
+    background-size: cover;
+  }
+  &:hover:after {
+    opacity: .3;
+    transform: scale(1.05);
+  }
+  .bg-zoom-content {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+} 

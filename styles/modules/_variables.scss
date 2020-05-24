@@ -1,7 +1,6 @@
 /******************************************************************
 全体適用
 ******************************************************************/
-
 /* boxsizing */
 * {
   box-sizing: border-box;
@@ -12,11 +11,69 @@ body {
   font-family: "Kameron", "Noto Sans JP", sans-serif;
 }
 
+* a {
+  color: black;
+  text-decoration: none;
+}
+
+/* color */
+$cBlack: rgb(31, 31, 29);
+$cDGray:rgb(158, 156, 156);
+$cGray:rgb(231, 228, 228);
+$cLGray:rgb(243, 243, 242);
+$cWhite: white;
+
+
+/* section-width */
 .content-width {
   margin: 0 auto;
   max-width: 1070px;
   width: 90%;
 }
+
+/* hover-animation */
+.hover-Uline{
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  &:before{
+    content: "";
+    background-color: $cDGray;
+    bottom: -5px; /*線の上下位置*/
+    height: 2px; /*線の太さ*/
+    left: 0;
+    position: absolute;
+    right: 0;
+    transform: scale(0,1);
+    transform-origin: center;
+    transition: transform .2s;
+    width: 100%; /*線の長さ*/
+  }
+  &:hover:before {
+    transform: scale(1);
+  }
+}
+
+/* hover-black-btn */
+.hoverBbtn {
+  border: solid 1px $cBlack;
+  border-radius: 3px;
+  box-shadow: $cBlack 0 0 8px;
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  margin: 0 auto;
+  text-align: center;
+  transition: all 0.5s ease;
+  width: 10rem;
+  &:hover {
+    background-color: $cBlack;
+    box-shadow: none;
+    color: white;
+  }
+}
+
+
 
 /* <br class="br-pc"> tablet */
 .br-pc {

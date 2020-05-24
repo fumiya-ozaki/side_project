@@ -6,20 +6,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Kameron&family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.min.css">
     <link rel="stylesheet" href="styles/responsive.min.css">
-    <script src="https://kit.fontawesome.com/95c8546a29.js" crossorigin="anonymous"></script>
+    <script defer src="scripts/all.js"></script>
     <title>Side project</title>
   </head>
   <body>
     <header class="grobal-header content-width font-md">
       <nav class="header-container">
-        <div class="header-left"><a class="link-logo" href="./index.html">LOGO</a></div>
+        <div class="header-left"><a class="link-logo" href="./index.html">GO home</a></div>
         <ul class="header-center">
-          <li class="link hover-Uline"><a href="#">WORKS</a></li>
-          <li class="link hover-Uline"><a href="./index.html#news">NEWS</a></li>
-          <li class="link hover-Uline"><a href="./about.html">ABOUT</a></li>
-          <li class="link hover-Uline"><a href="#">TOOL</a></li>
-          <li class="link hover-Uline"><a href="./contact.html">CONTACT</a></li>
-          <li class="link hover-Uline"><a href="#">OTHERS</a></li>
+          <li class="link-text hover-Uline"><a href="./archive.html">WORKS</a></li>
+          <li class="link-text hover-Uline"><a href="./archive.html">NEWS</a></li>
+          <li class="link-text hover-Uline"><a href="./about.html">ABOUT</a></li>
+          <li class="link-text hover-Uline"><a href="./contact.html">CONTACT</a></li>
+          <li class="link-text hover-Uline"><a href="#">OTHERS</a></li>
         </ul>
         <div class="header-right">
           <p class="option-icon hover-Uline"><i class="fas fa-globe fa-sm"></i> language</p>
@@ -30,11 +29,10 @@
 
     <section class="about-main-visual content-width">
       <div class="bg-img">
-  
+        <p class="about-main-title font-lg">About me...<br>What's me...<br>Who's me...</p>
         <div class="under-arrow">
           <div class="arrow1"></div>
         </div>
-
       </div>
     </section>
     <span class="sticky-container">
@@ -47,23 +45,23 @@
       </ul>
     </div>
 
-    <section id="whatsMe" class="about-what-content content-width">
+    <section id="whatsMe" class="about-what-content content-width content-height">
       <p class="about-what-title font-lg">What's me</p>
       <main class="about-what-grid">
         <div class="what-con about-con1">
           <p class="what-con-title font-lg">WORK</p>
           <span class="text-wrapper">
             <span class="what-conL">
-              <p class="textL">design</p>
-              <p class="textL">color</p>
-              <p class="textL">maintenance</p>
-              <p class="textL">expansion</p>
+              <p class="textL"><i class="fas fa-pen-nib"></i> design</p>
+              <p class="textL"><i class="fas fa-fill-drip"></i> color</p>
+              <p class="textL"><i class="fas fa-tools"></i> maint</p>
+              <p class="textL"><i class="fas fa-cogs"></i> exp.</p>
             </span>
             <span class="what-conR">
-              <p class="textR">テキストテキストテキスト</p>
-              <p class="textR">テキストテキストテキスト</p>
-              <p class="textR">テキストテキストテキスト</p>
-              <p class="textR">テキストテキストテキスト</p>
+              <p class="textR">シンプルで美しく機能的なデザイン</p>
+              <p class="textR">イメージとロジックで効果的な配色</p>
+              <p class="textR">保守・運用コストのかからない制作</p>
+              <p class="textR">拡張できるコーディング</p>
             </span>
           </span>
         </div>
@@ -71,20 +69,20 @@
           <p class="title font-lg">SKILL</p>
           <span class="text-wrapper">
             <span class="what-conL">
-              <p class="textL">HTML</p>
-              <p class="textL">CSS(SCSS)</p>
-              <p class="textL">JavaScript</p>
-              <p class="textL">Vue.js</p>
-              <p class="textL">Wordpress</p>
-              <p class="textL">Git</p>
+              <p class="textL"><i class="fab fa-html5"></i> HTML</p>
+              <p class="textL"><i class="fab fa-css3-alt"></i> CSS(SCSS)</p>
+              <p class="textL"><i class="fab fa-js"></i> JavaScript</p>
+              <p class="textL"><i class="fab fa-vuejs"></i> Vue.js</p>
+              <p class="textL"><i class="fab fa-wordpress"></i> Wordpress</p>
+              <p class="textL"><i class="fab fa-github-square"></i> Git etc</p>
             </span>
             <span class="what-conR">
-              <p class="textR">テキストテキストテキスト</p>
-              <p class="textR">テキストテキストテキスト</p>
-              <p class="textR">テキストテキストテキスト</p>
-              <p class="textR">テキストテキストテキスト</p>
-              <p class="textR">テキストテキストテキスト</p>
-              <p class="textR">テキストテキストテキスト</p>
+              <p class="textR">■■■■■■■■■■■■■■■</p>
+              <p class="textR">■■■■■■■■■■■■■■■</p>
+              <p class="textR">■■■■■■■■■■■■</p>
+              <p class="textR">■■■■■■■■■■</p>
+              <p class="textR">■■■■■■■■■■■■</p>
+              <p class="textR">■■■■■■■■■■■■</p>
             </span>
           </span>
         </div>
@@ -92,12 +90,14 @@
           <p class="title font-lg">TOOL</p>
           <span class="text-wrapper">
             <span class="what-conL">
-              <p class="textL">mac</p>
-              <p class="textL">vs code</p>
+              <p class="textL"><i class="fas fa-laptop"></i> PC</p>
+              <p class="textL"><i class="fas fa-edit"></i> editor</p>
+              <p class="textL"><i class="fas fa-camera-retro"></i>camera</p>
             </span>
             <span class="what-conR">
-              <p class="textR">テキストテキストテキスト</p>
-              <p class="textR">テキストテキストテキスト</p>
+              <p class="textR">MacBook Pro (13-inch)</p>
+              <p class="textR">VS CODE</p>
+              <p class="textR">Sony</p>
             </span>
           </span>
         </div>
@@ -105,23 +105,29 @@
           <p class="title font-lg">HOBBY</p>
           <span class="text-wrapper">
             <span class="what-conL">
-              <p class="textL">golf</p>
-              <p class="textL">music</p>
-              <p class="textL">movie</p>
-              <p class="textL">book</p>
+              <p class="textL"><i class="fas fa-golf-ball"></i> golf</p>
+              <p class="textL"><i class="fas fa-music"></i> music</p>
+              <p class="textL"><i class="fas fa-film"></i> movie</p>
+              <p class="textL"><i class="fas fa-book"></i> book</p>
+              <p class="textL"><i class="fas fa-graduation-cap"></i> english</p>
             </span>
             <span class="what-conR">
-              <p class="textR">テキストテキスト</p>
-              <p class="textR">テキストテキスト</p>
-              <p class="textR">テキストテキスト</p>
-              <p class="textR">テキストテキスト</p>
+              <p class="textR">永遠のアマチュアゴルファー</p>
+              <p class="textR">20代はプレーヤー30代はリスナー</p>
+              <p class="textR">サスペンスが大好物</p>
+              <p class="textR">ビジネス書 / 小説</p>
+              <p class="textR">上手になりたい</p>
             </span>
           </span>
         </div>
+        <div class="under-arrow">
+          <div class="arrow1"></div>
+        </div>
+
       </main>
     </section>
 
-    <section id="whosMe" class="about-who-content content-width">
+    <section id="whosMe" class="about-who-content content-width content-height">
       <p class="prof-title font-lg">Profile</p>
       <span class="prof-con-wrapper">
         <div class="prof-conL">
@@ -139,7 +145,7 @@
               <p>2006.3</p>
               <p>2006.4</p>
               <p>2011.11</p>
-              <p>2016.5</p>
+              <p>2016.5 〜</p>
 
             </div>
             <div class="history-text">
@@ -152,24 +158,42 @@
           </span>
         </div>
       </span>
+      <div class="under-arrow">
+        <div class="arrow1"></div>
+      </div>
     </section>
 
-    <section id="aboutGallery" class="about-gallery content-width">
+    <section id="aboutGallery" class="about-gallery content-width content-height">
       <p class="about-gallery-title font-lg">Gallery</p>
       <ul class="about-gallery-content">
         <li class="g-picture picture1">
           <p class="g-picture-text bg-zoom-content">
-            2020-01-01
+            2020-01-01<br>
+            グランドキャニオン
           </p>
         </li>
         <li class="g-picture picture2">
           <p class="g-picture-text bg-zoom-content">
-            2020-01-01
+            2020-01-01<br>
+            Fender テレキャスター<br>
+            bigsbyアーム付き
           </p>
         </li>
         <li class="g-picture picture3">
           <p class="g-picture-text bg-zoom-content">
-            2020-01-01
+            1D：Taylor made M1<br>
+            3W：Taylor made M1<br>
+            4U：Taylor made RBZ<br>
+            5I：Taylor made M3<br>
+            6I：Taylor made M3<br>
+            7I：Taylor made M3<br>
+            8I：Taylor made M3<br>
+            9I：Taylor made M3<br>
+            9I：Taylor made M3<br>
+             P：Taylor made M3<br>
+            52：cleveland<br>
+            58：cleveland<br>
+            PT：Taylor made<br>
           </p>
         </li>
       </ul>

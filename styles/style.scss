@@ -2,16 +2,9 @@
 @import "modules/variables";
 @import "modules/mixin";
 
-* a {
-  color: black;
-  text-decoration: none;
+.content-height {
+  padding: 100px 0 100px 0;
 }
-
-$cBlack: rgb(31, 31, 29);
-$cDGray:rgb(158, 156, 156);
-$cGray:rgb(231, 228, 228);
-$cLGray:rgb(243, 243, 242);
-$cWhite: white;
 
 //headerstart********************************************************
 
@@ -21,20 +14,14 @@ $cWhite: white;
   position: fixed;
   right: 0;
   z-index: 10;
-
+  height: 50px;
   .header-container {
-    width: 100%;
     display: flex;
     .header-left {
-      // background-color:$cBlack;
       line-height: 50px;
       text-align: center;
       width: 100px;
-      .link-logo{
-        color: $cBlack;
-        display: inline-block;
-        height: 100%;
-        width: 100%;
+      .link-logo {
       }
     }
     .header-center {
@@ -42,8 +29,7 @@ $cWhite: white;
       display: flex;
       flex-grow: 5;
       flex-wrap: wrap;
-      .link {
-        display: inline-block;
+      .link-text {
         margin-left: 1rem;
         text-align: center;
       }
@@ -53,165 +39,15 @@ $cWhite: white;
       display: flex;
       flex-grow: 3;
       flex-wrap: wrap;
-      .option-icon{
+      .option-icon {
         margin-left: 1rem;
       }
     }
   }
 }
-
 //headerend********************************************************
 
-
-
-//indexstart********************************************************
-.content {
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  &__link {
-    color: $cWhite;
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-  }
-  .category {
-    padding: .3rem;
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .content-info {
-    bottom: 0;
-    left: 0;
-    padding: .3rem;
-    position: absolute;
-    &.small {
-      font-size: 0.7rem;
-    }
-  }
-}
-
-.contents {
-  display: grid;
-  height: 800px;
-  padding-top: 100px;
-  width: 100%;
-  grid-template:
-    "con1 con1 con1 .... con5 .... con6 " 1fr
-    "con1 con1 con1 .... .... .... .... " 10px
-    "con1 con1 con1 .... con9 .... con10 " 1fr
-    ".... .... .... .... .... .... .... " 10px
-    "con3 .... con4 .... con2 con2 con2 " 1fr
-    ".... .... .... .... con2 con2 con2 " 10px
-    "con7 .... con8 .... con2 con2 con2" 1fr
-    /1fr 10px 1fr 10px 1fr 10px 1fr;
-}
-@for $i from 1 through 15 {
-  .con#{$i}{
-    grid-area: con#{$i};
-    @include bgZoom(url(../img/business_0#{$i}.jpeg))
-  }
-}
-
-.news {
-  background-color: $cLGray;
-  padding: 100px 0;
-  .news-title {
-    letter-spacing: 3px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  .news-lists {
-    margin-bottom: 50px;
-    margin-top: 50px;
-    .news-link {
-      display: block;
-      margin-bottom: 10px;
-    }
-    .news-link:last-child {
-      margin-bottom: 0;
-    }
-    .news-list {
-      background-color: $cWhite;
-      display: flex;
-      height: 150px;
-      padding: 1em;
-      .conL {
-        flex-grow: 1;
-        padding: 1em;
-      }
-      .conC {
-        flex-grow: 8;
-        padding: 1em;
-      }
-      .conR {
-        background-color: $cWhite;
-        flex-basis: 130px;
-        overflow: hidden;
-        .news-image{
-          height: 100%;
-          object-fit: cover;
-          transition: all 1s ease;
-          width: 100%;
-        }
-      }
-      transition: all 0.3s ease;
-      &:hover {
-        background-color: rgb(231, 228, 228);
-        .conR{
-          img{
-            opacity: 0.7;
-            transform: scale(1.1);
-          }
-        }
-      }
-    }
-  }
-  .news-btn {
-    border: solid 1px $cBlack;
-    border-radius: 3px;
-    box-shadow: $cBlack 0 0 8px;
-    display: block;
-    height: 50px;
-    line-height: 50px;
-    margin: 0 auto;
-    text-align: center;
-    transition: all 0.5s ease;
-    width: 10rem;
-    &:hover {
-      background-color: $cBlack;
-      box-shadow: none;
-      color: white;
-    }
-  }
-}
-
-.bottom-banners {
-  display: flex;
-  .banner {
-    height: 300px;
-    width: 100%;
-    .banner-content {
-      color: $cWhite;
-    }
-  }
-  .banner-1{
-    @include bgZoom(url(https://picsum.photos/seed/picsum/1350/900))
-  }
-  .banner-2{
-    @include bgZoom(url(https://picsum.photos/id/237/1350/900))
-  }
-  .banner-3{
-    @include bgZoom(url(https://picsum.photos/1350/900?grayscale))
-  }
-}
-
-//indexend********************************************************
-
-
-//footerstart********************************************************
-
+//footerstart******************************************************
 
 footer {
   background-color: $cBlack;
@@ -231,73 +67,216 @@ footer {
   .Cfooter {
   }
   .Rfooter {
-    .footer-icon{
-      margin: 0 .2rem;
+    .footer-icon {
+      margin: 0 0.2rem;
     }
   }
 }
 //footerend********************************************************
 
-//contactstart********************************************************
 
-.contact-form{
-  padding: 150px 0 50px 0;
-  &-title, &-message{
-    margin-bottom: 1rem;
-    padding-left: 1rem;
+//index.htmlstart**************************************************
+.main-contents-area {
+  .content {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    &__link {
+      color: $cWhite;
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+    }
+    .category {
+      background-color: $cBlack;
+      padding: 0.3rem;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .content-info {
+      background-color: $cBlack;
+      bottom: 0;
+      left: 0;
+      padding: 0.3rem;
+      position: absolute;
+      &.small {
+        font-size: 0.7rem;
+      }
+    }
   }
 }
-.contact-form-grid{
+
+.contents {
   display: grid;
-  grid-template: 
-  "... ....... ....... ....... ..."1rem
-  "... select  select  select  ..."1fr
-  "... ....... ....... ....... ..."
-  "... name    ....... belong  ..."1fr
-  "... ....... ....... ....... ..."1rem
-  "... email   ....... tel     ..."1fr
-  "... ....... ....... ....... ..."1rem
-  "... address ....... ....... ..."1fr
-  "... ....... ....... ....... ..."1rem
-  "... title   title   title   ..."1fr
-  "... ....... ....... ....... ..."1rem
-  "... message message message ..."
-   /1rem 1fr 1rem 1fr 1rem;
-}
-.select{grid-area: select;
-  .check-box{margin-left: 1rem;
-    &:first-child{margin-left: 0;}
+  width: 100%;
+  height: 100%;
+  grid-template:
+    "con1 con1 con1 .... con5 .... con6 " 1fr
+    "con1 con1 con1 .... .... .... .... " 10px
+    "con1 con1 con1 .... con9 .... con10 " 1fr
+    ".... .... .... .... .... .... .... " 10px
+    "con3 .... con4 .... con2 con2 con2 " 1fr
+    ".... .... .... .... con2 con2 con2 " 10px
+    "con7 .... con8 .... con2 con2 con2" 1fr
+    /1fr 10px 1fr 10px 1fr 10px 1fr;
+  .content {
+    &::before {
+      display: block;
+      content: "";
+      padding-top: 50%;
+    }
+  }
+  @for $i from 1 through 15 {
+    .con#{$i} {
+      grid-area: con#{$i};
+      @include bgZoom(url(../img/business_0#{$i}.jpeg), 1, 1);
+    }
   }
 }
-.name{grid-area: name;}
-.email{grid-area: email;}
-.address{grid-area: address;}
-.title{grid-area: title;}
-.message{grid-area: message;}
-.belong{grid-area: belong;}
-.tel{grid-area: tel;}
-  
-.form-item{
-  padding: .5rem 0;
-  .ipt{
+
+.news {
+  background-color: $cLGray;
+  .con-container {
+    .news-title {
+      letter-spacing: 3px;
+      margin: 0 auto 50px auto;
+      text-align: center;
+    }
+    .news-lists {
+      margin-bottom: 50px;
+      .news-link:last-child {
+        margin-bottom: 0;
+      }
+      .news-list {
+        background-color: $cWhite;
+        padding: 1em;
+        margin-bottom: 1rem;
+        .news-link {
+          display: flex;
+          .conL {
+            flex-grow: 1;
+            padding: 1em;
+          }
+          .conC {
+            flex-grow: 8;
+            padding: 1em;
+          }
+          .conR {
+            background-color: $cWhite;
+            flex-basis: 130px;
+            overflow: hidden;
+            height: 100px;
+            width: 100px;
+            .news-image {
+              height: 100%;
+              width: 100%;
+              object-fit: cover;
+              transition: all 1s ease;
+            }
+          }
+        }
+        transition: all 0.3s ease;
+        &:hover {
+          background-color: rgb(231, 228, 228);
+          .conR {
+            img {
+              opacity: 0.7;
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+      .news-btn{
+      }
+    }
+  }
+}
+
+.bottom-banners {
+  display: flex;
+  .banner {
+    width: 100%;
+    &::before {
+      display: block;
+      content: "";
+      padding-top: 50%;
+    }
+
+    .banner-content {
+      color: $cWhite;
+    }
+  }
+  .banner-1 {
+    @include bgZoom(url(https://picsum.photos/seed/picsum/1350/900));
+  }
+  .banner-2 {
+    @include bgZoom(url(https://picsum.photos/id/237/1350/900));
+  }
+  .banner-3 {
+    @include bgZoom(url(https://picsum.photos/1350/900?grayscale));
+  }
+}
+
+//index.htmlend********************************************************
+
+
+//contact.htmlstart****************************************************
+
+.contact-form {
+  // padding: 150px 0 50px 0;
+  &-title,
+  &-message {
+    margin-bottom: 1rem;
+  }
+}
+.contact-form-grid {
+  display: grid;
+  grid-template:
+    " .... .... ...." 1rem
+    " con1 con1 con1" 1fr
+    " con2 .... con3" 1fr
+    " .... .... ...." 1rem
+    " con4 .... con5" 1fr
+    " .... .... ...." 1rem
+    " con6 .... ...." 1fr
+    " .... .... ...." 1rem
+    " con7 con7 con7" 1fr
+    " .... .... ...." 1rem
+    " con8 con8 con8"
+    / 1fr 1rem 1fr;
+}
+.check-box {
+  margin-left: 1rem;
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+@for $i from 1 through 8 {
+  .form-item#{$i} {
+    padding: 0.5rem 0;
+    grid-area: con#{$i};
+  }
+  .ipt {
     background-color: $cLGray;
     border: none;
     height: 3rem;
-    padding-left:.5rem;
+    padding-left: 0.5rem;
     width: 100%;
   }
-  .ipt-lg{
+  .ipt-lg {
     background-color: $cLGray;
     border: none;
     height: 10rem;
-    padding-left:.5rem;
+    padding-left: 0.5rem;
     width: 100%;
   }
-  .must{
-    &:after{
+  .must {
+    &:after {
       content: " * 必須";
       color: red;
-      font-size: .7rem;
+      font-size: 0.7rem;
     }
   }
 }
@@ -306,7 +285,7 @@ footer {
   color: $cBlack;
   display: inline-block;
   height: 50px;
-  margin: 1rem 0 0 1rem;
+  margin: 1rem 0 0 0;
   perspective: 300px;
   position: relative;
   transform-style: preserve-3d;
@@ -316,14 +295,14 @@ footer {
     height: 100%;
     line-height: 48px;
     position: absolute;
-    transition: all .2s;
+    transition: all 0.2s;
     width: 100%;
   }
   & .hovering {
     transform: rotateX(90deg);
     transform-origin: center center -25px;
-    & .submit-btn{
-      background-color:$cBlack;
+    & .submit-btn {
+      background-color: $cBlack;
       border: none;
       color: $cWhite;
       display: inline-block;
@@ -333,10 +312,10 @@ footer {
     }
   }
   & .default {
-    color:$cBlack;
+    color: $cBlack;
     transform: rotateX(0);
     transform-origin: center center -25px;
-    & .submit-btn{
+    & .submit-btn {
       border: none;
       display: inline-block;
       font-weight: bold;
@@ -353,129 +332,88 @@ footer {
     }
   }
 }
+//contact.htmlend********************************************************
 
-//contactend********************************************************
+//about.htmlstart********************************************************
 
-
-.hover-Uline{
-  position: relative;
-  cursor: pointer;
-  text-decoration: none;
-  &:before{
-    content: "";
-    background-color: $cDGray;
-    bottom: -5px; /*線の上下位置*/
-    height: 2px; /*線の太さ*/
-    left: 0;
-    position: absolute;
-    right: 0;
-    transform: scale(0,1);
-    transform-origin: center;
-    transition: transform .2s;
-    width: 100%; /*線の長さ*/
-  }
-  &:hover:before {
-    transform: scale(1);
-  }
-}
-
-//aboutstart********************************************************
-
-.about-main-visual{
+.about-main-visual {
   height: calc(100vh - 50px);
   padding-top: 50px;
   position: relative;
-  .bg-img{
+  .about-main-title {
+    left: 50%;
+    letter-spacing: 5px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+  }
+  .bg-img {
     height: 100%;
     background-image: url(../img/about-main.jpg);
     background-size: cover;
     background-position: center;
-
   }
-  .under-arrow{
-    position: absolute;
-    bottom: 15px;
-    left: 50%;
-    @include animation(
-      $name:flow,
-      $iteration-count:infinite,
-      $duration:3s
-      );
-      .arrow1{
-        width: 30px;
-        height: 30px;
-        border: 5px solid;
-        border-color:  transparent transparent $cBlack $cBlack;
-        transform: translateX(-50%);
-        transform: rotate(-45deg);
-        transform-origin: (left bottom);
-    }
-    }
-    @keyframes flow {
-      0%{transform: translateY(0);}
-      50%{transform: translateY(-15px)}
-      100%{transform: translateY(0px)}
-    }
-  }
+}
 
-
-.about-nav{
-  // background-color: rgba(255, 255, 255, .8);
-  background-color: rgba(31, 31, 29, .8);
+.about-nav {
+  background-color: rgba(31, 31, 29, 0.8);
   position: sticky;
   z-index: 5;
   top: 50px;
-  .about-nav-lists{
+  .about-nav-lists {
     align-items: center;
     display: flex;
     height: 50px;
     padding-left: 100px;
-    .about-nav-list{
-      display: inline-block;
+    .about-nav-list {
       padding: 0 1rem;
-      .a-nav-text{
+      .a-nav-text {
         color: white;
       }
     }
-
   }
 }
 
-.about-what-content{
-  padding: 100px 0;
-  .about-what-grid{
+.about-what-content {
+  position: relative;
+  .about-what-grid {
     display: grid;
     grid-template:
-    "... .... ... .... ..."1rem
-    "... con1 ... con2 ..."1fr
-    "... .... ... .... ..."1rem
-    "... con3 ... con4 ..."1fr
-    "... .... ... .... ..."1rem
-    /1rem 1fr 1rem 1fr 1rem;
+      "... .... ... .... ..." 1rem
+      "... con1 ... con2 ..." 1fr
+      "... .... ... .... ..." 1rem
+      "... con3 ... con4 ..." 1fr
+      "... .... ... .... ..." 1rem
+      /0 1fr 1rem 1fr 0;
   }
   @for $i from 1 through 4 {
-    .about-con#{$i}{ grid-area:con#{$i};}
+    .about-con#{$i} {
+      grid-area: con#{$i};
+    }
   }
 
-  .what-con{
-    background-color:$cLGray;
+  .what-con {
+    background-color: $cLGray;
     padding: 1rem;
-    .text-wrapper{
+    .text-wrapper {
       display: flex;
       margin-top: 1rem;
-      .what-conL{
+      .what-conL {
         width: 25%;
-        .textL{
+        .textL {
           line-height: 1.5rem;
-          margin-bottom: .5rem;
-          margin-left: 1rem ;
+          margin-bottom: 0.5rem;
+          margin-left: 1rem;
+          .svg-inline--fa{
+            vertical-align: middle;
+          }
         }
       }
-      .what-conR{
+      .what-conR {
         width: 75%;
-        .textR{
+        .textR {
           line-height: 1.5rem;
-          margin-bottom: .5rem;
+          margin-bottom: 0.5rem;
           margin-left: 2rem;
         }
       }
@@ -483,43 +421,43 @@ footer {
   }
 }
 
-.about-who-content{
-  padding:100px 0;
-  .prof-con-wrapper{
+.about-who-content {
+  position: relative;
+  .prof-con-wrapper {
     margin-top: 1rem;
     display: flex;
-    .prof-conL{
+    .prof-conL {
       flex-grow: 3;
-      .prof-conL-wrapper{
+      .prof-conL-wrapper {
         align-items: center;
         display: flex;
         flex-direction: column;
-        .prof-picture{
+        .prof-picture {
           display: block;
           height: 250px;
           margin: 0 auto;
         }
-        .prof-name{
+        .prof-name {
           padding: 1rem 0;
         }
-        .prof-text{
+        .prof-text {
         }
       }
     }
-    .prof-conR{
+    .prof-conR {
       background-color: $cGray;
       flex-grow: 7;
       padding: 1rem;
-      .history-title{
+      .history-title {
         margin-bottom: 1rem;
       }
-      .history-wrapper{
+      .history-wrapper {
         display: flex;
-        .history-date{
+        .history-date {
           margin-left: 1rem;
           line-height: 2rem;
         }
-        .history-text{
+        .history-text {
           border-left: $cDGray solid 1px;
           margin-left: 2rem;
           line-height: 2rem;
@@ -530,43 +468,55 @@ footer {
   }
 }
 
-.about-gallery{
-  padding: 100px 0;
-  &-title{}
-  &-content{
+.about-gallery {
+  &-title {
+  }
+  &-content {
     display: grid;
-    grid-template: 
-    "... .... .... .... ..."1rem
-    "... pic1 pic1 pic1 ..."1fr
-    "... .... .... .... ..."1rem
-    "... pic2 .... pic3 ..."1fr
-    "... .... .... .... ..."1rem
-    /1rem 1fr 1rem 1fr 1rem;
+    grid-template:
+      "... .... .... .... ..." 1rem
+      "... pic1 pic1 pic1 ..." 1fr
+      "... .... .... .... ..." 1rem
+      "... pic2 .... pic3 ..." 1fr
+      "... .... .... .... ..." 1rem
+      /0 1fr 1rem 1fr 0;
 
-    .g-picture{
-      .g-picture-text{
+    .g-picture {
+      .g-picture-text {
         color: $cWhite;
+        text-align: center;
       }
-      &::before{
+      &::before {
         display: block;
-        content:'';
-        padding-top:50%;
+        content: "";
+        padding-top: 50%;
       }
     }
-    .picture1{
+    .picture1 {
       grid-area: pic1;
       @include bgZoom(url(https://picsum.photos/seed/picsum/1350/900));
     }
-    .picture2{
+    .picture2 {
       grid-area: pic2;
       @include bgZoom(url(https://picsum.photos/id/237/1350/900));
     }
-    .picture3{
+    .picture3 {
       @include bgZoom(url(https://picsum.photos/seed/picsum/1350/900));
       grid-area: pic3;
     }
   }
 }
+//about.htmlend********************************************************
 
+//archive.htmlstart****************************************************
 
-//aboutend********************************************************
+.category-lists {
+  padding: 1rem 0;
+  .category-list {
+    margin-right: 2rem;
+    &:last-child {
+    }
+  }
+}
+
+//archive.htmlend*****************************************************

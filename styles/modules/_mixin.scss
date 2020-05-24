@@ -20,7 +20,9 @@
 }
 
 //backgroud-image-zoom
-@mixin bgZoom($bgPath) {
+@mixin bgZoom(
+  $bgPath,$bgopacity:0,$hovopacity:1
+  ) {
   position: relative;
   overflow: hidden;
   background: rgb(31, 31, 29);
@@ -36,7 +38,7 @@
     background-size: cover;
   }
   &:hover .bg-zoom-content{
-    opacity: 1; //コンテンツの表示
+    opacity: $hovopacity; //コンテンツの表示
   }
   
   &:hover:after {
@@ -49,7 +51,54 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    opacity: 0; //コンテンツの非表示
+    opacity: $bgopacity; //コンテンツの非表示
     transition: all .8s ease;
   }
-} 
+}
+
+@mixin hoverUline() {
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  &:before{
+    content: "";
+    background-color: $cDGray;
+    bottom: -5px; /*線の上下位置*/
+    height: 2px; /*線の太さ*/
+    left: 0;
+    position: absolute;
+    right: 0;
+    transform: scale(0,1);
+    transform-origin: center;
+    transition: transform .2s;
+    width: 100%; /*線の長さ*/
+  }
+  &:hover:before {
+    transform: scale(1);
+  }
+}
+
+  .under-arrow{
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    @include animation(
+      $name:flow,
+      $iteration-count:infinite,
+      $duration:1.5s
+      );
+      .arrow1{
+        width: 30px;
+        height: 30px;
+        border: 5px solid;
+        border-color:  transparent transparent $cBlack $cBlack;
+        transform: translateX(-50%);
+        transform: rotate(-45deg);
+        transform-origin: (left bottom);
+    }
+  }
+    @keyframes flow {
+      0%{transform: translateY(0);}
+      50%{transform: translateY(-15px)}
+      100%{transform: translateY(0px)}
+    }

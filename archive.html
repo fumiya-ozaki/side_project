@@ -10,22 +10,74 @@
     <title>Side project</title>
   </head>
   <body>
-    <header class="grobal-header content-width font-md">
-      <nav class="header-container">
-        <div class="header-left"><a class="link-logo" href="./index.html">GO home</a></div>
-        <ul class="header-center">
-          <li class="link-text hover-Uline"><a href="./archive.html">WORKS</a></li>
-          <li class="link-text hover-Uline"><a href="./archive.html">NEWS</a></li>
-          <li class="link-text hover-Uline"><a href="./about.html">ABOUT</a></li>
-          <li class="link-text hover-Uline"><a href="./contact.html">CONTACT</a></li>
-          <li class="link-text hover-Uline"><a href="#">OTHERS</a></li>
+    <div id="global-container">
+      <nav class="mobile-menu">
+        <ul class="mobile-menu__main">
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="./index.html">
+              <span class="main-title">Home</span>
+              <span class="sub-title">トップへ戻る</span>
+            </a>
+          </li>
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="./archive.html">
+              <span class="main-title">Works</span>
+              <span class="sub-title">テキストテキスト</span>
+            </a>
+          </li>
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="./archive.html">
+              <span class="main-title">News</span>
+              <span class="sub-title">お知らせ</span>
+            </a>
+          </li>
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="./about.html">
+              <span class="main-title">About</span>
+              <span class="sub-title">ご紹介</span>
+            </a>
+          </li>
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="./contact.html">
+              <span class="main-title">Contact</span>
+              <span class="sub-title">お問い合わせ</span>
+            </a>
+          </li>
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="#">
+              <span class="main-title">Others</span>
+              <span class="sub-title">その他</span>
+            </a>
+          </li>
         </ul>
-        <div class="header-right">
-          <p class="option-icon hover-Uline"><i class="fas fa-globe fa-sm"></i> language</p>
-          <p class="option-icon hover-Uline"><i class="fas fa-search fa-sm"></i> search</p>
-        </div>
       </nav>
-    </header>    
+
+      <div id="container">
+        <div class="mobile-menu__cover"></div>
+        <header class="grobal-header font-md">
+          <!-- mobile-header-btn-->
+          <button id="mobile-menu-btn" class="mobile-menu__btn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          
+          <!-- main-header -->
+          <nav class="header-container content-width">
+            <div class="header-left"><a class="link-logo" href="./index.html">GO home</a></div>
+            <ul class="header-center">
+              <li class="link-text hover-Uline"><a href="./archive.html">WORKS</a></li>
+              <li class="link-text hover-Uline"><a href="./archive.html">NEWS</a></li>
+              <li class="link-text hover-Uline"><a href="./about.html">ABOUT</a></li>
+              <li class="link-text hover-Uline"><a href="./contact.html">CONTACT</a></li>
+              <li class="link-text hover-Uline"><a href="#">OTHERS</a></li>
+            </ul>
+            <div class="header-right">
+              <p class="option-icon hover-Uline"><i class="fas fa-globe fa-sm"></i> language</p>
+              <p class="option-icon hover-Uline"><i class="fas fa-search fa-sm"></i> search</p>
+            </div>
+          </nav>
+        </header>
     <main class="news">
       <div class="con-container content-width content-height">
         <div class="archive-title font-lg">Works / News Archives</div>
@@ -76,12 +128,15 @@
         <p><a class="hover-Uline" href="#">privacy policy</a> &copy;company</p>
       </div>
       <div class="content Rfooter">
-        <a class="footer-icon hover-Uline" href=""><i class="fab fa-youtube fa-sm"></i></a>
-        <a class="footer-icon hover-Uline" href=""><i class="fab fa-facebook-square fa-sm"></i></a>
+        <a class="footer-icon hover-Uline" href="#"><i class="fab fa-youtube fa-sm"></i></a>
+        <a class="footer-icon hover-Uline" href="#"><i class="fab fa-facebook-square fa-sm"></i></a>
         <a class="footer-icon hover-Uline" href="https://rua.jp/i/fumiya_ozaki_wd"><i class="fab fa-instagram fa-sm"></i></a>
         <a class="footer-icon hover-Uline" href="https://twitter.com/fumiya0414"><i class="fab fa-twitter fa-sm"></i></a>
         <a class="footer-icon hover-Uline" href=""><i class="fab fa-line fa-sm"></i></a>
       </div>
     </footer>
-  </body>
+  </div>
+</div>
+<script src="./scripts/main.js"></script>
+</body>
 </html>

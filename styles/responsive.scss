@@ -1,17 +1,25 @@
+@import "venders/reset";
+@import "modules/variables";
+@import "modules/mixin";
+
 @media (max-width:480px) { //smartphone start
-  
-  // index.htmlstart
-  .bottom-banners {
-  flex-direction: column;
+
+  #mobile-menu-btn{display: block;}
+  .content-width{width: 95%;}
+  .about-nav{display: none;} 
+  .content-height {padding: 50px 0 75px 0;}
+
+  .grobal-header{
+    width: 100%;
+    .header-container{
+      .header-center,.header-right{
+        display: none;
+      }
+    }
   }
-  
 
   
-} //smartphone end
-
-@media screen and (min-width:481px) and (max-width:959px){ //tablet start
-
-// index.htmlstart
+  // index.htmlstart******************************************************
   .contents {
     grid-template:
       "con1 con1 con1" 1fr
@@ -25,29 +33,204 @@
       "con3 .... con4" 1fr
       ".... .... ...." 10px
       "con7 .... con8" 1fr
+      ".... .... ...." 10px
+      "con2 con2 con2" 1fr
+      "con2 con2 con2" 1fr
+      "con2 con2 con2" 1fr
+      /1fr 10px 1fr;
+      .content{
+        box-shadow:none;
+      }
+  }
+  
+  .news {
+    .con-container {
+      .news-lists {
+        .news-list {
+          padding: 0;
+          .news-link {
+            display: flex;
+            flex-direction: column;
+            .conL {
+              padding-bottom: 0;
+            }
+            .conR {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .bottom-banners {
+    flex-direction: column;
+  }
+
+  footer {
+    flex-direction: column;
+    .content {
+      height: 50px;
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+// about.htmlstart*******************************************************
+
+
+  .about-what-content {
+    .about-what-grid {
+      grid-template:
+        "... .... ..." 1rem
+        "... con1 ..." 1fr
+        "... .... ..." 1rem
+        "... con2 ..." 1fr
+        "... .... ..." 1rem
+        "... con3 ..." 1fr
+        "... .... ..." 1rem
+        "... con4 ..." 1fr
+        "... .... ..." 1rem
+        /0  1fr 0;
+    }
+    .what-con {
+      .text-wrapper {
+        font-size: 10px;
+      }
+    }  
+  }
+  
+  .about-who-content {
+    .prof-con-wrapper {
+      flex-direction: column;
+      .prof-conR {
+        font-size: 11px;
+        margin: 0;
+        padding: .5rem;
+      }
+    }
+  }
+// about.htmlstart*******************************************************
+// contact.htmlstart*******************************************************
+.contact-form-grid {
+  grid-template:
+    " .... .... ...." 1rem
+    " con1 .... ...." 1fr
+    " con2 .... ...." 1fr
+    " con3 .... ...." 1fr
+    " con4 .... ...." 1fr
+    " con5 .... ...." 1fr
+    " con6 .... ...." 1fr
+    " .... .... ...." 1rem
+    " con7 con7 con7" 1fr
+    " .... .... ...." 1rem
+    " con8 con8 con8" 
+    / 1fr ;
+}
+
+
+// contact.htmlstart*******************************************************
+
+
+} //smartphone end
+
+@media screen and (min-width:481px) and (max-width:959px){ //tablet start
+  .grobal-header{
+    .header-container{
+      .header-center{
+        display: none;
+      }
+    }
+  }
+  #mobile-menu-btn{
+    display: block;
+  }
+
+// index.htmlstart*******************************************************
+
+  .contents {
+    grid-template:
+      "con1 con1 con1" 1fr
+      "con1 con1 con1" 10px
+      "con1 con1 con1" 1fr
+      ".... .... ...." 10px
+      "con5 .... con6" 1fr
+      ".... .... ...." 10px
+      "con9 .... con10"1fr
+      ".... .... ...." 10px
+      "con3 .... con4" 1fr
+      ".... .... ...." 10px
+      "con7 .... con8" 1fr
+      ".... .... ...." 10px
       "con2 con2 con2" 1fr
       "con2 con2 con2" 1fr
       "con2 con2 con2" 1fr
       /1fr 10px 1fr;
   }
-  .news-list {
-    display: grid;
-    grid-template:
-    "con1 .... con3"1fr
-    "con2 .... con3"1fr
-    /1fr 10px 1fr;
-    .conL{
-      grid-area:con1;
-    }
-    .conC{
-      grid-area:con2;
-    }
-    .conR{
-      grid-area:con3;
+
+  .news {
+    .con-container {
+      .news-lists {
+        .news-list {
+          padding: 0;
+          .news-link {
+            display: flex;
+            flex-direction: column;
+            .conL {
+              padding-bottom: 0;
+            }
+            .conR {
+              flex-basis: auto;
+              height: 300px;
+              width: 100%;
+            }
+          }
+        }
+      }
     }
   }
-  
-  
+
+  footer {
+    flex-direction: column;
+    .content {
+      height: 50px;
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  .bottom-banners {
+    flex-direction: column;
+  }
+// index.htmlend*******************************************************
+// about.htmlstart*******************************************************
+
+.about-what-content {
+  .about-what-grid {
+    grid-template:
+      "... .... ..." 1rem
+      "... con1 ..." 1fr
+      "... .... ..." 1rem
+      "... con2 ..." 1fr
+      "... .... ..." 1rem
+      "... con3 ..." 1fr
+      "... .... ..." 1rem
+      "... con4 ..." 1fr
+      "... .... ..." 1rem
+      /0  1fr 0;
+  }
+}
+
+.about-who-content {
+  .prof-con-wrapper {
+    flex-direction: column;
+    .prof-conR {
+      margin-top: 1rem;
+    }
+  }
+}
+// about.htmlend*******************************************************
+
 } //tablet end
 
 

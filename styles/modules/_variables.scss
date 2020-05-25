@@ -11,6 +11,7 @@ body {
   font-family: "Kameron", "Noto Sans JP", sans-serif;
 }
 
+/* a decoration reset */
 * a {
   color: black;
   text-decoration: none;
@@ -29,6 +30,11 @@ $cWhite: white;
   margin: 0 auto;
   max-width: 1070px;
   width: 90%;
+}
+
+/* section-height */
+.content-height {
+  padding: 100px 0 100px 0;
 }
 
 /* hover-animation */

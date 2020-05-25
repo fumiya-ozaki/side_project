@@ -154,6 +154,7 @@ body {
   font-family: "Kameron", "Noto Sans JP", sans-serif;
 }
 
+/* a decoration reset */
 * a {
   color: black;
   text-decoration: none;
@@ -165,6 +166,11 @@ body {
   margin: 0 auto;
   max-width: 1070px;
   width: 90%;
+}
+
+/* section-height */
+.content-height {
+  padding: 100px 0 100px 0;
 }
 
 /* hover-animation */
@@ -331,16 +337,14 @@ smartphoneで適用
   }
 }
 
-.content-height {
-  padding: 100px 0 100px 0;
-}
-
 .grobal-header {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: #1f1f1d;
+  color: white;
   left: 0;
-  position: fixed;
+  position: sticky;
+  top: 0;
   right: 0;
-  z-index: 10;
+  z-index: 5;
   height: 50px;
 }
 
@@ -352,6 +356,10 @@ smartphoneで適用
   line-height: 50px;
   text-align: center;
   width: 100px;
+}
+
+.grobal-header .header-container .header-left .link-logo {
+  color: white;
 }
 
 .grobal-header .header-container .header-center {
@@ -366,6 +374,10 @@ smartphoneで適用
   text-align: center;
 }
 
+.grobal-header .header-container .header-center .link-text a {
+  color: white;
+}
+
 .grobal-header .header-container .header-right {
   align-items: center;
   display: flex;
@@ -374,7 +386,178 @@ smartphoneで適用
 }
 
 .grobal-header .header-container .header-right .option-icon {
+  line-height: 19px;
   margin-left: 1rem;
+}
+
+.grobal-header .header-container .header-right .option-icon .svg-inline--fa {
+  font-size: 19px;
+}
+
+#mobile-menu-btn {
+  display: none;
+}
+
+.mobile-menu__btn {
+  border-radius: 3px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  padding: .5rem;
+  background-color: white;
+  border: none;
+  outline: none !important;
+  cursor: pointer;
+}
+
+.mobile-menu__btn span {
+  background-color: #1f1f1d;
+  display: block;
+  height: 2px;
+  width: 35px;
+  margin-bottom: 9px;
+  transition: transform .7s;
+}
+
+.mobile-menu__btn span:last-child {
+  margin-bottom: 0;
+}
+
+#container {
+  background-color: white;
+  position: relative;
+  z-index: 2;
+  transition: all 0.5s;
+}
+
+#container .header {
+  background-color: white;
+  height: 50px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.menu-open #container {
+  transform: translate(-200px, 0);
+  box-shadow: 0 8px 40px -10px rgba(0, 0, 0, 0.8);
+}
+
+.menu-open .mobile-menu__cover {
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu-open .mobile-menu__item {
+  transform: none;
+  opacity: 1;
+}
+
+.menu-open .mobile-menu__item:nth-child(1) {
+  transition-delay: 0.07s;
+}
+
+.menu-open .mobile-menu__item:nth-child(2) {
+  transition-delay: 0.14s;
+}
+
+.menu-open .mobile-menu__item:nth-child(3) {
+  transition-delay: 0.21s;
+}
+
+.menu-open .mobile-menu__item:nth-child(4) {
+  transition-delay: 0.28s;
+}
+
+.menu-open .mobile-menu__item:nth-child(5) {
+  transition-delay: 0.35s;
+}
+
+.menu-open .mobile-menu__item:nth-child(6) {
+  transition-delay: 0.42s;
+}
+
+.menu-open .mobile-menu__item:nth-child(7) {
+  transition-delay: 0.49s;
+}
+
+.menu-open .mobile-menu__item:nth-child(8) {
+  transition-delay: 0.56s;
+}
+
+.menu-open .mobile-menu__item:nth-child(9) {
+  transition-delay: 0.63s;
+}
+
+.menu-open .mobile-menu__item:nth-child(10) {
+  transition-delay: 0.7s;
+}
+
+.menu-open .mobile-menu__btn span {
+  background-color: #1f1f1d;
+}
+
+.menu-open .mobile-menu__btn span:nth-child(1) {
+  transform: translateY(11px) rotate(135deg);
+}
+
+.menu-open .mobile-menu__btn span:nth-child(2) {
+  transform: translateX(-18px) scaleX(0);
+}
+
+.menu-open .mobile-menu__btn span:nth-child(3) {
+  transform: translateY(-11px) rotate(-135deg);
+}
+
+.mobile-menu {
+  position: fixed;
+  right: 0;
+  top: 60px;
+}
+
+.mobile-menu__cover {
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s;
+  cursor: pointer;
+}
+
+.mobile-menu__main {
+  perspective: 2000px;
+  transform-style: preserve-3d;
+}
+
+.mobile-menu__item {
+  display: block;
+  transform: translate3d(0, 0, -1000px);
+  padding: 0 40px;
+  transition: transform 0.3s, opacity 0.2s;
+  opacity: 0;
+}
+
+.mobile-menu__link {
+  color: #1f1f1d;
+  display: block;
+  margin-top: 30px;
+}
+
+.mobile-menu__link .main-title {
+  font-weight: 600;
+  font-size: 25px;
+}
+
+.mobile-menu__link .sub-title {
+  padding-left: .5rem;
+  color: #9e9c9c;
+  display: block;
+  font-size: 14px;
 }
 
 footer {
@@ -385,7 +568,6 @@ footer {
 footer .content {
   color: white;
   height: 200px;
-  line-height: 200px;
   text-align: center;
   width: 100%;
 }
@@ -394,7 +576,13 @@ footer .content a {
   color: white;
 }
 
-footer .Rfooter .footer-icon {
+footer .Lfooter, footer .Cfooter, footer .Rfooter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer .footer-icon {
   margin: 0 0.2rem;
 }
 
@@ -412,7 +600,7 @@ footer .Rfooter .footer-icon {
 }
 
 .main-contents-area .content .category {
-  background-color: #1f1f1d;
+  background-color: rgba(31, 31, 29, 0.8);
   padding: 0.3rem;
   position: absolute;
   right: 0;
@@ -420,7 +608,7 @@ footer .Rfooter .footer-icon {
 }
 
 .main-contents-area .content .content-info {
-  background-color: #1f1f1d;
+  background-color: rgba(31, 31, 29, 0.8);
   bottom: 0;
   left: 0;
   padding: 0.3rem;
@@ -435,7 +623,11 @@ footer .Rfooter .footer-icon {
   display: grid;
   width: 100%;
   height: 100%;
-  grid-template: "con1 con1 con1 .... con5 .... con6 " 1fr "con1 con1 con1 .... .... .... .... " 10px "con1 con1 con1 .... con9 .... con10 " 1fr ".... .... .... .... .... .... .... " 10px "con3 .... con4 .... con2 con2 con2 " 1fr ".... .... .... .... con2 con2 con2 " 10px "con7 .... con8 .... con2 con2 con2" 1fr /1fr 10px 1fr 10px 1fr 10px 1fr;
+  grid-template: "con1 con1 con1 .... con5 .... con6 " 1fr "con1 con1 con1 .... .... .... .... " 20px "con1 con1 con1 .... con9 .... con10 " 1fr ".... .... .... .... .... .... .... " 20px "con3 .... con4 .... con2 con2 con2 " 1fr ".... .... .... .... con2 con2 con2 " 20px "con7 .... con8 .... con2 con2 con2" 1fr /1fr 20px 1fr 20px 1fr 20px 1fr;
+}
+
+.contents .content {
+  box-shadow: 0 0 15px #555454;
 }
 
 .contents .content::before {
@@ -1503,14 +1695,14 @@ footer .Rfooter .footer-icon {
 }
 
 .about-main-visual .about-main-title {
-  left: 50%;
   letter-spacing: 5px;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  position: absolute;
 }
 
 .about-main-visual .bg-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   height: 100%;
   background-image: url(../img/about-main.jpg);
   background-size: cover;
@@ -1545,7 +1737,7 @@ footer .Rfooter .footer-icon {
 
 .about-what-content .about-what-grid {
   display: grid;
-  grid-template: "... .... ... .... ..." 1rem "... con1 ... con2 ..." 1fr "... .... ... .... ..." 1rem "... con3 ... con4 ..." 1fr "... .... ... .... ..." 1rem /0 1fr 1rem 1fr 0;
+  grid-template: "... .... ... .... ..." 1rem "... con1 ... con2 ..." 1fr "... .... ... .... ..." 20px "... con3 ... con4 ..." 1fr "... .... ... .... ..." 1rem /0 1fr 20px 1fr 0;
 }
 
 .about-what-content .about-con1 {
@@ -1565,6 +1757,7 @@ footer .Rfooter .footer-icon {
 }
 
 .about-what-content .what-con {
+  box-shadow: 0 0 15px #555454;
   background-color: #f3f3f2;
   padding: 1rem;
 }
@@ -1579,13 +1772,18 @@ footer .Rfooter .footer-icon {
 }
 
 .about-what-content .what-con .text-wrapper .what-conL .textL {
+  display: flex;
   line-height: 1.5rem;
   margin-bottom: 0.5rem;
-  margin-left: 1rem;
 }
 
 .about-what-content .what-con .text-wrapper .what-conL .textL .svg-inline--fa {
-  vertical-align: middle;
+  border-radius: 2px;
+  color: white;
+  background-color: #1f1f1d;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: .5rem;
 }
 
 .about-what-content .what-con .text-wrapper .what-conR {
@@ -1605,6 +1803,7 @@ footer .Rfooter .footer-icon {
 .about-who-content .prof-con-wrapper {
   margin-top: 1rem;
   display: flex;
+  box-shadow: 0 0 15px #555454;
 }
 
 .about-who-content .prof-con-wrapper .prof-conL {
@@ -1620,11 +1819,15 @@ footer .Rfooter .footer-icon {
 .about-who-content .prof-con-wrapper .prof-conL .prof-conL-wrapper .prof-picture {
   display: block;
   height: 250px;
-  margin: 0 auto;
+  margin: 1rem auto;
 }
 
 .about-who-content .prof-con-wrapper .prof-conL .prof-conL-wrapper .prof-name {
-  padding: 1rem 0;
+  padding: .5rem 0;
+}
+
+.about-who-content .prof-con-wrapper .prof-conL .prof-conL-wrapper .prof-text {
+  margin-bottom: 1rem;
 }
 
 .about-who-content .prof-con-wrapper .prof-conR {

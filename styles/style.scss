@@ -2,18 +2,16 @@
 @import "modules/variables";
 @import "modules/mixin";
 
-.content-height {
-  padding: 100px 0 100px 0;
-}
-
 //headerstart********************************************************
 
 .grobal-header {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: $cBlack;
+  color: $cWhite;
   left: 0;
-  position: fixed;
+  position: sticky;
+  top: 0;
   right: 0;
-  z-index: 10;
+  z-index: 5;
   height: 50px;
   .header-container {
     display: flex;
@@ -22,6 +20,7 @@
       text-align: center;
       width: 100px;
       .link-logo {
+        color: $cWhite;
       }
     }
     .header-center {
@@ -32,6 +31,9 @@
       .link-text {
         margin-left: 1rem;
         text-align: center;
+        a{
+          color: $cWhite;
+        }
       }
     }
     .header-right {
@@ -40,11 +42,136 @@
       flex-grow: 3;
       flex-wrap: wrap;
       .option-icon {
+        line-height: 19px;
+        .svg-inline--fa{
+          font-size: 19px;
+        }
         margin-left: 1rem;
       }
     }
   }
 }
+
+#mobile-menu-btn{
+  display: none;
+}
+.mobile-menu__btn {
+  border-radius: 3px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  padding: .5rem;
+  background-color:$cWhite;
+  border: none;
+  outline: none !important;
+  cursor: pointer;
+  span{
+    background-color:$cBlack;
+    display: block;
+    height: 2px;
+    width: 35px;
+    margin-bottom: 9px;
+    transition:transform .7s;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+}
+  
+#container{
+  background-color: $cWhite;
+  position:relative;
+  z-index: 2;
+  transition: all 0.5s;
+  .header{
+    background-color: $cWhite;
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+
+.menu-open{
+  & #container{
+    transform: translate(-200px,0);
+    box-shadow: 0 8px 40px -10px rgba(0, 0, 0, 0.8);
+  }
+  & .mobile-menu{
+    &__cover{
+      opacity: 1;
+      visibility: visible;
+    }
+    &__item{
+      transform:none;
+      opacity: 1;
+      @for $i from 1 through 10 {
+        &:nth-child(#{$i}){
+          transition-delay: $i * 0.07s;
+        }
+      }
+    }  
+    &__btn span{
+      background-color: $cBlack;
+      &:nth-child(1){
+        transform: translateY(11px) rotate(135deg);
+      }
+      &:nth-child(2){
+        transform: translateX(-18px) scaleX(0);
+      }
+      &:nth-child(3){
+        transform: translateY(-11px) rotate(-135deg);
+      }
+    }
+  }
+}
+
+.mobile-menu{
+  position: fixed;
+  right: 0;
+  top: 60px;
+  &__cover{
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s;
+    cursor: pointer;
+  }
+  &__main{
+    perspective: 2000px;
+    transform-style: preserve-3d;
+  }
+  &__item{
+    display: block;
+    transform:translate3d(0,0,-1000px);
+    padding: 0 40px;
+    transition: transform 0.3s, opacity 0.2s;
+    opacity: 0;
+  }
+  &__link{
+    color: $cBlack;
+    display: block;
+    margin-top:30px;
+    .main-title{
+      font-weight: 600;
+      font-size: 25px;
+    }
+    .sub-title{
+      padding-left: .5rem;
+      color: $cDGray;
+      display:block;
+      font-size: 14px;
+    }
+  }
+}
+
+
 //headerend********************************************************
 
 //footerstart******************************************************
@@ -55,21 +182,19 @@ footer {
   .content {
     color: $cWhite;
     height: 200px;
-    line-height: 200px;
     text-align: center;
     width: 100%;
     a {
       color: $cWhite;
     }
   }
-  .Lfooter {
+  .Lfooter ,.Cfooter,.Rfooter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  .Cfooter {
-  }
-  .Rfooter {
-    .footer-icon {
-      margin: 0 0.2rem;
-    }
+  .footer-icon {
+    margin: 0 0.2rem;
   }
 }
 //footerend********************************************************
@@ -88,14 +213,14 @@ footer {
       width: 100%;
     }
     .category {
-      background-color: $cBlack;
+      background-color: rgba(31, 31, 29, 0.8);
       padding: 0.3rem;
       position: absolute;
       right: 0;
       top: 0;
     }
     .content-info {
-      background-color: $cBlack;
+      background-color: rgba(31, 31, 29, 0.8);
       bottom: 0;
       left: 0;
       padding: 0.3rem;
@@ -113,14 +238,15 @@ footer {
   height: 100%;
   grid-template:
     "con1 con1 con1 .... con5 .... con6 " 1fr
-    "con1 con1 con1 .... .... .... .... " 10px
+    "con1 con1 con1 .... .... .... .... " 20px
     "con1 con1 con1 .... con9 .... con10 " 1fr
-    ".... .... .... .... .... .... .... " 10px
+    ".... .... .... .... .... .... .... " 20px
     "con3 .... con4 .... con2 con2 con2 " 1fr
-    ".... .... .... .... con2 con2 con2 " 10px
+    ".... .... .... .... con2 con2 con2 " 20px
     "con7 .... con8 .... con2 con2 con2" 1fr
-    /1fr 10px 1fr 10px 1fr 10px 1fr;
+    /1fr 20px 1fr 20px 1fr 20px 1fr;
   .content {
+    box-shadow: 0 0 15px rgb(85, 84, 84);
     &::before {
       display: block;
       content: "";
@@ -224,7 +350,6 @@ footer {
 //contact.htmlstart****************************************************
 
 .contact-form {
-  // padding: 150px 0 50px 0;
   &-title,
   &-message {
     margin-bottom: 1rem;
@@ -341,13 +466,13 @@ footer {
   padding-top: 50px;
   position: relative;
   .about-main-title {
-    left: 50%;
     letter-spacing: 5px;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
   }
   .bg-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     height: 100%;
     background-image: url(../img/about-main.jpg);
     background-size: cover;
@@ -381,10 +506,10 @@ footer {
     grid-template:
       "... .... ... .... ..." 1rem
       "... con1 ... con2 ..." 1fr
-      "... .... ... .... ..." 1rem
+      "... .... ... .... ..." 20px
       "... con3 ... con4 ..." 1fr
       "... .... ... .... ..." 1rem
-      /0 1fr 1rem 1fr 0;
+      /0 1fr 20px 1fr 0;
   }
   @for $i from 1 through 4 {
     .about-con#{$i} {
@@ -393,6 +518,7 @@ footer {
   }
 
   .what-con {
+    box-shadow: 0 0 15px rgb(85, 84, 84);
     background-color: $cLGray;
     padding: 1rem;
     .text-wrapper {
@@ -401,11 +527,17 @@ footer {
       .what-conL {
         width: 25%;
         .textL {
+          display: flex;
           line-height: 1.5rem;
           margin-bottom: 0.5rem;
-          margin-left: 1rem;
+        
           .svg-inline--fa{
-            vertical-align: middle;
+            border-radius: 2px;
+            color: $cWhite;
+            background-color: $cBlack;
+            width: 1.5rem;
+            height: 1.5rem;
+            margin-right: .5rem;
           }
         }
       }
@@ -426,6 +558,7 @@ footer {
   .prof-con-wrapper {
     margin-top: 1rem;
     display: flex;
+    box-shadow: 0 0 15px rgb(85, 84, 84);
     .prof-conL {
       flex-grow: 3;
       .prof-conL-wrapper {
@@ -433,14 +566,16 @@ footer {
         display: flex;
         flex-direction: column;
         .prof-picture {
+
           display: block;
           height: 250px;
-          margin: 0 auto;
+          margin: 1rem auto;
         }
         .prof-name {
-          padding: 1rem 0;
+          padding: .5rem 0;
         }
         .prof-text {
+          margin-bottom: 1rem;
         }
       }
     }
@@ -469,8 +604,6 @@ footer {
 }
 
 .about-gallery {
-  &-title {
-  }
   &-content {
     display: grid;
     grid-template:
@@ -514,8 +647,6 @@ footer {
   padding: 1rem 0;
   .category-list {
     margin-right: 2rem;
-    &:last-child {
-    }
   }
 }
 

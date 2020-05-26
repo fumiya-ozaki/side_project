@@ -188,13 +188,19 @@ footer {
       color: $cWhite;
     }
   }
-  .Lfooter ,.Cfooter,.Rfooter{
+  .Lfooter ,.Cfooter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .Rfooter{
     display: flex;
     align-items: center;
     justify-content: center;
   }
   .footer-icon {
-    margin: 0 0.2rem;
+    font-size: 1.5rem;
+    margin: 0 1rem;
   }
 }
 //footerend********************************************************

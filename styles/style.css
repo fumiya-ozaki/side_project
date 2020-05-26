@@ -576,14 +576,21 @@ footer .content a {
   color: white;
 }
 
-footer .Lfooter, footer .Cfooter, footer .Rfooter {
+footer .Lfooter, footer .Cfooter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer .Rfooter {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 footer .footer-icon {
-  margin: 0 0.2rem;
+  font-size: 1.5rem;
+  margin: 0 1rem;
 }
 
 .main-contents-area .content {

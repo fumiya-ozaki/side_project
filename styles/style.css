@@ -1,144 +1,38 @@
 @charset "UTF-8";
-/*!
- * YUI 3.5.0 - reset.css (http://developer.yahoo.com/yui/3/cssreset/)
- * http://cssreset.com
- * Copyright 2012 Yahoo! Inc. All rights reserved.
- * http://yuilibrary.com/license/
- */
-/*
-    TODO will need to remove settings on HTML since we can't namespace it.
-    TODO with the prefix, should I group by selector or property for weight savings?
-*/
-html {
-  color: #000;
-  background: #fff;
+@import url(/Applications/MAMP/htdocs/wordpress_side-project/wp-content/themes/side_project/styles/venders/_reset.css);
+.under-arrow {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  animation-delay: 0s;
+  animation-direction: normal;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: flow;
+  animation-timing-function: ease;
 }
 
-/*
-  TODO remove settings on BODY since we can't namespace it.
-*/
-/*
-  TODO test putting a class on HEAD.
-      - Fails on FF.
-*/
-body,
-div,
-dl,
-dt,
-dd,
-ul,
-ol,
-li,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-pre,
-code,
-form,
-fieldset,
-legend,
-input,
-textarea,
-p,
-blockquote,
-th,
-td {
-  margin: 0;
-  padding: 0;
+.under-arrow .arrow1 {
+  width: 30px;
+  height: 30px;
+  border: 5px solid;
+  border-color: transparent transparent #1f1f1d #1f1f1d;
+  transform: translateX(-50%);
+  transform: rotate(-45deg);
+  transform-origin: left bottom;
 }
 
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-fieldset,
-img {
-  border: 0;
-}
-
-/*
-  TODO think about hanlding inheritence differently, maybe letting IE6 fail a bit...
-*/
-address,
-caption,
-cite,
-code,
-dfn,
-em,
-strong,
-th,
-var {
-  font-style: normal;
-  font-weight: normal;
-}
-
-ol,
-ul {
-  list-style: none;
-}
-
-caption,
-th {
-  text-align: left;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-size: 100%;
-  font-weight: normal;
-}
-
-q:before,
-q:after {
-  content: '';
-}
-
-abbr,
-acronym {
-  border: 0;
-  font-variant: normal;
-}
-
-/* to preserve line-height and selector appearance */
-sup {
-  vertical-align: text-top;
-}
-
-sub {
-  vertical-align: text-bottom;
-}
-
-input,
-textarea,
-select {
-  font-family: inherit;
-  font-size: inherit;
-  font-weight: inherit;
-}
-
-/*to enable resizing for IE*/
-input,
-textarea,
-select {
-  *font-size: 100%;
-}
-
-/*because legend doesn't inherit in IE */
-legend {
-  color: #000;
-}
-
-/* YUI CSS Detection Stamp */
-#yui3-css-stamp.cssreset {
-  display: none;
+@keyframes flow {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 /******************************************************************
@@ -160,7 +54,6 @@ body {
   text-decoration: none;
 }
 
-/* color */
 /* section-width */
 .content-width {
   margin: 0 auto;
@@ -171,6 +64,25 @@ body {
 /* section-height */
 .content-height {
   padding: 100px 0 100px 0;
+}
+
+/* category-tab */
+.tab {
+  border-radius: 5px;
+  margin-right: 1rem;
+  padding: 0 1rem;
+}
+
+.tab.news {
+  background-color: #f7ff08;
+}
+
+.tab.works {
+  background-color: #ff0df2;
+}
+
+.tab.blog {
+  background-color: #ff260d;
 }
 
 /* hover-animation */
@@ -199,26 +111,6 @@ body {
 
 .hover-Uline:hover:before {
   transform: scale(1);
-}
-
-/* hover-black-btn */
-.hoverBbtn {
-  border: solid 1px #1f1f1d;
-  border-radius: 3px;
-  box-shadow: #1f1f1d 0 0 8px;
-  display: block;
-  height: 50px;
-  line-height: 50px;
-  margin: 0 auto;
-  text-align: center;
-  transition: all 0.5s ease;
-  width: 10rem;
-}
-
-.hoverBbtn:hover {
-  background-color: #1f1f1d;
-  box-shadow: none;
-  color: white;
 }
 
 /* <br class="br-pc"> tablet */
@@ -545,7 +437,7 @@ smartphoneで適用
 .mobile-menu__link {
   color: #1f1f1d;
   display: block;
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 .mobile-menu__link .main-title {
@@ -558,6 +450,23 @@ smartphoneで適用
   color: #9e9c9c;
   display: block;
   font-size: 14px;
+}
+
+.topBtn {
+  border: 1px solid white;
+  border-radius: 50%;
+  align-items: center;
+  background-color: rgba(31, 31, 29, 0.8);
+  color: white;
+  bottom: 15px;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  position: fixed;
+  right: 15px;
+  width: 50px;
+  z-index: 20;
+  cursor: pointer;
 }
 
 footer {
@@ -1223,6 +1132,14 @@ footer .footer-icon {
   text-align: center;
 }
 
+.news .con-container .category-lists {
+  padding: 1rem 0;
+}
+
+.news .con-container .category-lists .category-list {
+  margin-right: .5rem;
+}
+
 .news .con-container .news-lists {
   margin-bottom: 50px;
 }
@@ -1248,6 +1165,7 @@ footer .footer-icon {
 }
 
 .news .con-container .news-lists .news-list .news-link .conC {
+  font-size: 1.5rem;
   flex-grow: 8;
   padding: 1em;
 }
@@ -1274,6 +1192,28 @@ footer .footer-icon {
 .news .con-container .news-lists .news-list:hover .conR img {
   opacity: 0.7;
   transform: scale(1.1);
+}
+
+.news .con-container .news-btn {
+  text-align: center;
+  display: block;
+  border-radius: 3px;
+  background-color: white;
+  border: solid 1px #1f1f1d;
+  box-shadow: #1f1f1d 0 0 8px;
+  font-size: 1rem;
+  height: 50px;
+  line-height: 50px;
+  margin: 0 auto;
+  width: 10rem;
+  transition: all 0.5s ease;
+}
+
+.news .con-container .news-btn:hover {
+  cursor: pointer;
+  background-color: #1f1f1d;
+  box-shadow: none;
+  color: white;
 }
 
 .bottom-banners {
@@ -1697,7 +1637,6 @@ footer .footer-icon {
 
 .about-main-visual {
   height: calc(100vh - 50px);
-  padding-top: 50px;
   position: relative;
 }
 
@@ -1717,7 +1656,7 @@ footer .footer-icon {
 }
 
 .about-nav {
-  background-color: rgba(31, 31, 29, 0.8);
+  background-color: rgba(31, 31, 31, 0.8);
   position: sticky;
   z-index: 5;
   top: 50px;
@@ -1767,6 +1706,7 @@ footer .footer-icon {
   box-shadow: 0 0 15px #555454;
   background-color: #f3f3f2;
   padding: 1rem;
+  position: relative;
 }
 
 .about-what-content .what-con .text-wrapper {
@@ -1801,6 +1741,102 @@ footer .footer-icon {
   line-height: 1.5rem;
   margin-bottom: 0.5rem;
   margin-left: 2rem;
+}
+
+.about-what-content .what-con__btn {
+  transition: all 0.5s ease;
+  vertical-align: middle;
+  display: inline-block;
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid #1f1f1d;
+  background-color: white;
+}
+
+.about-what-content .what-con__btn:hover {
+  cursor: pointer;
+  background-color: #1f1f1d;
+  box-shadow: none;
+  color: white;
+}
+
+.modal-area {
+  padding: 1rem;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.7);
+  background-color: white;
+  z-index: 10;
+  height: calc(100vh - 100px);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  overflow: auto;
+}
+
+.modal-area .modal {
+  display: none;
+}
+
+.modal-area .modal.active {
+  display: block;
+}
+
+.modal-area .modalClose {
+  border: 1px solid #1f1f1d;
+  border-radius: 3px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: #f3f3f2;
+  cursor: pointer;
+}
+
+.modal-area .modalClose span {
+  background-color: #1f1f1d;
+  display: block;
+  height: 2px;
+  width: 35px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal-area .modalClose span:nth-child(1) {
+  transform: translateX(-17px) rotate(45deg);
+}
+
+.modal-area .modalClose span:nth-child(2) {
+  transform: translateX(-17px) rotate(-45deg);
+}
+
+.modal-area.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.mask {
+  cursor: pointer;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(31, 31, 31, 0.8);
+  z-index: 9;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+
+.mask.active {
+  opacity: 0.8;
+  visibility: visible;
 }
 
 .about-who-content {
@@ -1993,10 +2029,28 @@ footer .footer-icon {
   transition: all .8s ease;
 }
 
-.category-lists {
-  padding: 1rem 0;
+.post-image {
+  background-image: url(https://picsum.photos/1350/900?grayscale);
+  background-position: center;
+  background-size: cover;
 }
 
-.category-lists .category-list {
-  margin-right: 2rem;
+.post-image::before {
+  content: "";
+  display: block;
+  padding-top: 50%;
+}
+
+.main-contents {
+  padding: 5rem;
+}
+
+.main-contents .content-info__title {
+  font-size: 2rem;
+  margin: 1rem;
+}
+
+.main-contents .content-text {
+  margin: 0 1rem;
+  line-height: 2;
 }

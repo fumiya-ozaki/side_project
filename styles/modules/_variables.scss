@@ -1,3 +1,6 @@
+@import "mixin";
+@import "colors";
+
 /******************************************************************
 全体適用
 ******************************************************************/
@@ -17,14 +20,6 @@ body {
   text-decoration: none;
 }
 
-/* color */
-$cBlack: rgb(31, 31, 29);
-$cDGray:rgb(158, 156, 156);
-$cGray:rgb(231, 228, 228);
-$cLGray:rgb(243, 243, 242);
-$cWhite: white;
-
-
 /* section-width */
 .content-width {
   margin: 0 auto;
@@ -36,6 +31,23 @@ $cWhite: white;
 .content-height {
   padding: 100px 0 100px 0;
 }
+
+/* category-tab */
+.tab{
+  border-radius: 5px;
+  margin-right: 1rem;
+  padding: 0 1rem;
+  &.news{
+    background-color: #f7ff08;
+  }
+  &.works{
+    background-color: #ff0df2;
+  }
+  &.blog{
+    background-color: #ff260d;
+  }
+}
+
 
 /* hover-animation */
 .hover-Uline{
@@ -59,27 +71,6 @@ $cWhite: white;
     transform: scale(1);
   }
 }
-
-/* hover-black-btn */
-.hoverBbtn {
-  border: solid 1px $cBlack;
-  border-radius: 3px;
-  box-shadow: $cBlack 0 0 8px;
-  display: block;
-  height: 50px;
-  line-height: 50px;
-  margin: 0 auto;
-  text-align: center;
-  transition: all 0.5s ease;
-  width: 10rem;
-  &:hover {
-    background-color: $cBlack;
-    box-shadow: none;
-    color: white;
-  }
-}
-
-
 
 /* <br class="br-pc"> tablet */
 .br-pc {

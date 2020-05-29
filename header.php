@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Kameron&family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet"> -->
+    <!-- <link rel="stylesheet" href="styles/style.min.css">
+    <link rel="stylesheet" href="styles/responsive.min.css"> -->
+    <!-- <script defer src="scripts/all.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <?php wp_head(); ?><!--headerfookpoint-->
+    <title>Side project</title>
+  </head>
+  <body <?php body_class(); ?>> <!--bodystartpoint-->
+  <?php wp_body_open(); ?> <!--bodyfookpoint-->
+
+    <!-- mobile-slide-link -->
+    <div id="global-container">
+      <nav class="mobile-menu">
+        <ul class="mobile-menu__main">
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="<?php echo home_url(); ?>">
+              <span class="main-title">HOME</span>
+              <span class="sub-title">トップへ戻る</span>
+            </a>
+          </li>
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="<?php echo home_url('/archive'); ?>">
+              <span class="main-title">WORKS</span>
+              <span class="sub-title">実績</span>
+            </a>
+          </li>
+          <li class="mobile-menu__item">
+          <a class="mobile-menu__link" href="<?php echo home_url('/archive'); ?>">
+              <span class="main-title">NEWS</span>
+              <span class="sub-title">お知らせ</span>
+            </a>
+          </li>
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="<?php echo home_url(); ?>">
+              <span class="main-title">BLOG</span>
+              <span class="sub-title">ブログ</span>
+            </a>
+          </li>
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="<?php echo home_url('/about'); ?>">
+              <span class="main-title">ABOUT</span>
+              <span class="sub-title">ご紹介</span>
+            </a>
+          </li>
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="#">
+              <span class="main-title">DEMO</span>
+              <span class="sub-title">デモページ</span>
+            </a>
+          </li>
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="<?php echo home_url('/contact'); ?>">
+              <span class="main-title">CONTACT</span>
+              <span class="sub-title">お問い合わせ</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div id="container">
+        <div class="mobile-menu__cover"></div>
+        <header class="grobal-header font-md">
+          <!-- mobile-header-btn-->
+          <button id="mobile-menu-btn" class="mobile-menu__btn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          
+          <!-- main-header -->
+          <nav class="header-container content-width">
+            <div class="header-left"><a class="link-logo" href="<?php echo home_url(); ?>">GO home</a></div>
+            <ul class="header-center">
+            <!-- メニューPHP化 -->
+            <?php /* wp_nav_menu( array(
+              'theme_location'=>'place_global', 
+              'container'     =>'', 
+              'menu_class'    =>'',
+              'items_wrap' => '%3$s',//<ul>を出力しない
+            ));*/ ?>
+              <li class="link-text hover-Uline"><a href="<?php echo home_url('archive'); ?>">WORKS</a></li>
+              <li class="link-text hover-Uline"><a href="<?php echo home_url('archive'); ?>">NEWS</a></li>
+              <li class="link-text hover-Uline"><a href="<?php echo home_url('archive'); ?>">BLOG</a></li>
+              <li class="link-text hover-Uline"><a href="<?php echo home_url('about'); ?>">ABOUT</a></li>
+              <li class="link-text hover-Uline"><a href="#">DEMO</a></li>
+              <li class="link-text hover-Uline"><a href="<?php echo home_url('contact'); ?>">CONTACT</a></li>
+            </ul>
+            <div class="header-right">
+              <p class="option-icon hover-Uline"><i class="fas fa-globe fa-sm"></i> language</p>
+              <p class="option-icon hover-Uline"><i class="fas fa-search fa-sm"></i> search</p>
+            </div>
+          </nav>
+
+        </header>

@@ -1,3 +1,5 @@
+@import "colors";
+
 //animation
 @mixin animation(
   $delay: 0s,
@@ -55,6 +57,18 @@
     transition: all .8s ease;
   }
 }
+
+@mixin hoverBbtn(
+){
+  transition: all 0.5s ease;
+  &:hover {
+    cursor: pointer;
+    background-color: $cBlack;
+    box-shadow: none;
+    color: white;
+  }
+}
+  
 
 @mixin hoverUline() {
   position: relative;

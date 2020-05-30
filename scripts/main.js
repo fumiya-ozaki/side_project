@@ -44,43 +44,42 @@ jQuery(function() {
 
 
 //modalopenclose
-const modalAreaOpen = () => document.getElementById("modalArea").classList.add("active");
-const modalAreaClose = () => document.getElementById("modalArea").classList.remove("active");
-const maskAdd = () =>  document.getElementById("mask").classList.add("active");
-const maskRemove = () =>  document.getElementById("mask").classList.remove("active");
+const modalAreaAction = () => document.getElementById("modalArea").classList.toggle("active");
+const maskAction = () =>  document.getElementById("mask").classList.toggle("active");
+// const maskRemove = () =>  document.getElementById("mask").classList.remove("active");
 
 document.getElementById("modalOpen1").addEventListener("click",function(){
-  modalAreaOpen();
-  maskAdd();
+  modalAreaAction();
+  maskAction();
   document.getElementById("modal1").classList.add("active");
 })
 document.getElementById("modalOpen2").addEventListener("click",function(){
-  modalAreaOpen();
-  maskAdd();
+  modalAreaAction();
+  maskAction();
   document.getElementById("modal2").classList.add("active");
 })
 document.getElementById("modalOpen3").addEventListener("click",function(){
-  modalAreaOpen();
+  modalAreaAction();
   document.getElementById("modal3").classList.add("active");
-  maskAdd();
+  maskAction();
 })
 document.getElementById("modalOpen4").addEventListener("click",function(){
-  modalAreaOpen();
+  modalAreaAction();
   document.getElementById("modal4").classList.add("active");
-  maskAdd();
+  maskAction();
 })
 
 document.getElementById("modalClose").addEventListener("click",function(){
-  modalAreaClose();
-  maskRemove();
+  modalAreaAction();
+  maskAction();
   document.getElementById("modal1").classList.remove("active");
   document.getElementById("modal2").classList.remove("active");
   document.getElementById("modal3").classList.remove("active");
   document.getElementById("modal4").classList.remove("active");
 })
 document.getElementById("mask").addEventListener("click",function(){
-  modalAreaClose();
-  maskRemove();
+  modalAreaAction();
+  maskAction();
   document.getElementById("modal1").classList.remove("active");
   document.getElementById("modal2").classList.remove("active");
   document.getElementById("modal3").classList.remove("active");

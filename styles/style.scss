@@ -6,6 +6,17 @@
 
 //headerstart********************************************************
 
+//消す
+#scrollValue{
+  background-color: red;
+  padding: 20px;
+  position: fixed;
+  top: 100px;
+  right: 0px;
+}
+//消す
+
+
 .grobal-header {
   background-color: $cBlack;
   color: $cWhite;

@@ -97,4 +97,6 @@
             </div>
           </nav>
 
+          <div id="scrollValue"></div>
+
         </header>

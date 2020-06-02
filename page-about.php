@@ -24,12 +24,12 @@ Template Name: about
       </ul>
     </div>
 
-    <section id="whatsMe" class="about-what-content content-width content-height">
+    <section id="whatsMe" class="about-what-content content-width content-height2">
       <p class="about-what-title font-lg">What's me</p>
       <main class="about-what-grid">
         <div class="what-con about-con1">
           <p class="what-con-title font-lg">WORK</p>
-            <button class="what-con__btn" id="modalOpen1">MORE</button>
+            <!-- <button class="what-con__btn" id="modalOpen1">MORE</button> -->
           <span class="text-wrapper">
             <span class="what-conL">
               <p class="textL"><i class="fas fa-pen-nib" data-fa-transform="shrink-5"></i> design</p>
@@ -48,7 +48,7 @@ Template Name: about
         </div>
         <div class="what-con about-con2">
           <p class="title font-lg">SKILL</p>
-          <button class="what-con__btn" id="modalOpen2">MORE</button>
+          <!-- <button class="what-con__btn" id="modalOpen2">MORE</button> -->
           <span class="text-wrapper">
             <span class="what-conL">
               <p class="textL"><i class="fab fa-html5" data-fa-transform="shrink-5"></i> HTML</p>
@@ -71,7 +71,7 @@ Template Name: about
         </div>
         <div class="what-con about-con3">
           <p class="title font-lg">TOOL</p>
-          <button class="what-con__btn" id="modalOpen3">MORE</button>
+          <!-- <button class="what-con__btn" id="modalOpen3">MORE</button> -->
           <span class="text-wrapper">
             <span class="what-conL">
               <p class="textL"><i class="fas fa-laptop" data-fa-transform="shrink-5"></i> PC</p>
@@ -88,7 +88,7 @@ Template Name: about
         </div>
         <div class="what-con about-con4">
           <p class="title font-lg">HOBBY</p>
-          <button class="what-con__btn" id="modalOpen4">MORE</button>
+          <!-- <button class="what-con__btn" id="modalOpen4">MORE</button> -->
           <span class="text-wrapper">
             <span class="what-conL">
               <p class="textL"><i class="fas fa-golf-ball" data-fa-transform="shrink-5"></i> golf</p>
@@ -107,9 +107,28 @@ Template Name: about
           </span>
           <div class="modal-area content-width" id="modalArea">
 
-            <div class="modal" id="modal1">
-              <p>モーダル1</p>
-              <p>これはモーダル１です</p>
+            <!-- <div class="modal" id="modal1">
+              <p>・デザイン</p>
+              <p>４原則（近接・整列・反復・コントラスト）を大切にしています</p>
+              <p>優れたデザインはひと目で情報を伝えるためです</p>
+              <p>要素やコンテンツの意味やまとまりを整え</p>
+              <p>人間の目の動きと負担を最小限にすることで</p>
+              <p>ユーザーへ情報を早く的確に伝えます</p>
+
+              <P>・色</P>
+              <P>イメージや好みなどの感覚と</P>
+              <P>色相環や色彩心理などの論理を</P>
+              <P>調和させた配色を大切にしています</P>
+
+              <p>・保守性</p>
+              <p>修正に負担がかからない制作を大切にしています</p>
+              <p>保守と安定を担保した制作をいたします</p>
+              
+              <p>・拡張性</p>
+              <p>ビジネスの拡大に沿って拡張可能な制作をいたします</p>
+              <p>コンテンツの追加や変更に強く</p>
+              <p>リリースに負担がかからない制作をいたします</p>
+
             </div>
 
             <div class="modal" id="modal2">
@@ -125,12 +144,12 @@ Template Name: about
               <p>モーダル4</p>
               <p>これはモーダル４です</p>
             </div>
-            <a id="modalClose" class="modalClose">
+            <a id="modalClose" class="modalClose mobile-menu__btn">
               <span></span>
               <span></span>
             </a>
           </div>
-          <div class="mask" id="mask"></div>
+          <div class="mask" id="mask"></div> -->
 
         </div>
         <div class="under-arrow">
@@ -139,7 +158,7 @@ Template Name: about
       </main>
     </section>
 
-    <section id="whosMe" class="about-who-content content-width content-height">
+    <section id="whosMe" class="about-who-content content-width content-height2">
       <p class="prof-title font-lg">Profile</p>
       <span class="prof-con-wrapper">
         <div class="prof-conL">
@@ -175,7 +194,7 @@ Template Name: about
       </div>
     </section>
 
-    <section id="aboutGallery" class="about-gallery content-width content-height">
+    <section id="aboutGallery" class="about-gallery content-width content-height2">
       <p class="about-gallery-title font-lg">Gallery</p>
       <ul class="about-gallery-content">
         <li class="g-picture picture1">

@@ -1,25 +1,29 @@
-class MobileMenu{
-  constructor(){
-    this.DOM = {};
-    this.DOM.btn = document.querySelector('.mobile-menu__btn');
-    this.DOM.cover = document.querySelector('.mobile-menu__cover');
-    this.DOM.container = document.querySelector('#global-container');
-    this.eventType = this._getEventType();
-    this._addEvent();
+window.onload = function() {
+  // document.addEventListener('DOMContentLoaded', function(){ //動作エラー
+  
+  //hamburgermenustart
+  class MobileMenu{
+    constructor(){
+      this.DOM = {};
+      this.DOM.btn = document.querySelector('.mobile-menu__btn');
+      this.DOM.cover = document.querySelector('.mobile-menu__cover');
+      this.DOM.container = document.querySelector('#global-container');
+      this.eventType = this._getEventType();
+      this._addEvent();
+    }
+    _getEventType(){
+      return window.ontouchstart ? 'touchstart' : 'click';
+    }
+    _toggle(){
+      this.DOM.container.classList.toggle('menu-open');
+    }
+    _addEvent(){
+      this.DOM.btn.addEventListener(this.eventType,this._toggle.bind(this));
+      this.DOM.cover.addEventListener(this.eventType,this._toggle.bind(this));
+    }
   }
-  _getEventType(){
-    return window.ontouchstart ? 'touchstart' : 'click';
-  }
-  _toggle(){
-    this.DOM.container.classList.toggle('menu-open');
-  }
-  _addEvent(){
-    this.DOM.btn.addEventListener(this.eventType,this._toggle.bind(this));
-    this.DOM.cover.addEventListener(this.eventType,this._toggle.bind(this));
-  }
-}
-new MobileMenu();
-
+  new MobileMenu();
+  //hamburgermenuend
 
 //scrolltopbtnstart
 jQuery(function() {
@@ -42,51 +46,7 @@ jQuery(function() {
 });
 //scrolltopbtnend
 
-
-//modalopenclose
-const modalAreaAction = () => document.getElementById("modalArea").classList.toggle("active");
-const maskAction = () =>  document.getElementById("mask").classList.toggle("active");
-// const maskRemove = () =>  document.getElementById("mask").classList.remove("active");
-
-document.getElementById("modalOpen1").addEventListener("click",function(){
-  modalAreaAction();
-  maskAction();
-  document.getElementById("modal1").classList.add("active");
-})
-document.getElementById("modalOpen2").addEventListener("click",function(){
-  modalAreaAction();
-  maskAction();
-  document.getElementById("modal2").classList.add("active");
-})
-document.getElementById("modalOpen3").addEventListener("click",function(){
-  modalAreaAction();
-  document.getElementById("modal3").classList.add("active");
-  maskAction();
-})
-document.getElementById("modalOpen4").addEventListener("click",function(){
-  modalAreaAction();
-  document.getElementById("modal4").classList.add("active");
-  maskAction();
-})
-
-document.getElementById("modalClose").addEventListener("click",function(){
-  modalAreaAction();
-  maskAction();
-  document.getElementById("modal1").classList.remove("active");
-  document.getElementById("modal2").classList.remove("active");
-  document.getElementById("modal3").classList.remove("active");
-  document.getElementById("modal4").classList.remove("active");
-})
-document.getElementById("mask").addEventListener("click",function(){
-  modalAreaAction();
-  maskAction();
-  document.getElementById("modal1").classList.remove("active");
-  document.getElementById("modal2").classList.remove("active");
-  document.getElementById("modal3").classList.remove("active");
-  document.getElementById("modal4").classList.remove("active");
-})
-//modalopenclose
-
+// windowscrollcheckstart
 window.addEventListener("scroll",function(){
   let scroll = document.documentElement.scrollTop;
   document.getElementById("scrollValue").textContent = scroll;
@@ -96,5 +56,8 @@ window.addEventListener("scroll",function(){
     document.querySelector("main").classList.remove("test");
   }
 })
+// windowscrollcheckend
 
+// },false);  //動作エラー
+};
 

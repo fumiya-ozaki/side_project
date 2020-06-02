@@ -64,6 +64,21 @@
   .contact-form-grid {
     grid-template: " .... .... ...." 1rem " con1 .... ...." 1fr " con2 .... ...." 1fr " con3 .... ...." 1fr " con4 .... ...." 1fr " con5 .... ...." 1fr " con6 .... ...." 1fr " .... .... ...." 1rem " con7 con7 con7" 1fr " .... .... ...." 1rem " con8 con8 con8"  / 1fr;
   }
+  .SAwrapper {
+    flex-direction: column;
+  }
+  .SAwrapper__left {
+    width: 100% !important;
+  }
+  .SAwrapper__right {
+    width: 100% !important;
+  }
+  .SAwrapper__right .swiper-container {
+    margin: 0 auto;
+  }
+  element.style {
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 481px) and (max-width: 959px) {
@@ -110,5 +125,17 @@
   }
   .about-who-content .prof-con-wrapper .prof-conR {
     margin-top: 1rem;
+  }
+  .SAwrapper__left {
+    width: 100%;
+  }
+  .SAwrapper__rigtht {
+    width: 100%;
+  }
+  .SAwrapper__rigtht .swiper-container .swiper-wrapper .swiper-slide {
+    width: 100%;
+  }
+  element.style {
+    width: 100%;
   }
 }

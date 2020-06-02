@@ -9,6 +9,13 @@
   box-sizing: border-box;
 }
 
+/* text-control */
+// p, h1{
+//   text-overflow: ellipsis;
+//   white-space: nowrap;
+//   overflow: hidden;
+// }
+
 /* googlefont */
 body {
   font-family: "Kameron", "Noto Sans JP", sans-serif;
@@ -29,6 +36,9 @@ body {
 
 /* section-height */
 .content-height {
+  padding: 50px 0 50px 0;
+}
+.content-height2 {
   padding: 100px 0 100px 0;
 }
 

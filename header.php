@@ -3,11 +3,6 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Kameron&family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet"> -->
-    <!-- <link rel="stylesheet" href="styles/style.min.css">
-    <link rel="stylesheet" href="styles/responsive.min.css"> -->
-    <!-- <script defer src="scripts/all.js"></script> -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <?php wp_head(); ?><!--headerfookpoint-->
     <title>Side project</title>
   </head>
@@ -25,19 +20,19 @@
             </a>
           </li>
           <li class="mobile-menu__item">
-            <a class="mobile-menu__link" href="<?php echo home_url('/archive'); ?>">
+            <a class="mobile-menu__link" href="<?php echo home_url('/works'); ?>">
               <span class="main-title">WORKS</span>
               <span class="sub-title">実績</span>
             </a>
           </li>
           <li class="mobile-menu__item">
-          <a class="mobile-menu__link" href="<?php echo home_url('/archive'); ?>">
+          <a class="mobile-menu__link" href="<?php echo home_url('/news'); ?>">
               <span class="main-title">NEWS</span>
               <span class="sub-title">お知らせ</span>
             </a>
           </li>
           <li class="mobile-menu__item">
-            <a class="mobile-menu__link" href="<?php echo home_url(); ?>">
+            <a class="mobile-menu__link" href="<?php echo home_url('/blog'); ?>">
               <span class="main-title">BLOG</span>
               <span class="sub-title">ブログ</span>
             </a>
@@ -49,7 +44,7 @@
             </a>
           </li>
           <li class="mobile-menu__item">
-            <a class="mobile-menu__link" href="#">
+            <a class="mobile-menu__link" href="<?php echo home_url('/demo')?>">
               <span class="main-title">DEMO</span>
               <span class="sub-title">デモページ</span>
             </a>
@@ -84,19 +79,29 @@
               'menu_class'    =>'',
               'items_wrap' => '%3$s',//<ul>を出力しない
             ));*/ ?>
-              <li class="link-text hover-Uline"><a href="<?php echo home_url('archive'); ?>">WORKS</a></li>
-              <li class="link-text hover-Uline"><a href="<?php echo home_url('archive'); ?>">NEWS</a></li>
-              <li class="link-text hover-Uline"><a href="<?php echo home_url('archive'); ?>">BLOG</a></li>
+              <li class="link-text hover-Uline"><a href="<?php echo home_url('works'); ?>">WORKS</a></li>
+              <li class="link-text hover-Uline"><a href="<?php echo home_url('news'); ?>">NEWS</a></li>
+              <li class="link-text hover-Uline"><a href="<?php echo home_url('blog'); ?>">BLOG</a></li>
               <li class="link-text hover-Uline"><a href="<?php echo home_url('about'); ?>">ABOUT</a></li>
-              <li class="link-text hover-Uline"><a href="#">DEMO</a></li>
+              <li class="link-text hover-Uline"><a href="<?php echo home_url('demo'); ?>">DEMO</a></li>
               <li class="link-text hover-Uline"><a href="<?php echo home_url('contact'); ?>">CONTACT</a></li>
             </ul>
             <div class="header-right">
-              <p class="option-icon hover-Uline"><i class="fas fa-globe fa-sm"></i> language</p>
-              <p class="option-icon hover-Uline"><i class="fas fa-search fa-sm"></i> search</p>
+              <div class="option-icon iconL hover-Uline">
+                <i class="fas fa-globe fa-sm"></i> language
+              </div>
+              <div class="option-icon iconR hover-Uline">
+                <i class="fas fa-search fa-sm"></i> search
+                <form class="search-form fixed" method="get" role="search"  action="<?php echo esc_url(home_url());?>">
+                  <div class="search-box">
+                    <input class="search-input" type="text" name="s" placeholder="キーワードを入力してください">
+                    <button type="submit" class="button button-submit"><i class="fas fa-search fa-sm"></i></button>
+                  </div>
+                </form>
+              </div>
             </div>
           </nav>
 
-          <div id="scrollValue"></div>
+          <div id="scrollValue"></div> <!--スクロール値デバッグ用-->
 
         </header>

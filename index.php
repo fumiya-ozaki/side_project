@@ -109,7 +109,7 @@
       
         <section class="news " id="news">
           <div class="con-container content-width content-height">
-          <div class="news-title font-lg">news / information</div>
+          <div class="news-title font-lg">information</div>
           <ul class="news-lists">
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?> <!--roopstart-->
               <li class="news-list">
@@ -124,34 +124,30 @@
                   </span>
                   <span class="conC"><p><?php the_title(); ?></p></span><!--content-title-->
                   <span class="conR">
-                    <?php the_post_thumbnail('thumbside'); ?>
-                    <img class="news-image" src="<?php echo get_template_directory_uri();?>/img/business_01.jpeg" alt="写真">
+                    <?php the_post_thumbnail('medium'); ?>
                   </span><!--content-image-->
                 </a>
               </li>
             <?php endwhile; endif; ?> <!--roopend-->
           </ul>
-          <a class="news-btn" href="<?php echo home_url('/archive'); ?>">VIEW MORE</a>
+          <a class="news-btn" href="<?php echo home_url('/news'); ?>">VIEW MORE</a>
         </div>
         </section>
       
         <section class="bottom-banners">
           <a class="banner banner-1" href="#">
             <div class="banner-content bg-zoom-content">
-              <p>text text text</p>
-              <p>text text text</p>
+              <p>under construction</p>
             </div>
           </a>
           <a class="banner banner-2" href="#">
             <div class="banner-content bg-zoom-content">
-              <p>text text text</p>
-              <p>text text text</p>
+              <p>under construction</p>
             </div>
           </a>
           <a class="banner banner-3" href="#">
             <div class="banner-content bg-zoom-content">
-              <p>text text text</p>
-              <p>text text text</p>
+              <p>under construction</p>
             </div>
           </a>
         </section>

@@ -3,7 +3,7 @@
             <a class="hover-Uline" href="<?php home_url('/contact'); ?>"><i class="far fa-envelope fa-sm"></i> contact</a>
           </div>
           <div class="content Cfooter">
-            <p><a class="hover-Uline" href="<?php home_url(); ?>">privacy policy</a> &copy;company</p>
+            <a class="hover-Uline" href="<?php home_url(); ?>">privacy policy</a>
           </div>
           <div class="content Rfooter">
             <!-- <a class="footer-icon hover-Uline" href="#"><i class="fab fa-youtube fa-sm"></i></a> -->

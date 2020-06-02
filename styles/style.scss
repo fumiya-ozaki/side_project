@@ -3,11 +3,12 @@
 @import "modules/mixin";
 @import "modules/colors";
 
-
 //headerstart********************************************************
+//googlefont読み込み
+@import url("https://fonts.googleapis.com/css2?family=Kameron&family=Noto+Sans+JP:wght@100&display=swap");
 
 //消す
-#scrollValue{
+#scrollValue {
   background-color: red;
   padding: 20px;
   position: fixed;
@@ -15,7 +16,6 @@
   right: 0px;
 }
 //消す
-
 
 .grobal-header {
   background-color: $cBlack;
@@ -44,7 +44,7 @@
       .link-text {
         margin-left: 1rem;
         text-align: center;
-        a{
+        a {
           color: $cWhite;
         }
       }
@@ -56,16 +56,34 @@
       flex-wrap: wrap;
       .option-icon {
         line-height: 19px;
-        .svg-inline--fa{
+        margin-left: 1rem;
+        .svg-inline--fa {
           font-size: 19px;
         }
-        margin-left: 1rem;
+        &.iconR{
+          .search-form{
+            position: fixed;
+            top:50px;
+            .search-box{
+              display: flex;
+              background-color: red;
+              .button-submit{
+                cursor: pointer;
+                
+              }
+            }
+            .search-input{
+              font-size: 15px;
+            }
+          }
+
+        }
       }
     }
   }
 }
 
-#mobile-menu-btn{
+#mobile-menu-btn {
   display: none;
 }
 .mobile-menu__btn {
@@ -73,30 +91,30 @@
   position: absolute;
   top: 5px;
   right: 5px;
-  padding: .5rem;
-  background-color:$cWhite;
+  padding: 0.5rem;
+  background-color: $cWhite;
   border: none;
   outline: none !important;
   cursor: pointer;
-  span{
-    background-color:$cBlack;
+  span {
+    background-color: $cBlack;
     display: block;
     height: 2px;
     width: 35px;
     margin-bottom: 9px;
-    transition:transform .7s;
-    &:last-child{
+    transition: transform 0.7s;
+    &:last-child {
       margin-bottom: 0;
     }
   }
 }
-  
-#container{
+
+#container {
   background-color: $cWhite;
-  position:relative;
+  position: relative;
   z-index: 2;
   transition: all 0.5s;
-  .header{
+  .header {
     background-color: $cWhite;
     height: 50px;
     display: flex;
@@ -105,86 +123,86 @@
   }
 }
 
-.menu-open{
-  & #container{
-    transform: translate(-200px,0);
+.menu-open {
+  & #container {
+    transform: translate(-200px, 0);
     box-shadow: 0 8px 40px -10px rgba(0, 0, 0, 0.8);
   }
-  & .mobile-menu{
-    &__cover{
+  & .mobile-menu {
+    &__cover {
       opacity: 1;
       visibility: visible;
     }
-    &__item{
-      transform:none;
+    &__item {
+      transform: none;
       opacity: 1;
       @for $i from 1 through 10 {
-        &:nth-child(#{$i}){
+        &:nth-child(#{$i}) {
           transition-delay: $i * 0.07s;
         }
       }
-    }  
-    &__btn span{
+    }
+    &__btn span {
       background-color: $cBlack;
-      &:nth-child(1){
+      &:nth-child(1) {
         transform: translateY(11px) rotate(135deg);
       }
-      &:nth-child(2){
+      &:nth-child(2) {
         transform: translateX(-18px) scaleX(0);
       }
-      &:nth-child(3){
+      &:nth-child(3) {
         transform: translateY(-11px) rotate(-135deg);
       }
     }
   }
 }
 
-.mobile-menu{
+.mobile-menu {
   position: fixed;
   right: 0;
   top: 60px;
-  &__cover{
+  &__cover {
     z-index: 10;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0, 0, 0, 0.3);
     opacity: 0;
     visibility: hidden;
     transition: opacity 1s;
     cursor: pointer;
   }
-  &__main{
+  &__main {
     perspective: 2000px;
     transform-style: preserve-3d;
   }
-  &__item{
+  &__item {
     display: block;
-    transform:translate3d(0,0,-1000px);
+    transform: translate3d(0, 0, -1000px);
     padding: 0 40px;
     transition: transform 0.3s, opacity 0.2s;
     opacity: 0;
   }
-  &__link{
+  &__link {
     color: $cBlack;
     display: block;
-    margin-top:10px;
-    .main-title{
+    margin-top: 10px;
+    .main-title {
       font-weight: 600;
       font-size: 25px;
     }
-    .sub-title{
-      padding-left: .5rem;
+    .sub-title {
+      padding-left: 0.5rem;
       color: $cDGray;
-      display:block;
+      display: block;
       font-size: 14px;
     }
   }
 }
 
-.topBtn{
+.topBtn {
   border: 1px solid $cWhite;
   border-radius: 50%;
   align-items: center;
@@ -200,7 +218,6 @@
   z-index: 20;
   cursor: pointer;
 }
-
 
 //headerend********************************************************
 
@@ -218,12 +235,13 @@ footer {
       color: $cWhite;
     }
   }
-  .Lfooter ,.Cfooter{
+  .Lfooter,
+  .Cfooter {
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  .Rfooter{
+  .Rfooter {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -235,9 +253,9 @@ footer {
 }
 //footerend********************************************************
 
-
 //index.htmlstart**************************************************
 .main-contents-area {
+  height: calc(100vh - 50px);
   .content {
     background-size: cover;
     background-position: center;
@@ -308,10 +326,10 @@ footer {
     .category-lists {
       padding: 1rem 0;
       .category-list {
-        margin-right: .5rem;
+        margin-right: 0.5rem;
       }
     }
-    
+
     .news-lists {
       margin-bottom: 50px;
       .news-link:last-child {
@@ -339,7 +357,7 @@ footer {
             overflow: hidden;
             height: 100px;
             width: 100px;
-            .news-image {
+            .wp-post-image {
               height: 100%;
               width: 100%;
               object-fit: cover;
@@ -358,7 +376,7 @@ footer {
         }
       }
     }
-    .news-btn{
+    .news-btn {
       text-align: center;
       display: block;
       border-radius: 3px;
@@ -368,10 +386,9 @@ footer {
       font-size: 1rem;
       height: 50px;
       line-height: 50px;
-      margin: 0 auto;    
+      margin: 0 auto;
       width: 10rem;
-      @include hoverBbtn(
-        );
+      @include hoverBbtn();
     }
   }
 }
@@ -403,7 +420,6 @@ footer {
 
 //index.htmlend********************************************************
 
-
 //contact.htmlstart****************************************************
 
 .contact-form {
@@ -428,8 +444,11 @@ footer {
     " con8 con8 con8"
     / 1fr 1rem 1fr;
 }
-.check-box {
+.checkbox {
   margin-left: 1rem;
+  input {
+    vertical-align: text-top;
+  }
   &:first-child {
     margin-left: 0;
   }
@@ -473,6 +492,7 @@ footer {
   transform-style: preserve-3d;
   width: 250px;
   & span {
+    // top: 0;//追加
     border: solid 1px $cBlack;
     height: 100%;
     line-height: 48px;
@@ -537,7 +557,7 @@ footer {
 }
 
 .about-nav {
-  background-color:$cOpblack;
+  background-color: $cOpblack;
   position: sticky;
   z-index: 5;
   top: 50px;
@@ -587,14 +607,14 @@ footer {
           display: flex;
           line-height: 1.5rem;
           margin-bottom: 0.5rem;
-        
-          .svg-inline--fa{
+
+          .svg-inline--fa {
             border-radius: 2px;
             color: $cWhite;
             background-color: $cBlack;
             width: 1.5rem;
             height: 1.5rem;
-            margin-right: .5rem;
+            margin-right: 0.5rem;
           }
         }
       }
@@ -607,23 +627,23 @@ footer {
         }
       }
     }
-    &__btn{
+    &__btn {
       @include hoverBbtn();
       vertical-align: middle;
       display: inline-block;
-      width:4rem;
+      width: 4rem;
       height: 4rem;
       border: 1px solid $cBlack;
       background-color: $cWhite;
     }
   }
 }
-.modal-area{
+.modal-area {
   padding: 1rem;
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%) scale(.7);
+  transform: translate(-50%, -50%) scale(0.7);
   background-color: $cWhite;
   z-index: 10;
   height: calc(100vh - 100px);
@@ -631,13 +651,13 @@ footer {
   visibility: hidden;
   transition: 0.3s;
   overflow: auto;
-  .modal{
+  .modal {
     display: none;
-    &.active{
-    display: block;
+    &.active {
+      display: block;
     }
   }
-  .modalClose{
+  .modalClose {
     border: 1px solid $cBlack;
     border-radius: 3px;
     height: 50px;
@@ -645,36 +665,36 @@ footer {
     position: absolute;
     top: 1rem;
     right: 1rem;
-    background-color:$cLGray;
+    background-color: $cLGray;
     cursor: pointer;
-    span{
-      background-color:$cBlack;
+    span {
+      background-color: $cBlack;
       display: block;
       height: 2px;
       width: 35px;
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%,-50%);
-      &:nth-child(1){
+      transform: translate(-50%, -50%);
+      &:nth-child(1) {
         transform: translateX(-17px) rotate(45deg);
       }
-      &:nth-child(2){
+      &:nth-child(2) {
         transform: translateX(-17px) rotate(-45deg);
       }
-    
+
       // &:last-child{
       //   margin-bottom: 0;
       // }
-    }  
+    }
   }
-  &.active{
+  &.active {
     opacity: 1;
     visibility: visible;
-    transform: translate(-50%,-50%) scale(1);
+    transform: translate(-50%, -50%) scale(1);
   }
 }
-.mask{
+.mask {
   cursor: pointer;
   position: fixed;
   top: 0;
@@ -686,7 +706,7 @@ footer {
   opacity: 0;
   visibility: hidden;
   transition: 0.3s;
-  &.active{
+  &.active {
     opacity: 0.8;
     visibility: visible;
   }
@@ -710,7 +730,7 @@ footer {
           margin: 1rem auto;
         }
         .prof-name {
-          padding: .5rem 0;
+          padding: 0.5rem 0;
         }
         .prof-text {
           margin-bottom: 1rem;
@@ -781,12 +801,49 @@ footer {
 
 //archive.htmlstart****************************************************
 
+.page_navi {
+  text-align: center;
+}
+
+.page_navi li {
+  display: inline;
+  list-style: none;
+}
+
+.page_navi li.current span {
+  color: #000;
+  font-weight: bold;
+  display: inline-block;
+  padding: 3px 7px;
+  background: $cWhite;
+  border: solid 1px #999;
+}
+
+.page_navi li a {
+  color: #333;
+  padding: 3px 7px;
+  background: #eee;
+  display: inline-block;
+  border: solid 1px #999;
+  text-decoration: none;
+}
+
+.page_navi li a:hover {
+  color: #f00;
+}
+
+.page_navi li.page_nums span {
+  color: #fff;
+  padding: 3px 7px;
+  background: #666;
+  display: inline-block;
+  border: solid 1px #333;
+}
 
 //archive.htmlend*****************************************************
 
-
 //single.phpstart*****************************************************
-.post-image{
+.post-image {
   background-image: url(https://picsum.photos/1350/900?grayscale);
   background-position: center;
   background-size: cover;
@@ -796,19 +853,86 @@ footer {
     padding-top: 50%;
   }
 }
-.main-contents{
-  padding: 5rem;   //仮置
-  .content-info{
-    &__title{
+.main-contents {
+  padding: 5rem; //仮置
+  .content-info {
+    &__title {
       font-size: 2rem;
       margin: 1rem;
     }
   }
-  .content-text{
+  .content-text {
     margin: 0 1rem;
     line-height: 2;
   }
 }
-
 //single.phpend*****************************************************
+
+//demo.phpstart*****************************************************
+.demo{
+  margin-top: 50px;
+}
+.demo-container{
+  padding: 2rem 0;
+}
+.slider-area {
+  margin: 2rem 0;
+  .SAwrapper {
+    display: flex;
+    justify-content: space-between;
+    &__left {
+      width: 50%;
+      background-color: $cLGray;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      p,h1{
+        text-align: center;
+        line-height: 2rem;
+      }
+      h1{
+        font-size: 1.3rem;
+        margin: 0 2rem 1rem 2rem;
+        border-bottom: solid $cBlack 1px ;
+      }
+    }
+    &__right {
+      width: 50%;
+      .swiper-container{
+        .swiper-slide {
+          height: 25vh;
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+        .swiper-slide.slide1 {
+          background-image: url(../img/business_01.jpeg);
+        }
+        .swiper-slide.slide2 {
+          background-image: url(../img/business_02.jpeg);
+        }
+        .swiper-slide.slide3 {
+          background-image: url(../img/business_03.jpeg);
+        }
+        .swiper-slide.slide4 {
+          background-image: url(../img/business_04.jpeg);
+        }
+        .swiper-slide.slide5 {
+          background-image: url(../img/business_05.jpeg);
+        }
+        .swiper-slide.slide6 {
+          background-image: url(../img/business_06.jpeg);
+        }
+      }
+      .swiper-pagination-fraction{
+        color:rgb(20,122,246);
+      }
+    }
+  }
+}
+
+
+//demo.phpend*****************************************************
+
 

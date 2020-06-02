@@ -1,5 +1,4 @@
-window.onload = function() {
-  // document.addEventListener('DOMContentLoaded', function(){ //動作エラー
+  document.addEventListener('DOMContentLoaded', function(){
   
   //hamburgermenustart
   class MobileMenu{
@@ -56,8 +55,6 @@ window.addEventListener("scroll",function(){
     document.querySelector("main").classList.remove("test");
   }
 })
-// windowscrollcheckend
 
-// },false);  //動作エラー
-};
+},false);
 

@@ -94,7 +94,7 @@
                 <i class="fas fa-search fa-sm"></i> search
                 <form class="search-form fixed" method="get" role="search"  action="<?php echo esc_url(home_url());?>">
                   <div class="search-box">
-                    <input class="search-input" type="text" name="s" placeholder="キーワードを入力してください">
+                    <input class="search-input" type="text" name="s" placeholder="キーワードを入力">
                     <button type="submit" class="button button-submit"><i class="fas fa-search fa-sm"></i></button>
                   </div>
                 </form>

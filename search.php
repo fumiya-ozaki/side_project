@@ -1,9 +1,12 @@
 <?php get_header(); ?>  <!--header-import-->
 <main class="news">
   <div class="con-container content-width content-height">
+    <p class="font-lg">
+      SEARCH
+    </p>
     <form class="search-form" method="get" role="search"  action="<?php echo esc_url( home_url() );?>">
       <div class="search-box">
-        <input type="text" name="s" class="search-input" placeholder="キーワードを入力してください" value="<?php the_search_query();?>">
+        <input type="text" name="s" class="search-input" placeholder="キーワードを入力" value="<?php the_search_query();?>">
         <button type="submit" class="button button-submit"><i class="fas fa-search fa-sm"></i></button>
       </div>  
     </form>  
@@ -16,7 +19,7 @@
         </div>  
       <?php endif; ?>  
     </div>
-    
+
     <?php if(have_posts() && get_search_query()) :
       while(have_posts()): the_post();?>
         <ul class="news-lists">
@@ -54,9 +57,6 @@
     <?php endif; ?>
   </div>
 
-
 </main>
-
-
 
 <?php get_footer(); //footerimport

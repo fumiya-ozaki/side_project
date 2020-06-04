@@ -1,6 +1,6 @@
-  document.addEventListener('DOMContentLoaded', function(){
+  document.addEventListener('DOMContentLoaded', function(){  //DOMloadstart
   
-  //hamburgermenustart
+//hamburgermenustart
   class MobileMenu{
     constructor(){
       this.DOM = {};
@@ -22,7 +22,7 @@
     }
   }
   new MobileMenu();
-  //hamburgermenuend
+//hamburgermenuend
 
 //scrolltopbtnstart
 jQuery(function() {
@@ -45,16 +45,15 @@ jQuery(function() {
 });
 //scrolltopbtnend
 
-// windowscrollcheckstart
-window.addEventListener("scroll",function(){
-  let scroll = document.documentElement.scrollTop;
-  document.getElementById("scrollValue").textContent = scroll;
-  if(scroll > 300){
-    document.querySelector("main").classList.add("test");
-  }else{
-    document.querySelector("main").classList.remove("test");
-  }
-})
+//serchbtnstart
+  document.getElementById("searchBtn").addEventListener("click",function(){
+    document.getElementById("searchForm").classList.toggle("active");
+  });
+  
+  document.getElementById("langSelector").addEventListener("click",function(){
+    document.getElementById("langBox").classList.toggle("active");
+  })
+//serchbtnend
 
-},false);
+},false);  //DOMloadend
 

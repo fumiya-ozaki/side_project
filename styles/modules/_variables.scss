@@ -5,21 +5,10 @@
 全体適用
 ******************************************************************/
 /* boxsizing */
-* {
-  box-sizing: border-box;
-}
-
-/* text-control */
-// p, h1{
-//   text-overflow: ellipsis;
-//   white-space: nowrap;
-//   overflow: hidden;
-// }
+* {box-sizing: border-box;}
 
 /* googlefont */
-body {
-  font-family: "Kameron", "Noto Sans JP", sans-serif;
-}
+body {font-family: "Kameron", "Noto Sans JP", sans-serif;}
 
 /* a decoration reset */
 * a {
@@ -35,27 +24,18 @@ body {
 }
 
 /* section-height */
-.content-height {
-  padding: 50px 0 50px 0;
-}
-.content-height2 {
-  padding: 100px 0 100px 0;
-}
+.content-height {padding: 50px 0 50px 0;}
+.content-height2 {padding: 100px 0 100px 0;}
 
 /* category-tab */
 .tab{
+  width: 5rem;
   border-radius: 5px;
   margin-right: 1rem;
   padding: 0 1rem;
-  &.news{
-    background-color: #f7ff08;
-  }
-  &.works{
-    background-color: #ff0df2;
-  }
-  &.blog{
-    background-color: #ff260d;
-  }
+  &.news{background-color: #f7ff08;}
+  &.works{background-color: #ff0df2;}
+  &.blog{background-color: #ff260d;}
 }
 
 

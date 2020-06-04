@@ -164,6 +164,43 @@ Template Name: demo
   </div>
 </section>
 
+<section class="demo-container play-ground">
+  <p class="demo-con-title font-lr">アニメーション</p>
+  <div class="demo-section animation-area">
+      <div class="animation-char" id="aniChar1">
+        Lorem ipsum dolor sit amet,consectetur
+      </div>
+      <div class="animation-char" id="aniChar2">
+        adipiscing elit, sed do eiusmod tempor
+      </div>
+      <div class="animation-char" id="aniChar3">
+        <div class="block-animation">incididunt</div>
+        <div class="block-animation">ut</div>
+        <div class="block-animation">labore</div>
+        <div class="block-animation">et</div>
+        <div class="block-animation">dolore</div>
+        <div class="block-animation">magna</div>
+        <div class="block-animation">aliqua</div>
+      </div>
+  </div>
+  <p>文字アニメーションのサンプルです</p>
+  <p>段落/単語/文字などアニメーションの単位や</p>
+  <p>スピード/イージング/フェードなど</p>
+  <p>ご希望に合わせた内容で作成いたします</p>
+  <div class="playback_controls_row">
+      <a href="#0" class="playbackButton playButton">Play</a>
+      <a href="#0" class="playbackButton pauseButton">Pause</a>
+      <a href="#0" class="playbackButton resumeButton">Resume</a>
+      <a href="#0" class="playbackButton reverseButton">Reverse</a>
+      <a href="#0" class="playbackButton slowButton">Slow</a>
+      <a href="#0" class="playbackButton fastButton">Fast</a>
+      <a href="#0" class="playbackButton seekButton">Seek</a>
+      <a href="#0" class="playbackButton progressButton">Progress</a>
+  </div>
+
+
+</section>
+
 </main>
 <?php get_footer(); //footerimport
 

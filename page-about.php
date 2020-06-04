@@ -59,12 +59,12 @@ Template Name: about
               <p class="textL"><i class="fab fa-github-square" data-fa-transform="shrink-5"></i> Git etc</p>
             </span>
             <span class="what-conR">
-              <p class="textR">テキストテキスト</p>
-              <p class="textR">テキストテキスト</p>
-              <p class="textR">テキストテキスト</p>
-              <p class="textR">テキストテキスト</p>
-              <p class="textR">テキストテキスト</p>
-              <p class="textR">テキストテキスト</p>
+              <p class="textR">★★★★★★★★★★★</p>
+              <p class="textR">★★★★★★★★★★★</p>
+              <p class="textR">★★★★★★★★★★</p>
+              <p class="textR">★★★★★★★★</p>
+              <p class="textR">★★★★★★★★★★</p>
+              <p class="textR">★★★★★★★★★★★</p>
             </span>
           </span>
 
@@ -77,11 +77,15 @@ Template Name: about
               <p class="textL"><i class="fas fa-laptop" data-fa-transform="shrink-5"></i> PC</p>
               <p class="textL"><i class="fas fa-edit" data-fa-transform="shrink-5"></i> editor</p>
               <p class="textL"><i class="fas fa-camera-retro" data-fa-transform="shrink-5"></i>camera</p>
+              <p class="textL"><i class="fas fa-microphone-alt" data-fa-transform="shrink-5"></i>mic</p>
+              <p class="textL"><i class="fas fa-guitar" data-fa-transform="shrink-5"></i>guiter</p>
             </span>
             <span class="what-conR">
               <p class="textR">MacBook Pro (13-inch)</p>
               <p class="textR">VS CODE</p>
-              <p class="textR">Sony</p>
+              <p class="textR">Sony NEX-5N</p>
+              <p class="textR">Under consideration</p>
+              <p class="textR">Fender Telecaster</p>
             </span>
           </span>
 
@@ -101,11 +105,12 @@ Template Name: about
               <p class="textR">永遠のアマチュアゴルファー</p>
               <p class="textR">20代はプレーヤー30代はリスナー</p>
               <p class="textR">サスペンスが大好物</p>
-              <p class="textR">ビジネス書 / 小説</p>
+              <p class="textR">ビジネス書 / ミステリー小説</p>
               <p class="textR">上手になりたい</p>
             </span>
           </span>
-          <div class="modal-area content-width" id="modalArea">
+          
+          <!-- <div class="modal-area content-width" id="modalArea"> -->
 
             <!-- <div class="modal" id="modal1">
               <p>・デザイン</p>
@@ -165,7 +170,7 @@ Template Name: about
           <div class="prof-conL-wrapper">
             <img class="prof-picture" src="<?php echo get_template_directory_uri();?>/img/about_profile.jpeg" alt="写真">
             <p class="prof-name font-md">尾崎 文哉 - OZAKI fumiya -</p>
-            <p class="prof-text">1983年 東京出身 学習院大学卒業後<br>独学でWEBデザインを学び今に至る<br>主にフロントエンドの開発が得意</p>
+            <p class="prof-text">1983年 東京出身 学習院大学卒業後<br>独学でWEBデザインを学び今に至る<br>フロントエンドの開発が得意</p>
           </div>
         </div>
         <div class="prof-conR history">

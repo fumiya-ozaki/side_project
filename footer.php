@@ -1,9 +1,9 @@
 <footer>
           <div class="content Lfooter">
-            <a class="hover-Uline" href="<?php home_url('/contact'); ?>"><i class="far fa-envelope fa-sm"></i> contact</a>
+            <a class="hover-Uline" href="<?php echo home_url('/contact'); ?>"><i class="far fa-envelope fa-sm"></i> contact</a>
           </div>
           <div class="content Cfooter">
-            <a class="hover-Uline" href="<?php home_url(); ?>">privacy policy</a>
+            <a class="hover-Uline" href="<?php echo home_url('/privacypolicy'); ?>">privacy policy</a>
           </div>
           <div class="content Rfooter">
             <!-- <a class="footer-icon hover-Uline" href="#"><i class="fab fa-youtube fa-sm"></i></a> -->

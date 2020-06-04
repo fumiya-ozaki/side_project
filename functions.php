@@ -2,7 +2,7 @@
 // head-import
 function theme_script(){
   $version = wp_get_theme()->get( 'Version' );
-  wp_enqueue_style('theme-reset', get_template_directory_uri() . '/styles/venders/_reset.css', array(),$version ); //resetcss NG
+  wp_enqueue_style('theme-reset', get_template_directory_uri() . '/styles/venders/_reset.css', array(),$version ); //resetcss
   wp_enqueue_style('theme-style', get_template_directory_uri() . '/styles/style.min.css', array(),$version ); //stylecss 
   wp_enqueue_style('responsive-style', get_template_directory_uri() . '/styles/responsive.min.css', array(),$version ); //responsivecss 
   wp_enqueue_script('font-awsome', get_template_directory_uri() . '/scripts/venders/fontawesome.js', array(),$version ); //fontawesome 
@@ -11,11 +11,12 @@ function theme_script(){
 	wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js', array(), $version ); //latestjquery
   wp_enqueue_script('main', get_template_directory_uri() . '/scripts/main.js', array('jquery'),$version ); //mainjs
   if(is_page( 'about' )){ //aboutページの分岐
-    wp_enqueue_script('about', get_template_directory_uri() . '/scripts/about.js', array(),$version); //aboutjs
+    wp_enqueue_script('about', get_template_directory_uri() . '/scripts/about.js', array(),$version ); //aboutjs
   }else if(is_page( 'demo' )){ //demoページの分岐
-    wp_enqueue_style('rswiper-css','https://unpkg.com/swiper/css/swiper.min.css', array(),$version ); //swipercss 
-    wp_enqueue_script( 'swiper', 'https://unpkg.com/swiper/js/swiper.min.js', array(), '1.0.0',); //swiper
-    wp_enqueue_script('demo',get_template_directory_uri() . '/scripts/demo.js', array('swiper'),$version);
+    wp_enqueue_style('swiper-css','https://unpkg.com/swiper/css/swiper.min.css', array(),$version ); //swipercss 
+    wp_enqueue_script( 'swiper', 'https://unpkg.com/swiper/js/swiper.min.js', array(),$version ); //swiper
+    wp_enqueue_script( 'GSAP', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js', array('jquery'),$version ); //swiper
+    wp_enqueue_script('demo',get_template_directory_uri() . '/scripts/demo.js', array(),$version ); //demojs
   }
 }
 add_action( 'wp_enqueue_scripts' ,'theme_script' );
@@ -82,4 +83,25 @@ register_nav_menus( //add menu-function
     }
       return $title;
   });
-  /* the_archive_title 余計な文字を削除 */
+
+  //省略の変更
+  function cms_excerpt_more() {
+    return '...';
+  }
+  add_filter( 'excerpt_more', 'cms_excerpt_more' );
+  
+  //デフォルトの抜粋文字数を80へ変更
+  function cms_excerpt_length() {
+    return 80;
+  }
+  add_filter( 'excerpt_mblength', 'cms_excerpt_length' ); //
+  
+  // 抜粋機能を固定ページに使えるよう設定
+  add_post_type_support( 'page', 'excerpt' );
+  
+  //関数で抜粋文に文字数を渡して処理
+  function get_flexible_excerpt( $number ) {
+    $value = get_the_excerpt();
+    $value = wp_trim_words( $value, $number, '...' );
+    return $value;
+  }

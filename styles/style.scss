@@ -1,4 +1,3 @@
-@import "venders/reset";
 @import "modules/variables";
 @import "modules/mixin";
 @import "modules/colors";
@@ -7,15 +6,6 @@
 //googlefont読み込み
 @import url("https://fonts.googleapis.com/css2?family=Kameron&family=Noto+Sans+JP:wght@100&display=swap");
 
-//消す
-#scrollValue {
-  background-color: red;
-  padding: 20px;
-  position: fixed;
-  top: 100px;
-  right: 0px;
-}
-//消す
 
 .grobal-header {
   background-color: $cBlack;
@@ -62,18 +52,57 @@
         }
         &.iconR{
           .search-form{
+            margin-top: .5rem;
             position: fixed;
+            z-index: 5;
             top:50px;
+            transform: translateY(-50px);
+            opacity: 0;
+            transition:all .5s ;
+            visibility: hidden;
             .search-box{
               display: flex;
-              background-color: red;
               .button-submit{
                 cursor: pointer;
-                
               }
             }
             .search-input{
               font-size: 15px;
+              height: 40px;
+              padding-left: .5rem;
+            }
+            &.active{
+              transform: translateY(0);
+              opacity: 1;
+              visibility: visible;
+            }
+          }
+        }
+        &.iconL{
+          .language-box{
+            position: fixed;
+            top:50px;
+            transform: translateY(-50px);
+            opacity: 0;
+            transition:all .5s ;
+            z-index: 5;
+            visibility: hidden;
+            &.active{
+              transform: translateY(0);
+              opacity: 1;
+              visibility: visible;
+            }
+            a{
+              border: solid 1px $cBlack;
+              background-color: $cWhite;
+              padding: .5rem;
+              color: black;
+              display: block;
+              margin: .5rem;
+              &:hover{
+                background-color: $cBlack;
+                color: $cWhite;
+              }
             }
           }
 
@@ -255,7 +284,7 @@ footer {
 
 //index.htmlstart**************************************************
 .main-contents-area {
-  height: calc(100vh - 50px);
+  // height: calc(100vh - 50px);
   .content {
     background-size: cover;
     background-position: center;
@@ -343,13 +372,14 @@ footer {
         .news-link {
           display: flex;
           .conL {
+            flex-basis: 130px;
             flex-grow: 1;
-            padding: 1em;
+            display: flex;
+            flex-direction: column;
           }
           .conC {
             font-size: 1.5rem;
             flex-grow: 8;
-            padding: 1em;
           }
           .conR {
             background-color: $cWhite;
@@ -556,23 +586,28 @@ footer {
   }
 }
 
-.about-nav {
-  background-color: $cOpblack;
-  position: sticky;
-  z-index: 5;
-  top: 50px;
-  .about-nav-lists {
-    align-items: center;
-    display: flex;
-    height: 50px;
-    padding-left: 100px;
-    .about-nav-list {
-      padding: 0 1rem;
-      .a-nav-text {
-        color: white;
+.sticky-container{
+  position: relative;
+  z-index: 1;
+  .about-nav {
+    background-color: $cOpblack;
+    position: sticky;
+    z-index: 2;
+    top: 50px;
+    .about-nav-lists {
+      align-items: center;
+      display: flex;
+      height: 50px;
+      padding-left: 100px;
+      .about-nav-list {
+        padding: 0 1rem;
+        .a-nav-text {
+          color: white;
+        }
       }
     }
   }
+  
 }
 
 .about-what-content {
@@ -847,23 +882,42 @@ footer {
   background-image: url(https://picsum.photos/1350/900?grayscale);
   background-position: center;
   background-size: cover;
-  &::before {
-    content: "";
-    display: block;
-    padding-top: 50%;
-  }
+  height: 50vh;
+  margin-top: 50px;
 }
 .main-contents {
-  padding: 5rem; //仮置
   .content-info {
+    width: 90%;
+    margin: 0 auto;
+    &__category,&__date,&__title,&__author{
+      margin-bottom: 1rem;
+    }
     &__title {
       font-size: 2rem;
-      margin: 1rem;
+    }
+    &__author{
+      font-size: 19px;
+    }
+    &__text {
+      p{
+        font-size: 19px;
+        line-height: 2;
+      }
     }
   }
-  .content-text {
-    margin: 0 1rem;
-    line-height: 2;
+  .more-news{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    .next,.prev{
+      background-color: $cLGray;
+      a{
+        padding: 1rem;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+      }
+    }
   }
 }
 //single.phpend*****************************************************
@@ -873,7 +927,7 @@ footer {
   margin-top: 50px;
 }
 .demo-container{
-  padding: 2rem 0;
+  // padding: 2rem 0;
 }
 .slider-area {
   margin: 2rem 0;
@@ -932,7 +986,92 @@ footer {
   }
 }
 
+.play-ground{
+  background-color:$cLGray;
+  position: relative;
+  .animation-char{
+    font-size: 2rem;
+    line-height: 5rem;
+    .block-animation{
+      display: inline-block;
+    }
+  }
+
+  .playback_controls_row {
+    position: sticky;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $cDGray;
+    display:grid;
+    grid-template:
+    "... .... .... .... .... .... .... .... ..." 1rem
+    "... btn1 .... btn2 .... btn3 .... btn4 ..." 1fr
+    "... .... .... .... .... .... .... .... ..." 1rem
+    "... btn5 .... btn6 .... btn7 .... btn8 ..." 1fr
+    "... .... .... .... .... .... .... .... ..." 1rem
+    /1rem 1fr  1rem 1fr  1rem 1fr  1rem 1fr  1rem;
+    .playButton{grid-area: btn1;}
+    .pauseButton{grid-area: btn2;}
+    .resumeButton{grid-area: btn3;}
+    .reverseButton{grid-area: btn4;}
+    .slowButton{grid-area: btn5;}
+    .fastButton{grid-area: btn6;}
+    .seekButton{grid-area: btn7;}
+    .progressButton{grid-area: btn8;}
+    .playbackButton {
+      text-align: center;
+      width: 100%;
+      text-decoration: none;
+      background-color: $cBlack;
+      color: white;
+      padding: 1rem 0;
+      border-radius: 5px;
+      display: inline-block;
+      margin-right: 1rem; 
+      transition: all .5s;
+      &:hover{
+        background-color: $cWhite;
+        color: $cBlack;
+      }
+    }
+  }
+}
 
 //demo.phpend*****************************************************
 
+//404.phpstart****************************************************
+
+.e404{
+  height: calc(100vh - 200px);
+  .error-content{
+    margin: 1rem 0;
+    line-height: 2;
+  }
+  .search-form{
+    // background-color: red;
+    .search-box{
+      // background-color: blue;
+      .search-input{
+        padding-left: 1rem;
+        border: solid 1px $cGray;
+        vertical-align: text-top;
+        // background-color: green;
+        height: 3rem;
+      }
+      .button-submit{
+        border: solid 1px $cGray;
+        background-color: $cLGray;
+        vertical-align: text-top;
+        font-size: 2rem;
+        // background-color: orange;
+        height: 3rem;
+        width: 3rem;
+      }
+    }
+  }
+}
+
+
+//404.phpend******************************************************
 

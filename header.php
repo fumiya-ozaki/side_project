@@ -88,11 +88,19 @@
             </ul>
             <div class="header-right">
               <div class="option-icon iconL hover-Uline">
-                <i class="fas fa-globe fa-sm"></i> language
+                <span class="language-selector" id="langSelector">
+                  <i class="fas fa-globe fa-sm"></i> language
+                </span>
+                <div class="language-box" id="langBox">
+                  <a class="language-text" href="#">Japanese</a>
+                  <a class="language-text" href="#">English</a>
+                </div>
               </div>
               <div class="option-icon iconR hover-Uline">
-                <i class="fas fa-search fa-sm"></i> search
-                <form class="search-form fixed" method="get" role="search"  action="<?php echo esc_url(home_url());?>">
+                <span id="searchBtn">
+                  <i class="fas fa-search fa-sm"></i> search
+                </span>
+                <form class="search-form fixed" id="searchForm" method="get" role="search"  action="<?php echo esc_url(home_url());?>">
                   <div class="search-box">
                     <input class="search-input" type="text" name="s" placeholder="キーワードを入力">
                     <button type="submit" class="button button-submit"><i class="fas fa-search fa-sm"></i></button>

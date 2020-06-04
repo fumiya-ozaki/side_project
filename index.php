@@ -122,7 +122,10 @@
                       <?php the_time( get_option( 'date_format' )); ?><!--content-date-->
                     </time>
                   </span>
-                  <span class="conC"><p><?php the_title(); ?></p></span><!--content-title-->
+                  <span class="conC">
+                    <p class="title"><?php the_title(); ?></p>
+                    <p class="content"><?php echo get_flexible_excerpt(15); ?></p>
+                  </span><!--content-title-->
                   <span class="conR">
                     <?php the_post_thumbnail('medium'); ?>
                   </span><!--content-image-->

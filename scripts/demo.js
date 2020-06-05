@@ -234,4 +234,23 @@ tlCharAnimation.fromTo('#aniChar1', 1, { x:-50 , y:-50, opacity:0, scale:.9 },{ 
   });
 //textanimationend***********************************************************************
   
+
+const controller = new ScrollMagic.Controller();
+
+const ourScene = new ScrollMagic.Scene({
+  triggerElement: '#project01 div', //追加
+  triggerHook: 0.9,
+  reverse:false
+})
+
+.setClassToggle('#project01','fade-in')
+.addIndicators({
+  name:'fade scene',
+  colorTrigger: 'black',
+  colorStart:'#75C695',
+  colorEnd:'pink'
+})
+.addTo(controller);
+
+
 },false);//DOMloadEnd

@@ -2338,6 +2338,57 @@ footer .footer-icon {
   color: #1f1f1d;
 }
 
+#intro {
+  height: 100vh;
+  width: 100%;
+  background-color: #526bc3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#intro .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#intro .content .img-logo {
+  width: 200px;
+  height: 200px;
+  background-color: gray;
+  border-radius: 50%;
+}
+
+.project {
+  border: 10px solid white;
+  height: 100vh;
+  width: 100%;
+  background-color: gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all 1s ease-out;
+}
+
+.project.fade-in {
+  opacity: 1;
+}
+
+.project .info {
+  text-align: center;
+}
+
+.project .img {
+  width: 200px;
+  height: 200px;
+  background-color: #526bc3;
+  border-radius: 50%;
+}
+
 .e404 {
   height: calc(100vh - 200px);
 }
@@ -2345,6 +2396,14 @@ footer .footer-icon {
 .e404 .error-content {
   margin: 1rem 0;
   line-height: 2;
+}
+
+.e404 .error-content .top-link {
+  display: inline-block;
+  border: 1px solid #9e9c9c;
+  margin-top: 1rem;
+  padding: .5rem;
+  background-color: #f3f3f2;
 }
 
 .e404 .search-form .search-box .search-input {
@@ -2355,6 +2414,7 @@ footer .footer-icon {
 }
 
 .e404 .search-form .search-box .button-submit {
+  cursor: pointer;
   border: solid 1px #e7e4e4;
   background-color: #f3f3f2;
   vertical-align: text-top;

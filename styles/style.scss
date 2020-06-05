@@ -1038,6 +1038,53 @@ footer {
   }
 }
 
+#intro{
+  height: 100vh;
+  width: 100%;
+  background-color:rgb(82,107,195);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .img-logo{
+      width: 200px;
+      height: 200px;
+      background-color: gray;
+      border-radius: 50%;
+    }
+  }
+}
+
+.project{
+  border: 10px solid white;
+  height: 100vh;
+  width: 100%;
+  background-color: gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity:0;
+  transition: all 1s ease-out;
+  &.fade-in{
+    opacity: 1;
+  }
+  .info{
+    text-align: center;
+  }
+  .img{
+    width: 200px;
+    height: 200px;
+    background-color:rgb(82,107,195);
+    border-radius: 50%;
+  }
+}
+
+
 //demo.phpend*****************************************************
 
 //404.phpstart****************************************************
@@ -1047,24 +1094,28 @@ footer {
   .error-content{
     margin: 1rem 0;
     line-height: 2;
+    .top-link{
+      display: inline-block;
+      border: 1px solid $cDGray;
+      margin-top: 1rem;
+      padding: .5rem;
+      background-color: $cLGray;
+    }
   }
   .search-form{
-    // background-color: red;
     .search-box{
-      // background-color: blue;
       .search-input{
         padding-left: 1rem;
         border: solid 1px $cGray;
         vertical-align: text-top;
-        // background-color: green;
         height: 3rem;
       }
       .button-submit{
+        cursor: pointer;
         border: solid 1px $cGray;
         background-color: $cLGray;
         vertical-align: text-top;
         font-size: 2rem;
-        // background-color: orange;
         height: 3rem;
         width: 3rem;
       }

@@ -15,20 +15,25 @@
 
       <?php if(have_posts()): while(have_posts()): the_post();?>
         <ul class="news-lists">
-          <li class="news-list">
-            <a class="news-link" href="<?php the_permalink(); ?>">
-              <span class="conL">
-                <p>
-                  <span class="tab <?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->slug; } ?>"><?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->cat_name; } ?></span>
-                </p>
-                <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time( get_option( 'date_format' )); ?></time>
-              </span>
-              <span class="conC"><p><?php the_title(); ?></p></span>
-              <span class="conR">
-                <?php the_post_thumbnail('medium'); ?>
-              </span>
-            </a>
-          </li>
+        <li class="news-list">
+                <a class="news-link" href="<?php the_permalink(); ?>"> <!--content-link-->
+                  <span class="conL">
+                    <span class="tab <?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->slug; } ?>">
+                      <?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->cat_name; } ?>
+                    </span>
+                    <time datetime="<?php the_time('Y-m-d'); ?>"> <!--time-tag-->
+                      <?php the_time( get_option( 'date_format' )); ?><!--content-date-->
+                    </time>
+                  </span>
+                  <span class="conC">
+                    <p class="title"><?php the_title(); ?></p>
+                    <p class="content"><?php echo get_flexible_excerpt(15); ?></p>
+                  </span><!--content-title-->
+                  <span class="conR">
+                    <?php the_post_thumbnail('medium'); ?>
+                  </span><!--content-image-->
+                </a>
+              </li>
         </ul>
       <?php endwhile; endif; ?>
 
@@ -45,20 +50,25 @@
     </ul>
     <?php if(have_posts()): while(have_posts()): the_post();?>
       <ul class="news-lists">
-        <li class="news-list">
-          <a class="news-link" href="<?php the_permalink(); ?>">
-            <span class="conL">
-              <p>
-                <span class="tab <?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->slug; } ?>"><?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->cat_name; } ?></span>
-              </p>
-              <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time( get_option( 'date_format' )); ?></time>
-            </span>
-            <span class="conC"><p><?php the_title(); ?></p></span>
-            <span class="conR">
-              <?php the_post_thumbnail('medium'); ?>
-            </span>
-          </a>
-        </li>
+      <li class="news-list">
+                <a class="news-link" href="<?php the_permalink(); ?>"> <!--content-link-->
+                  <span class="conL">
+                    <span class="tab <?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->slug; } ?>">
+                      <?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->cat_name; } ?>
+                    </span>
+                    <time datetime="<?php the_time('Y-m-d'); ?>"> <!--time-tag-->
+                      <?php the_time( get_option( 'date_format' )); ?><!--content-date-->
+                    </time>
+                  </span>
+                  <span class="conC">
+                    <p class="title"><?php the_title(); ?></p>
+                    <p class="content"><?php echo get_flexible_excerpt(15); ?></p>
+                  </span><!--content-title-->
+                  <span class="conR">
+                    <?php the_post_thumbnail('medium'); ?>
+                  </span><!--content-image-->
+                </a>
+              </li>
       </ul>
     <?php endwhile; endif; ?>
 
@@ -75,20 +85,25 @@
     </ul>
     <?php if(have_posts()): while(have_posts()): the_post();?>
       <ul class="news-lists">
-        <li class="news-list">
-          <a class="news-link" href="<?php the_permalink(); ?>">
-            <span class="conL">
-              <p>
-                <span class="tab <?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->slug; } ?>"><?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->cat_name; } ?></span>
-              </p>
-              <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time( get_option( 'date_format' )); ?></time>
-            </span>
-            <span class="conC"><p><?php the_title(); ?></p></span>
-            <span class="conR">
-              <?php the_post_thumbnail('medium'); ?>
-            </span>
-          </a>
-        </li>
+      <li class="news-list">
+                <a class="news-link" href="<?php the_permalink(); ?>"> <!--content-link-->
+                  <span class="conL">
+                    <span class="tab <?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->slug; } ?>">
+                      <?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->cat_name; } ?>
+                    </span>
+                    <time datetime="<?php the_time('Y-m-d'); ?>"> <!--time-tag-->
+                      <?php the_time( get_option( 'date_format' )); ?><!--content-date-->
+                    </time>
+                  </span>
+                  <span class="conC">
+                    <p class="title"><?php the_title(); ?></p>
+                    <p class="content"><?php echo get_flexible_excerpt(15); ?></p>
+                  </span><!--content-title-->
+                  <span class="conR">
+                    <?php the_post_thumbnail('medium'); ?>
+                  </span><!--content-image-->
+                </a>
+              </li>
       </ul>
     <?php endwhile; endif; ?>
   <?php } ?>

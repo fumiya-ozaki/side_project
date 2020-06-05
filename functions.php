@@ -15,7 +15,9 @@ function theme_script(){
   }else if(is_page( 'demo' )){ //demoページの分岐
     wp_enqueue_style('swiper-css','https://unpkg.com/swiper/css/swiper.min.css', array(),$version ); //swipercss 
     wp_enqueue_script( 'swiper', 'https://unpkg.com/swiper/js/swiper.min.js', array(),$version ); //swiper
-    wp_enqueue_script( 'GSAP', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js', array('jquery'),$version ); //swiper
+    wp_enqueue_script( 'GSAP', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js', array('jquery'),$version ); //GSAP
+    wp_enqueue_script( 'scrollmagic', 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js', array('jquery'),$version ); //scrollmagic
+    wp_enqueue_script( 'scrollmagic-debug', 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js', array('jquery'),$version ); //scrollmagicdebug
     wp_enqueue_script('demo',get_template_directory_uri() . '/scripts/demo.js', array(),$version ); //demojs
   }
 }

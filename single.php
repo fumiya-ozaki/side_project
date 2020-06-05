@@ -57,7 +57,6 @@
 
 
 
-
 </article><!--getpostinfoend-->
 <?php endif; ?><!--mainloopend-->
 

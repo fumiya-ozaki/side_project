@@ -35,6 +35,7 @@ add_theme_support( 'automatic-feed-links' );
 register_nav_menus( //add menu-function
   array(
     'place_global' => 'グローバル', //“メニュー英語名” =>”メニュー名”,
+    'mobile_global' => 'モバイル', //“メニュー英語名” =>”メニュー名”,
     'place_utility' => 'ユーティリティ',
     'place_sidebar' => 'サイドメニュー',
     'place_footer' => 'フッター',

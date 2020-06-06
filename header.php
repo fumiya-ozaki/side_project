@@ -9,18 +9,16 @@
   <body <?php body_class(); ?>> <!--bodystartpoint-->
   <?php wp_body_open(); ?> <!--bodyfookpoint-->
 
-  <?php
-				wp_nav_menu( array(
-					'theme_location' => 'place_global'
-				) );
-				?>
-
-
-
     <!-- mobile-slide-link -->
     <div id="global-container">
       <nav class="mobile-menu">
-        <ul class="mobile-menu__main">
+      <?php
+        wp_nav_menu( array(
+        'theme_location' => 'mobile_global'
+        ));
+      ?>
+
+        <!-- <ul class="mobile-menu__main">
           <li class="mobile-menu__item">
             <a class="mobile-menu__link" href="<?php echo home_url(); ?>">
               <span class="main-title">HOME</span>
@@ -63,7 +61,7 @@
               <span class="sub-title">お問い合わせ</span>
             </a>
           </li>
-        </ul>
+        </ul> -->
       </nav>
 
       <div id="container">
@@ -87,12 +85,11 @@
               'menu_class'    =>'',
               'items_wrap' => '%3$s',//<ul>を出力しない
             ));*/ ?>
-              <li class="link-text hover-Uline"><a href="<?php echo home_url('works'); ?>">WORKS</a></li>
-              <li class="link-text hover-Uline"><a href="<?php echo home_url('news'); ?>">NEWS</a></li>
-              <li class="link-text hover-Uline"><a href="<?php echo home_url('blog'); ?>">BLOG</a></li>
-              <li class="link-text hover-Uline"><a href="<?php echo home_url('about'); ?>">ABOUT</a></li>
-              <li class="link-text hover-Uline"><a href="<?php echo home_url('demo'); ?>">DEMO</a></li>
-              <li class="link-text hover-Uline"><a href="<?php echo home_url('contact'); ?>">CONTACT</a></li>
+                <?php
+                  wp_nav_menu( array(
+                  'theme_location' => 'place_global'
+                  ));
+                ?>
             </ul>
             <div class="header-right">
               <div class="option-icon iconL hover-Uline">

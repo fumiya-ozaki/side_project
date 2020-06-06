@@ -266,12 +266,13 @@ smartphoneで適用
   flex-wrap: wrap;
 }
 
-.grobal-header .header-container .header-center .link-text {
+.grobal-header .header-container .header-center .menu-item {
+  display: inline-block;
   margin-left: 1rem;
   text-align: center;
 }
 
-.grobal-header .header-container .header-center .link-text a {
+.grobal-header .header-container .header-center .menu-item a {
   color: white;
 }
 
@@ -406,48 +407,48 @@ smartphoneで適用
   visibility: visible;
 }
 
-.menu-open .mobile-menu__item {
+.menu-open .mobile-menu .menu-mobile_global-container #menu-mobile_global .menu-item {
   transform: none;
   opacity: 1;
 }
 
-.menu-open .mobile-menu__item:nth-child(1) {
+.menu-open .mobile-menu .menu-mobile_global-container #menu-mobile_global .menu-item:nth-child(1) {
   transition-delay: 0.07s;
 }
 
-.menu-open .mobile-menu__item:nth-child(2) {
+.menu-open .mobile-menu .menu-mobile_global-container #menu-mobile_global .menu-item:nth-child(2) {
   transition-delay: 0.14s;
 }
 
-.menu-open .mobile-menu__item:nth-child(3) {
+.menu-open .mobile-menu .menu-mobile_global-container #menu-mobile_global .menu-item:nth-child(3) {
   transition-delay: 0.21s;
 }
 
-.menu-open .mobile-menu__item:nth-child(4) {
+.menu-open .mobile-menu .menu-mobile_global-container #menu-mobile_global .menu-item:nth-child(4) {
   transition-delay: 0.28s;
 }
 
-.menu-open .mobile-menu__item:nth-child(5) {
+.menu-open .mobile-menu .menu-mobile_global-container #menu-mobile_global .menu-item:nth-child(5) {
   transition-delay: 0.35s;
 }
 
-.menu-open .mobile-menu__item:nth-child(6) {
+.menu-open .mobile-menu .menu-mobile_global-container #menu-mobile_global .menu-item:nth-child(6) {
   transition-delay: 0.42s;
 }
 
-.menu-open .mobile-menu__item:nth-child(7) {
+.menu-open .mobile-menu .menu-mobile_global-container #menu-mobile_global .menu-item:nth-child(7) {
   transition-delay: 0.49s;
 }
 
-.menu-open .mobile-menu__item:nth-child(8) {
+.menu-open .mobile-menu .menu-mobile_global-container #menu-mobile_global .menu-item:nth-child(8) {
   transition-delay: 0.56s;
 }
 
-.menu-open .mobile-menu__item:nth-child(9) {
+.menu-open .mobile-menu .menu-mobile_global-container #menu-mobile_global .menu-item:nth-child(9) {
   transition-delay: 0.63s;
 }
 
-.menu-open .mobile-menu__item:nth-child(10) {
+.menu-open .mobile-menu .menu-mobile_global-container #menu-mobile_global .menu-item:nth-child(10) {
   transition-delay: 0.7s;
 }
 
@@ -487,35 +488,25 @@ smartphoneで適用
   cursor: pointer;
 }
 
-.mobile-menu__main {
+.mobile-menu #menu-mobile_global {
   perspective: 2000px;
   transform-style: preserve-3d;
 }
 
-.mobile-menu__item {
+.mobile-menu #menu-mobile_global .menu-item {
   display: block;
   transform: translate3d(0, 0, -1000px);
   padding: 0 40px;
   transition: transform 0.3s, opacity 0.2s;
   opacity: 0;
-}
-
-.mobile-menu__link {
-  color: #1f1f1d;
-  display: block;
-  margin-top: 10px;
-}
-
-.mobile-menu__link .main-title {
   font-weight: 600;
   font-size: 25px;
+  margin-top: 20px;
 }
 
-.mobile-menu__link .sub-title {
-  padding-left: 0.5rem;
-  color: #9e9c9c;
+.mobile-menu #menu-mobile_global .menu-item a {
+  color: #1f1f1d;
   display: block;
-  font-size: 14px;
 }
 
 .topBtn {

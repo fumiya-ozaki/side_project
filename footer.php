@@ -1,4 +1,4 @@
-<footer>
+        <footer>
           <div class="content Lfooter">
             <a class="hover-Uline" href="<?php echo home_url('/contact'); ?>"><i class="far fa-envelope fa-sm"></i> contact</a>
           </div>
@@ -14,8 +14,8 @@
           </div>
           <div id="topBtn" class="topBtn">TOP</div>
         </footer>
-      </div>
-    </div>
-  <?php wp_footer(); ?> <!--footerfookpoint-->
+      </div> <!--#containerFromheader-->
+    </div> <!--#global-containerFromheader-->
+    <?php wp_footer(); ?> <!--footerfookpoint-->
   </body>
 </html>

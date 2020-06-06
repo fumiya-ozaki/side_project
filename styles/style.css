@@ -237,12 +237,12 @@ smartphoneで適用
 .grobal-header {
   background-color: #1f1f1d;
   color: white;
+  height: 50px;
   left: 0;
   position: sticky;
-  top: 0;
   right: 0;
+  top: 0;
   z-index: 5;
-  height: 50px;
 }
 
 .grobal-header .header-container {
@@ -294,13 +294,13 @@ smartphoneで適用
 
 .grobal-header .header-container .header-right .option-icon.iconR .search-form {
   margin-top: .5rem;
+  opacity: 0;
   position: fixed;
-  z-index: 5;
   top: 50px;
   transform: translateY(-50px);
-  opacity: 0;
   transition: all .5s;
   visibility: hidden;
+  z-index: 5;
 }
 
 .grobal-header .header-container .header-right .option-icon.iconR .search-form .search-box {
@@ -318,34 +318,34 @@ smartphoneで適用
 }
 
 .grobal-header .header-container .header-right .option-icon.iconR .search-form.active {
-  transform: translateY(0);
   opacity: 1;
+  transform: translateY(0);
   visibility: visible;
 }
 
 .grobal-header .header-container .header-right .option-icon.iconL .language-box {
+  opacity: 0;
   position: fixed;
   top: 50px;
   transform: translateY(-50px);
-  opacity: 0;
   transition: all .5s;
-  z-index: 5;
   visibility: hidden;
+  z-index: 5;
 }
 
 .grobal-header .header-container .header-right .option-icon.iconL .language-box.active {
-  transform: translateY(0);
   opacity: 1;
+  transform: translateY(0);
   visibility: visible;
 }
 
 .grobal-header .header-container .header-right .option-icon.iconL .language-box a {
   border: solid 1px #1f1f1d;
   background-color: white;
-  padding: .5rem;
   color: black;
   display: block;
   margin: .5rem;
+  padding: .5rem;
 }
 
 .grobal-header .header-container .header-right .option-icon.iconL .language-box a:hover {
@@ -358,14 +358,14 @@ smartphoneで適用
 }
 
 .mobile-menu__btn {
-  border-radius: 3px;
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  padding: 0.5rem;
   background-color: white;
+  border-radius: 3px;
   border: none;
   outline: none !important;
+  padding: 0.5rem;
+  position: absolute;
+  right: 5px;
+  top: 5px;
   cursor: pointer;
 }
 
@@ -373,9 +373,9 @@ smartphoneで適用
   background-color: #1f1f1d;
   display: block;
   height: 2px;
-  width: 35px;
   margin-bottom: 9px;
   transition: transform 0.7s;
+  width: 35px;
 }
 
 .mobile-menu__btn span:last-child {
@@ -385,21 +385,21 @@ smartphoneで適用
 #container {
   background-color: white;
   position: relative;
-  z-index: 2;
   transition: all 0.5s;
+  z-index: 2;
 }
 
 #container .header {
-  background-color: white;
-  height: 50px;
-  display: flex;
-  justify-content: flex-end;
   align-items: center;
+  background-color: white;
+  display: flex;
+  height: 50px;
+  justify-content: flex-end;
 }
 
 .menu-open #container {
-  transform: translate(-200px, 0);
   box-shadow: 0 8px 40px -10px rgba(0, 0, 0, 0.8);
+  transform: translate(-200px, 0);
 }
 
 .menu-open .mobile-menu__cover {
@@ -408,8 +408,8 @@ smartphoneで適用
 }
 
 .menu-open .mobile-menu .menu-mobile_global-container #menu-mobile_global .menu-item {
-  transform: none;
   opacity: 1;
+  transform: none;
 }
 
 .menu-open .mobile-menu .menu-mobile_global-container #menu-mobile_global .menu-item:nth-child(1) {
@@ -475,17 +475,17 @@ smartphoneで適用
 }
 
 .mobile-menu__cover {
-  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  height: 100%;
+  left: 0;
+  opacity: 0;
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
-  opacity: 0;
-  visibility: hidden;
   transition: opacity 1s;
-  cursor: pointer;
+  visibility: hidden;
+  width: 100%;
+  z-index: 10;
 }
 
 .mobile-menu #menu-mobile_global {
@@ -495,13 +495,13 @@ smartphoneで適用
 
 .mobile-menu #menu-mobile_global .menu-item {
   display: block;
-  transform: translate3d(0, 0, -1000px);
-  padding: 0 40px;
-  transition: transform 0.3s, opacity 0.2s;
-  opacity: 0;
   font-weight: 600;
   font-size: 25px;
   margin-top: 20px;
+  opacity: 0;
+  padding: 0 40px;
+  transform: translate3d(0, 0, -1000px);
+  transition: transform 0.3s, opacity 0.2s;
 }
 
 .mobile-menu #menu-mobile_global .menu-item a {
@@ -510,12 +510,13 @@ smartphoneで適用
 }
 
 .topBtn {
-  border: 1px solid white;
-  border-radius: 50%;
   align-items: center;
   background-color: rgba(31, 31, 29, 0.8);
-  color: white;
+  border: 1px solid white;
   bottom: 15px;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
   display: flex;
   height: 50px;
   justify-content: center;
@@ -523,7 +524,6 @@ smartphoneで適用
   right: 15px;
   width: 50px;
   z-index: 20;
-  cursor: pointer;
 }
 
 footer {
@@ -544,14 +544,14 @@ footer .content a {
 
 footer .Lfooter,
 footer .Cfooter {
-  display: flex;
   align-items: center;
+  display: flex;
   justify-content: center;
 }
 
 footer .Rfooter {
-  display: flex;
   align-items: center;
+  display: flex;
   justify-content: center;
 }
 
@@ -595,8 +595,8 @@ footer .footer-icon {
 
 .contents {
   display: grid;
-  width: 100%;
   height: 100%;
+  width: 100%;
   grid-template: "con1 con1 con1 .... con5 .... con6 " 1fr "con1 con1 con1 .... .... .... .... " 20px "con1 con1 con1 .... con9 .... con10 " 1fr ".... .... .... .... .... .... .... " 20px "con3 .... con4 .... con2 con2 con2 " 1fr ".... .... .... .... con2 con2 con2 " 20px "con7 .... con8 .... con2 con2 con2" 1fr /1fr 20px 1fr 20px 1fr 20px 1fr;
 }
 
@@ -605,8 +605,8 @@ footer .footer-icon {
 }
 
 .contents .content::before {
-  display: block;
   content: "";
+  display: block;
   padding-top: 50%;
 }
 
@@ -1218,10 +1218,10 @@ footer .footer-icon {
 }
 
 .news .con-container .news-lists .news-list .news-link .conL {
-  flex-basis: 130px;
-  flex-grow: 1;
   display: flex;
+  flex-basis: 130px;
   flex-direction: column;
+  flex-grow: 1;
 }
 
 .news .con-container .news-lists .news-list .news-link .conC {
@@ -1232,16 +1232,16 @@ footer .footer-icon {
 .news .con-container .news-lists .news-list .news-link .conR {
   background-color: white;
   flex-basis: 130px;
-  overflow: hidden;
   height: 100px;
+  overflow: hidden;
   width: 100px;
 }
 
 .news .con-container .news-lists .news-list .news-link .conR .wp-post-image {
   height: 100%;
-  width: 100%;
   object-fit: cover;
   transition: all 1s ease;
+  width: 100%;
 }
 
 .news .con-container .news-lists .news-list:hover {
@@ -1254,16 +1254,16 @@ footer .footer-icon {
 }
 
 .news .con-container .news-btn {
-  text-align: center;
-  display: block;
-  border-radius: 3px;
   background-color: white;
+  border-radius: 3px;
   border: solid 1px #1f1f1d;
   box-shadow: #1f1f1d 0 0 8px;
+  display: block;
   font-size: 1rem;
   height: 50px;
   line-height: 50px;
   margin: 0 auto;
+  text-align: center;
   width: 10rem;
   transition: all 0.5s ease;
 }
@@ -1426,8 +1426,8 @@ footer .footer-icon {
 }
 
 .form-item1 {
-  padding: 0.5rem 0;
   grid-area: con1;
+  padding: 0.5rem 0;
 }
 
 .ipt {
@@ -1453,8 +1453,8 @@ footer .footer-icon {
 }
 
 .form-item2 {
-  padding: 0.5rem 0;
   grid-area: con2;
+  padding: 0.5rem 0;
 }
 
 .ipt {
@@ -1480,8 +1480,8 @@ footer .footer-icon {
 }
 
 .form-item3 {
-  padding: 0.5rem 0;
   grid-area: con3;
+  padding: 0.5rem 0;
 }
 
 .ipt {
@@ -1507,8 +1507,8 @@ footer .footer-icon {
 }
 
 .form-item4 {
-  padding: 0.5rem 0;
   grid-area: con4;
+  padding: 0.5rem 0;
 }
 
 .ipt {
@@ -1534,8 +1534,8 @@ footer .footer-icon {
 }
 
 .form-item5 {
-  padding: 0.5rem 0;
   grid-area: con5;
+  padding: 0.5rem 0;
 }
 
 .ipt {
@@ -1561,8 +1561,8 @@ footer .footer-icon {
 }
 
 .form-item6 {
-  padding: 0.5rem 0;
   grid-area: con6;
+  padding: 0.5rem 0;
 }
 
 .ipt {
@@ -1588,8 +1588,8 @@ footer .footer-icon {
 }
 
 .form-item7 {
-  padding: 0.5rem 0;
   grid-area: con7;
+  padding: 0.5rem 0;
 }
 
 .ipt {
@@ -1615,8 +1615,8 @@ footer .footer-icon {
 }
 
 .form-item8 {
-  padding: 0.5rem 0;
   grid-area: con8;
+  padding: 0.5rem 0;
 }
 
 .ipt {
@@ -1708,14 +1708,14 @@ footer .footer-icon {
 }
 
 .about-main-visual .bg-img {
-  display: flex;
-  justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
   background-image: url(../img/about-main.jpg);
   background-size: cover;
   background-position: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
 }
 
 .sticky-container {
@@ -1726,8 +1726,8 @@ footer .footer-icon {
 .sticky-container .about-nav {
   background-color: rgba(31, 31, 31, 0.8);
   position: sticky;
-  z-index: 2;
   top: 50px;
+  z-index: 2;
 }
 
 .sticky-container .about-nav .about-nav-lists {
@@ -1771,8 +1771,8 @@ footer .footer-icon {
 }
 
 .about-what-content .what-con {
-  box-shadow: 0 0 15px #555454;
   background-color: #f3f3f2;
+  box-shadow: 0 0 15px #555454;
   padding: 1rem;
   position: relative;
 }
@@ -1793,12 +1793,12 @@ footer .footer-icon {
 }
 
 .about-what-content .what-con .text-wrapper .what-conL .textL .svg-inline--fa {
+  background-color: #1f1f1d;
   border-radius: 2px;
   color: white;
-  background-color: #1f1f1d;
-  width: 1.5rem;
   height: 1.5rem;
   margin-right: 0.5rem;
+  width: 1.5rem;
 }
 
 .about-what-content .what-con .text-wrapper .what-conR {
@@ -1812,13 +1812,13 @@ footer .footer-icon {
 }
 
 .about-what-content .what-con__btn {
-  transition: all 0.5s ease;
-  vertical-align: middle;
-  display: inline-block;
-  width: 4rem;
-  height: 4rem;
-  border: 1px solid #1f1f1d;
   background-color: white;
+  border: 1px solid #1f1f1d;
+  display: inline-block;
+  height: 4rem;
+  width: 4rem;
+  vertical-align: middle;
+  transition: all 0.5s ease;
 }
 
 .about-what-content .what-con__btn:hover {
@@ -1829,18 +1829,18 @@ footer .footer-icon {
 }
 
 .modal-area {
+  background-color: white;
+  height: calc(100vh - 100px);
+  left: 50%;
+  opacity: 0;
+  overflow: auto;
   padding: 1rem;
   position: fixed;
   top: 50%;
-  left: 50%;
   transform: translate(-50%, -50%) scale(0.7);
-  background-color: white;
-  z-index: 10;
-  height: calc(100vh - 100px);
-  opacity: 0;
-  visibility: hidden;
   transition: 0.3s;
-  overflow: auto;
+  visibility: hidden;
+  z-index: 10;
 }
 
 .modal-area .modal {
@@ -1852,26 +1852,26 @@ footer .footer-icon {
 }
 
 .modal-area .modalClose {
+  background-color: #f3f3f2;
   border: 1px solid #1f1f1d;
+  cursor: pointer;
   border-radius: 3px;
   height: 50px;
-  width: 50px;
   position: absolute;
-  top: 1rem;
   right: 1rem;
-  background-color: #f3f3f2;
-  cursor: pointer;
+  top: 1rem;
+  width: 50px;
 }
 
 .modal-area .modalClose span {
   background-color: #1f1f1d;
   display: block;
   height: 2px;
-  width: 35px;
+  left: 50%;
   position: absolute;
   top: 50%;
-  left: 50%;
   transform: translate(-50%, -50%);
+  width: 35px;
 }
 
 .modal-area .modalClose span:nth-child(1) {
@@ -1884,22 +1884,22 @@ footer .footer-icon {
 
 .modal-area.active {
   opacity: 1;
-  visibility: visible;
   transform: translate(-50%, -50%) scale(1);
+  visibility: visible;
 }
 
 .mask {
+  background-color: rgba(31, 31, 31, 0.8);
   cursor: pointer;
+  height: 100%;
+  left: 0;
+  opacity: 0;
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(31, 31, 31, 0.8);
-  z-index: 9;
-  opacity: 0;
-  visibility: hidden;
   transition: 0.3s;
+  visibility: hidden;
+  width: 100%;
+  z-index: 9;
 }
 
 .mask.active {
@@ -1912,9 +1912,9 @@ footer .footer-icon {
 }
 
 .about-who-content .prof-con-wrapper {
-  margin-top: 1rem;
-  display: flex;
   box-shadow: 0 0 15px #555454;
+  display: flex;
+  margin-top: 1rem;
 }
 
 .about-who-content .prof-con-wrapper .prof-conL {
@@ -1956,14 +1956,14 @@ footer .footer-icon {
 }
 
 .about-who-content .prof-con-wrapper .prof-conR .history-wrapper .history-date {
-  margin-left: 1rem;
   line-height: 2rem;
+  margin-left: 1rem;
 }
 
 .about-who-content .prof-con-wrapper .prof-conR .history-wrapper .history-text {
   border-left: #9e9c9c solid 1px;
-  margin-left: 2rem;
   line-height: 2rem;
+  margin-left: 2rem;
   padding-left: 2rem;
 }
 
@@ -1978,8 +1978,8 @@ footer .footer-icon {
 }
 
 .about-gallery-content .g-picture::before {
-  display: block;
   content: "";
+  display: block;
   padding-top: 50%;
 }
 
@@ -2098,9 +2098,9 @@ footer .footer-icon {
 }
 
 .pagination .screen-reader-text {
-  text-align: center;
-  padding: 1rem;
   margin: 100px 0 0 0;
+  padding: 1rem;
+  text-align: center;
 }
 
 .pagination .nav-links {
@@ -2109,17 +2109,17 @@ footer .footer-icon {
 }
 
 .pagination .nav-links span.page-numbers {
+  background-color: #e7e4e4;
   color: white;
   margin: 0 .5rem;
   padding: .5rem 1rem;
-  background-color: #e7e4e4;
 }
 
 .pagination .nav-links a.page-numbers {
+  background-color: #9e9c9c;
+  color: white;
   margin: 0 .5rem;
   padding: .5rem 1rem;
-  color: white;
-  background-color: #9e9c9c;
 }
 
 .post-image {
@@ -2131,8 +2131,8 @@ footer .footer-icon {
 }
 
 .main-contents .content-info {
-  width: 90%;
   margin: 0 auto;
+  width: 90%;
 }
 
 .main-contents .content-info__category, .main-contents .content-info__date, .main-contents .content-info__title, .main-contents .content-info__author {
@@ -2153,14 +2153,13 @@ footer .footer-icon {
 }
 
 .main-contents .post-navigation .screen-reader-text {
+  border-top: 3px solid #e7e4e4;
   color: #1f1f1d;
   display: inline-block;
-  width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  border-top: 3px solid #e7e4e4;
   margin: 100px 0 2rem 0;
   padding: 1rem 0;
+  text-align: center;
+  width: 100%;
 }
 
 .main-contents .post-navigation .nav-links {
@@ -2169,8 +2168,8 @@ footer .footer-icon {
 }
 
 .main-contents .post-navigation .nav-links .nav-previous {
-  position: absolute;
   left: 0;
+  position: absolute;
 }
 
 .main-contents .post-navigation .nav-links .nav-next {
@@ -2184,10 +2183,10 @@ footer .footer-icon {
 }
 
 .main-contents .post-navigation .nav-links .nav-previous:before, .main-contents .post-navigation .nav-links .nav-next:before {
-  content: "";
   background-color: #9e9c9c;
   bottom: -5px;
   /*線の上下位置*/
+  content: "";
   height: 2px;
   /*線の太さ*/
   left: 0;
@@ -2218,12 +2217,12 @@ footer .footer-icon {
 }
 
 .slider-area .SAwrapper__left {
-  width: 50%;
   background-color: #f3f3f2;
-  padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 1rem;
+  width: 50%;
 }
 
 .slider-area .SAwrapper__left p, .slider-area .SAwrapper__left h1 {
@@ -2232,9 +2231,9 @@ footer .footer-icon {
 }
 
 .slider-area .SAwrapper__left h1 {
+  border-bottom: solid #1f1f1d 1px;
   font-size: 1.3rem;
   margin: 0 2rem 1rem 2rem;
-  border-bottom: solid #1f1f1d 1px;
 }
 
 .slider-area .SAwrapper__right {
@@ -2242,10 +2241,10 @@ footer .footer-icon {
 }
 
 .slider-area .SAwrapper__right .swiper-container .swiper-slide {
-  height: 25vh;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  height: 25vh;
 }
 
 .slider-area .SAwrapper__right .swiper-container .swiper-slide.slide1 {
@@ -2290,12 +2289,12 @@ footer .footer-icon {
 }
 
 .animation-area .playback_controls_row {
-  position: sticky;
-  left: 0;
-  right: 0;
-  bottom: 0;
   background-color: #9e9c9c;
+  bottom: 0;
   display: grid;
+  left: 0;
+  position: sticky;
+  right: 0;
   grid-template: "... .... .... .... .... .... .... .... ..." 1rem "... btn1 .... btn2 .... btn3 .... btn4 ..." 1fr "... .... .... .... .... .... .... .... ..." 1rem "... btn5 .... btn6 .... btn7 .... btn8 ..." 1fr "... .... .... .... .... .... .... .... ..." 1rem /1rem 1fr  1rem 1fr  1rem 1fr  1rem 1fr  1rem;
 }
 
@@ -2332,16 +2331,16 @@ footer .footer-icon {
 }
 
 .animation-area .playback_controls_row .playbackButton {
-  text-align: center;
-  width: 100%;
-  text-decoration: none;
   background-color: #1f1f1d;
-  color: white;
-  padding: 1rem 0;
   border-radius: 5px;
+  color: white;
   display: inline-block;
   margin-right: 1rem;
+  padding: 1rem 0;
+  text-align: center;
+  text-decoration: none;
   transition: all .5s;
+  width: 100%;
 }
 
 .animation-area .playback_controls_row .playbackButton:hover {
@@ -2350,38 +2349,38 @@ footer .footer-icon {
 }
 
 #intro {
-  height: 100vh;
-  width: 100%;
-  margin: 0 auto;
+  align-items: center;
   background-color: #526bc3;
   display: flex;
+  height: 100vh;
   justify-content: center;
-  align-items: center;
+  margin: 0 auto;
+  width: 100%;
 }
 
 #intro .content {
+  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 
 #intro .content .img-logo {
-  width: 200px;
-  height: 200px;
   background-color: gray;
   border-radius: 50%;
+  height: 200px;
+  width: 200px;
 }
 
 .project {
-  height: 100vh;
-  width: 100%;
+  align-items: center;
   background-color: gray;
   display: flex;
   flex-direction: column;
+  height: 100vh;
   justify-content: center;
-  align-items: center;
   transition: all 1s ease-out;
+  width: 100%;
 }
 
 .project .info {
@@ -2389,10 +2388,10 @@ footer .footer-icon {
 }
 
 .project .img {
-  width: 200px;
-  height: 200px;
   background-color: #526bc3;
   border-radius: 50%;
+  height: 200px;
+  width: 200px;
 }
 
 .e404 {
@@ -2400,31 +2399,42 @@ footer .footer-icon {
 }
 
 .e404 .error-content {
-  margin: 1rem 0;
   line-height: 2;
+  margin: 1rem 0;
 }
 
 .e404 .error-content .top-link {
-  display: inline-block;
+  background-color: #f3f3f2;
   border: 1px solid #9e9c9c;
+  display: inline-block;
   margin-top: 1rem;
   padding: .5rem;
-  background-color: #f3f3f2;
 }
 
 .e404 .search-form .search-box .search-input {
-  padding-left: 1rem;
   border: solid 1px #e7e4e4;
-  vertical-align: text-top;
   height: 3rem;
+  padding-left: 1rem;
+  vertical-align: text-top;
 }
 
 .e404 .search-form .search-box .button-submit {
-  cursor: pointer;
-  border: solid 1px #e7e4e4;
   background-color: #f3f3f2;
-  vertical-align: text-top;
+  border: solid 1px #e7e4e4;
+  cursor: pointer;
   font-size: 2rem;
   height: 3rem;
+  vertical-align: text-top;
   width: 3rem;
+}
+
+.privacy-main .privacy-title, .privacy-main .privacy-text {
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.privacy-main h2 {
+  font-weight: bolder;
+  padding-left: 1rem;
+  margin: .5rem 0;
 }

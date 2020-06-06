@@ -9,6 +9,14 @@
   <body <?php body_class(); ?>> <!--bodystartpoint-->
   <?php wp_body_open(); ?> <!--bodyfookpoint-->
 
+  <?php
+				wp_nav_menu( array(
+					'theme_location' => 'place_global'
+				) );
+				?>
+
+
+
     <!-- mobile-slide-link -->
     <div id="global-container">
       <nav class="mobile-menu">

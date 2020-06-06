@@ -108,16 +108,15 @@
     <?php endwhile; endif; ?>
   <?php } ?>
   
-  <div class="pager">
-    <ul class="pagerList">
-      <?php
-        if(function_exists( 'page_navi' )):
-          page_navi();
-        endif;
-      ?> 
-    </ul>
-  </div>
-
+  <?php 
+  the_posts_pagination( array(
+    'before_page_number' => '',
+    'next_text'          => 'Next',
+    'prev_text'          => 'Prev',
+    'show_all'           => __return_true(),
+    'screen_reader_text' => 'Post Navigation'
+  ));
+  ?>
   </div>
 </main>
 <?php get_footer(); //footerimport

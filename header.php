@@ -32,18 +32,11 @@
           <nav class="header-container content-width">
             <div class="header-left"><a class="link-logo" href="<?php echo home_url(); ?>">GO home</a></div>
             <ul class="header-center">
-            <!-- メニューPHP化 -->
-            <?php /* wp_nav_menu( array(
-              'theme_location'=>'place_global', 
-              'container'     =>'', 
-              'menu_class'    =>'',
-              'items_wrap' => '%3$s',//<ul>を出力しない
-            ));*/ ?>
-                <?php
-                  wp_nav_menu( array(
-                  'theme_location' => 'place_global'
-                  ));
-                ?>
+              <?php
+                wp_nav_menu( array(
+                'theme_location' => 'place_global'
+                ));
+              ?>
             </ul>
             <div class="header-right">
               <div class="option-icon iconL hover-Uline">

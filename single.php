@@ -28,34 +28,22 @@
     </li>
   </ul>
   
-  <div class="more-news"><!--next/prevbuttonstart-->
-    <?php 
-      $next_post = get_next_post();
-      $prev_post = get_previous_post();
-    if ( $prev_post ):
-    ?>
-  
-    <div class="prev">
-      <a class="another-link" href="<?php echo get_permalink( $prev_post ->ID )?>">
-      <i class="fas fa-arrow-left fa-sm"></i>PREV
-      </a>
-    </div>
-  
-  <?php
-    endif;
-    if( $next_post ):
-      ?>
-    <div class="next">
-      <a class="another-link" href="<?php echo get_permalink( $next_post ->ID )?>">
-        NEXT<i class="fas fa-arrow-right fa-sm"></i>
-      </a>
-    </div>
-    
-    <?php endif;?>
-  </div><!--next/prevbuttonend-->
+  <?php while( have_posts() ) : the_post(); ?>
+    <article class="post">
+      <h2><?php the_title(); ?></h2>
+      <?php the_content(); ?>
+    </article>
+  <?php endwhile;?>
+  <?php the_post_navigation(
+    array(
+      'prev_text'           => '前の記事 - %title',
+      'next_text'           => '次の記事 - %title',
+      'screen_reader_text'  => 'page navigation',
+      'in_same_term' => true,
+    )
+  ); ?>
+
 </main>
-
-
 
 </article><!--getpostinfoend-->
 <?php endif; ?><!--mainloopend-->

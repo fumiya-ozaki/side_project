@@ -108,6 +108,7 @@
     <?php endwhile; endif; ?>
   <?php } ?>
   
+  <!--pagenavigation-->
   <?php 
   the_posts_pagination( array(
     'before_page_number' => '',

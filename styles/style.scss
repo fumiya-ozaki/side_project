@@ -926,11 +926,9 @@ footer {
 .demo{
   margin-top: 50px;
 }
-.demo-container{
-  // padding: 2rem 0;
-}
+
 .slider-area {
-  margin: 2rem 0;
+  margin-bottom: 2rem;
   .SAwrapper {
     display: flex;
     justify-content: space-between;
@@ -986,8 +984,7 @@ footer {
   }
 }
 
-.play-ground{
-  background-color:$cLGray;
+.animation-area{
   position: relative;
   .animation-char{
     font-size: 2rem;
@@ -996,7 +993,6 @@ footer {
       display: inline-block;
     }
   }
-
   .playback_controls_row {
     position: sticky;
     left: 0;
@@ -1039,8 +1035,9 @@ footer {
 }
 
 #intro{
-  height: 100vh;
+  height:100vh;
   width: 100%;
+  margin: 0 auto;
   background-color:rgb(82,107,195);
   display: flex;
   justify-content: center;
@@ -1060,7 +1057,6 @@ footer {
 }
 
 .project{
-  border: 10px solid white;
   height: 100vh;
   width: 100%;
   background-color: gray;
@@ -1068,11 +1064,11 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  opacity:0;
+  // opacity:0;
   transition: all 1s ease-out;
-  &.fade-in{
-    opacity: 1;
-  }
+  // &.fade-in{
+  //   opacity: 1;
+  // }
   .info{
     text-align: center;
   }
@@ -1082,6 +1078,11 @@ footer {
     background-color:rgb(82,107,195);
     border-radius: 50%;
   }
+}
+
+#main{
+  // position: relative;
+  // background-color: white;
 }
 
 

@@ -6,14 +6,17 @@ Template Name: demo
 
 <?php get_header(); ?>  <!--header-import-->
 <main class="demo content-width">
-  <h1 class="font-lg">DEMO</h1>
-  <p>制作のデモコンテンツです</p>
+
+  <div class="top-content">
+    <h1 class="top-content__title font-lg">DEMO</h1>
+    <p class="top-content__text">制作のデモコンテンツです</p>
+  </div>
 
     <!--sliderdemostart-->
   <section class="demo-container">  
     <p class="demo-con-title font-lr">スライダー</p>
 
-    <div class="demo-section slider-area">
+    <div class="slider-area">
       <div class="SAwrapper">
         <div class="SAwrapper__left">
           <h1>スクロールスライダー</h1>
@@ -38,7 +41,7 @@ Template Name: demo
       </div>
     </div>
 
-    <div class="demo-section slider-area">
+    <div class="slider-area">
       <div class="SAwrapper">
         <div class="SAwrapper__left">
           <h1>マルチスライダー</h1>
@@ -63,7 +66,7 @@ Template Name: demo
       </div>
     </div>
 
-    <div class="demo-section slider-area">
+    <div class="slider-area">
       <div class="SAwrapper">
         <div class="SAwrapper__left">
           <h1>フェードスライダー</h1>
@@ -88,7 +91,7 @@ Template Name: demo
       </div>
     </div>
 
-    <div class="demo-section slider-area">
+    <div class="slider-area">
       <div class="SAwrapper">
         <div class="SAwrapper__left">
           <h1>キュービックスライダー</h1>
@@ -113,7 +116,7 @@ Template Name: demo
       </div>
     </div>
 
-    <div class="demo-section slider-area">
+    <div class="slider-area">
       <div class="SAwrapper">
         <div class="SAwrapper__left">
           <h1>フリップスライダー</h1>
@@ -138,7 +141,7 @@ Template Name: demo
       </div>
     </div>
 
-    <div class="demo-section slider-area">
+    <div class="slider-area">
       <div class="SAwrapper">
         <div class="SAwrapper__left">
           <h1>３Dマルチスライダー</h1>
@@ -166,9 +169,10 @@ Template Name: demo
   <!--sliderdemoend-->
 
   <!--charanimationstart-->
-  <section class="demo-container play-ground">
+  <section class="demo-container animation-area">
     <p class="demo-con-title font-lr">アニメーション</p>
-    <div class="demo-section animation-area">
+
+    <div class="animation-area">
       <div class="animation-char" id="aniChar1">
         Lorem ipsum dolor sit amet,consectetur
       </div>
@@ -205,54 +209,6 @@ Template Name: demo
   <section class="demo-container scroll-area">
     <p class="demo-con-title font-lr">スクロール</p>
 
-    <div id="intro">
-      <div class="content">
-        <div class="img-logo"></div>
-        <h1>The title</h1>
-        <p>
-          Short and sharp ScrollAnimation demos,<br>
-        </p>
-      </div>
-    </div>
-
-    <div class="main-container" id="main">
-
-      <div id="project01" class="project">
-        <div class="img"></div>
-        <h1>Project title</h1>
-        <p class=info>
-          Lorem ipsum dolor sit amet, consectetur<br>
-          adipiscing elit, sed do eiusmod tempor incididunt<br>
-          ut labore et dolore magna aliqua. Ut enim ad<br>
-          minim veniam, quis nostrud exercitation ullamco<br>
-          laboris nisi ut aliquip ex ea commodo consequat.
-        </p>
-      </div>
-      
-      <div id="project02" class="project">
-        <div class="img"></div>
-        <h1>Project title</h1>
-        <p class=info>
-          Lorem ipsum dolor sit amet, consectetur<br>
-          adipiscing elit, sed do eiusmod tempor incididunt<br>
-          ut labore et dolore magna aliqua. Ut enim ad<br>
-          minim veniam, quis nostrud exercitation ullamco<br>
-          laboris nisi ut aliquip ex ea commodo consequat.
-        </p>
-      </div>
-      
-      <div id="project03" class="project">
-        <div class="img"></div>
-        <h1>Project title</h1>
-        <p class=info>
-          Lorem ipsum dolor sit amet, consectetur<br>
-          adipiscing elit, sed do eiusmod tempor incididunt<br>
-          ut labore et dolore magna aliqua. Ut enim ad<br>
-          minim veniam, quis nostrud exercitation ullamco<br>
-          laboris nisi ut aliquip ex ea commodo consequat.
-        </p>
-      </div>
-    </div>
   </section>
 
 

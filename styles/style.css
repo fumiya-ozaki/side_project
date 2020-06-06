@@ -2197,7 +2197,7 @@ footer .footer-icon {
 }
 
 .slider-area {
-  margin: 2rem 0;
+  margin-bottom: 2rem;
 }
 
 .slider-area .SAwrapper {
@@ -2264,21 +2264,20 @@ footer .footer-icon {
   color: #147af6;
 }
 
-.play-ground {
-  background-color: #f3f3f2;
+.animation-area {
   position: relative;
 }
 
-.play-ground .animation-char {
+.animation-area .animation-char {
   font-size: 2rem;
   line-height: 5rem;
 }
 
-.play-ground .animation-char .block-animation {
+.animation-area .animation-char .block-animation {
   display: inline-block;
 }
 
-.play-ground .playback_controls_row {
+.animation-area .playback_controls_row {
   position: sticky;
   left: 0;
   right: 0;
@@ -2288,39 +2287,39 @@ footer .footer-icon {
   grid-template: "... .... .... .... .... .... .... .... ..." 1rem "... btn1 .... btn2 .... btn3 .... btn4 ..." 1fr "... .... .... .... .... .... .... .... ..." 1rem "... btn5 .... btn6 .... btn7 .... btn8 ..." 1fr "... .... .... .... .... .... .... .... ..." 1rem /1rem 1fr  1rem 1fr  1rem 1fr  1rem 1fr  1rem;
 }
 
-.play-ground .playback_controls_row .playButton {
+.animation-area .playback_controls_row .playButton {
   grid-area: btn1;
 }
 
-.play-ground .playback_controls_row .pauseButton {
+.animation-area .playback_controls_row .pauseButton {
   grid-area: btn2;
 }
 
-.play-ground .playback_controls_row .resumeButton {
+.animation-area .playback_controls_row .resumeButton {
   grid-area: btn3;
 }
 
-.play-ground .playback_controls_row .reverseButton {
+.animation-area .playback_controls_row .reverseButton {
   grid-area: btn4;
 }
 
-.play-ground .playback_controls_row .slowButton {
+.animation-area .playback_controls_row .slowButton {
   grid-area: btn5;
 }
 
-.play-ground .playback_controls_row .fastButton {
+.animation-area .playback_controls_row .fastButton {
   grid-area: btn6;
 }
 
-.play-ground .playback_controls_row .seekButton {
+.animation-area .playback_controls_row .seekButton {
   grid-area: btn7;
 }
 
-.play-ground .playback_controls_row .progressButton {
+.animation-area .playback_controls_row .progressButton {
   grid-area: btn8;
 }
 
-.play-ground .playback_controls_row .playbackButton {
+.animation-area .playback_controls_row .playbackButton {
   text-align: center;
   width: 100%;
   text-decoration: none;
@@ -2333,7 +2332,7 @@ footer .footer-icon {
   transition: all .5s;
 }
 
-.play-ground .playback_controls_row .playbackButton:hover {
+.animation-area .playback_controls_row .playbackButton:hover {
   background-color: white;
   color: #1f1f1d;
 }
@@ -2341,6 +2340,7 @@ footer .footer-icon {
 #intro {
   height: 100vh;
   width: 100%;
+  margin: 0 auto;
   background-color: #526bc3;
   display: flex;
   justify-content: center;
@@ -2362,7 +2362,6 @@ footer .footer-icon {
 }
 
 .project {
-  border: 10px solid white;
   height: 100vh;
   width: 100%;
   background-color: gray;
@@ -2370,12 +2369,7 @@ footer .footer-icon {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  opacity: 0;
   transition: all 1s ease-out;
-}
-
-.project.fade-in {
-  opacity: 1;
 }
 
 .project .info {

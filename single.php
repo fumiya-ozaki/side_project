@@ -28,20 +28,22 @@
     </li>
   </ul>
   
+  <!--pagenavigationstart-->
   <?php while( have_posts() ) : the_post(); ?>
-    <article class="post">
-      <h2><?php the_title(); ?></h2>
-      <?php the_content(); ?>
-    </article>
+  <article class="post">
+    <h2><?php the_title(); ?></h2>
+    <?php the_content(); ?>
+  </article>
   <?php endwhile;?>
   <?php the_post_navigation(
     array(
-      'prev_text'           => '前の記事 - %title',
-      'next_text'           => '次の記事 - %title',
-      'screen_reader_text'  => 'page navigation',
+      'prev_text'           => '← PREV',
+      'next_text'           => 'NEXT →',
+      'screen_reader_text'  => 'Page Navigation',
       'in_same_term' => true,
-    )
-  ); ?>
+      )
+    ); ?>
+  <!--pagenavigationend-->
 
 </main>
 

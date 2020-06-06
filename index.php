@@ -133,7 +133,7 @@
               </li>
             <?php endwhile; endif; ?> <!--roopend-->
           </ul>
-          <a class="news-btn" href="<?php echo home_url('/news'); ?>">VIEW MORE</a>
+          <a class="news-btn" href="<?php echo home_url('/category/news/'); ?>">VIEW MORE</a>
         </div>
         </section>
       

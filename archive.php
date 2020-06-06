@@ -6,11 +6,11 @@
         <?php the_archive_title(); ?>
       </div>
       <ul class="category-lists">
-        <lic class="category-list hover-Uline">workstag1</lic>
-        <lic class="category-list hover-Uline">workstag2</lic>
-        <lic class="category-list hover-Uline">workstag3</lic>
-        <lic class="category-list hover-Uline">workstag4</lic>
-        <lic class="category-list hover-Uline">workstag5</lic>
+        <li class="category-list hover-Uline">workstag1</li>
+        <li class="category-list hover-Uline">workstag2</li>
+        <li class="category-list hover-Uline">workstag3</li>
+        <li class="category-list hover-Uline">workstag4</li>
+        <li class="category-list hover-Uline">workstag5</li>
       </ul>
 
       <?php if(have_posts()): while(have_posts()): the_post();?>
@@ -42,11 +42,11 @@
       <?php the_archive_title(); ?>
     </div>
     <ul class="category-lists">
-      <lic class="category-list hover-Uline">newstag1</lic>
-      <lic class="category-list hover-Uline">newstag2</lic>
-      <lic class="category-list hover-Uline">newstag3</lic>
-      <lic class="category-list hover-Uline">newstag4</lic>
-      <lic class="category-list hover-Uline">newstag5</lic>
+      <li class="category-list hover-Uline">newstag1</li>
+      <li class="category-list hover-Uline">newstag2</li>
+      <li class="category-list hover-Uline">newstag3</li>
+      <li class="category-list hover-Uline">newstag4</li>
+      <li class="category-list hover-Uline">newstag5</li>
     </ul>
     <?php if(have_posts()): while(have_posts()): the_post();?>
       <ul class="news-lists">
@@ -77,11 +77,11 @@
       <?php the_archive_title(); ?>
     </div>
     <ul class="category-lists">
-      <lic class="category-list hover-Uline">blogtag1</lic>
-      <lic class="category-list hover-Uline">blogtag2</lic>
-      <lic class="category-list hover-Uline">blogtag3</lic>
-      <lic class="category-list hover-Uline">blogtag4</lic>
-      <lic class="category-list hover-Uline">blogtag5</lic>
+      <li class="category-list hover-Uline">blogtag1</li>
+      <li class="category-list hover-Uline">blogtag2</li>
+      <li class="category-list hover-Uline">blogtag3</li>
+      <li class="category-list hover-Uline">blogtag4</li>
+      <li class="category-list hover-Uline">blogtag5</li>
     </ul>
     <?php if(have_posts()): while(have_posts()): the_post();?>
       <ul class="news-lists">

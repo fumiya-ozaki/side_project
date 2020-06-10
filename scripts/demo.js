@@ -232,10 +232,24 @@ tlCharAnimation.fromTo('#aniChar1', 1, { x:-50 , y:-50, opacity:0, scale:.9 },{ 
   $('.progressButton').click(function(){
     tlCharAnimation.progress(0.5);
   });
-//textanimationend***********************************************************************
+  //textanimationend***********************************************************************
   
+  const tabLabels = document.querySelectorAll('.tab-demo__label li a');
+  const tabContents = document.querySelectorAll('.tab-demo__content');
 
-              
+  tabLabels.forEach(function(clickedLabel){
+    clickedLabel.addEventListener('click',function(e){
+      e.preventDefault();
+      tabLabels.forEach(function(label){
+        label.classList.remove('active');
+      });
+      clickedLabel.classList.add('active');
+      tabContents.forEach(function(content){
+        content.classList.remove('active');
+      });
+      document.getElementById(clickedLabel.dataset.id).classList.add('active');
+    })
+  })
               
               
 },false);//DOMloadEnd

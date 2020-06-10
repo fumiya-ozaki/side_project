@@ -29,38 +29,17 @@ body {font-family: "Kameron", "Noto Sans JP", sans-serif;}
 
 /* category-tab */
 .tab{
-  width: 5rem;
   border-radius: 5px;
   margin-right: 1rem;
   padding: 0 1rem;
+  width: 5rem;
   &.news{background-color: #f7ff08;}
   &.works{background-color: #ff0df2;}
   &.blog{background-color: #ff260d;}
 }
 
 
-/* hover-animation */
-.hover-Uline{
-  position: relative;
-  cursor: pointer;
-  text-decoration: none;
-  &:before{
-    content: "";
-    background-color: $cDGray;
-    bottom: -5px; /*線の上下位置*/
-    height: 2px; /*線の太さ*/
-    left: 0;
-    position: absolute;
-    right: 0;
-    transform: scale(0,1);
-    transform-origin: center;
-    transition: transform .2s;
-    width: 100%; /*線の長さ*/
-  }
-  &:hover:before {
-    transform: scale(1);
-  }
-}
+
 
 /* <br class="br-pc"> tablet */
 .br-pc {

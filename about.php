@@ -110,9 +110,9 @@ Template Name: about
             </span>
           </span>
           
-          <!-- <div class="modal-area content-width" id="modalArea"> -->
+          <!-- <div class="modal-area content-width" id="modalArea">
 
-            <!-- <div class="modal" id="modal1">
+            <div class="modal" id="modal1">
               <p>・デザイン</p>
               <p>４原則（近接・整列・反復・コントラスト）を大切にしています</p>
               <p>優れたデザインはひと目で情報を伝えるためです</p>

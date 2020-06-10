@@ -17,13 +17,13 @@
         <?php the_time( get_option( 'date_format' )); ?><!--content-date-->
       </time>
     </li>
-    <li class="content-info__title">
+    <li class="content-info__title font-lr">
       <p><?php the_title(); ?></p><!--title-->
     </li>
     <li>
       <p class="content-info__author"><?php the_author(); ?></p><!--author-->
     </li>
-    <li class="content-info__text">
+    <li class="content-info__text font-sm">
       <?php the_content(); ?><!--content-->
     </li>
   </ul>

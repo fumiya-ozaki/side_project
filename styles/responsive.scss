@@ -1,3 +1,53 @@
+@import "modules/colors";
+
+@media (min-width:960px) { //PConly start
+
+  /* hover-animation */
+.hover-Uline{
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  &:before{
+    content: "";
+    background-color: $cDGray;
+    bottom: -5px; /*線の上下位置*/
+    height: 2px; /*線の太さ*/
+    left: 0;
+    position: absolute;
+    right: 0;
+    transform: scale(0,1);
+    transform-origin: center;
+    transition: transform .2s;
+    width: 100%; /*線の長さ*/
+  }
+  &:hover:before {
+    transform: scale(1);
+  }
+}
+
+.nav-previous,.nav-next{
+  cursor: pointer;
+  text-decoration: none;
+  &:before{
+    background-color: $cDGray;
+    bottom: -5px; /*線の上下位置*/
+    content: "";
+    height: 2px; /*線の太さ*/
+    left: 0;
+    position: absolute;
+    right: 0;
+    transform: scale(0);
+    transform-origin: center;
+    transition: transform .2s;
+    width: 100%; /*線の長さ*/
+  }
+  &:hover:before {
+    transform: scale(1);
+  }
+}
+
+}//PConlyend
+
 @media (max-width:480px) { //smartphone start
 
   #mobile-menu-btn{display: block;}
@@ -12,8 +62,7 @@
         display: none;
       }
     }
-  }
-
+  }  
   
   // index.htmlstart******************************************************
   .contents {
@@ -45,15 +94,31 @@
         .news-list {
           padding: 0;
           .news-link {
-            display: flex;
-            flex-direction: column;
-            .conL {
-              padding-bottom: 0;
+            display: grid;
+            grid-template:
+            ".... .... ....".5rem
+            ".... conL ...."2rem
+            ".... .... ....".5rem
+            ".... conC ...."3rem
+            ".... .... ....".5rem
+            ".... conR ...."150px
+            ".... .... ....".5rem
+            /.5rem 1fr .5rem;
+            .conR{
+              .wp-post-image,.no-image {
+              transition: none;
+              }
             }
+          &:hover {
             .conR {
-              width: 100%;
+              img {
+                opacity: 1;
+                transform: scale(1);
+              }
             }
           }
+
+          }  
         }
       }
     }
@@ -123,7 +188,31 @@
     " con8 con8 con8" 
     / 1fr ;
 }
+.wpcf7-form-control{
+  display: flex;
+  flex-direction: column;
+}
 
+.cubic-btn {
+  display: none;
+}
+
+.mobile-btn{
+  align-items: center;
+  display: block;
+  display: flex;
+  justify-content: center;
+  .submit-btn{
+    align-items: center;
+    background-color: $cBlack;
+    color: $cWhite;
+    display: flex;
+    margin-top: 1rem;
+    justify-content: center;
+    padding: .5rem;
+    width: 100%;
+  }
+}
 
 // contact.htmlstart*******************************************************
 // demo.phpstart*******************************************************
@@ -145,9 +234,9 @@
  }
 // demo.phpstart*******************************************************
 
-
-
 } //smartphone end
+
+
 
 @media screen and (min-width:481px) and (max-width:959px){ //tablet start
   .grobal-header{
@@ -160,7 +249,6 @@
   #mobile-menu-btn{
     display: block;
   }
-
 // index.htmlstart*******************************************************
 
   .contents {
@@ -189,18 +277,32 @@
         .news-list {
           padding: 0;
           .news-link {
-            display: flex;
-            flex-direction: column;
-            .conL {
-              padding-bottom: 0;
+            display: grid;
+            grid-template:
+            ".... .... ....".5rem
+            ".... conL ...."2rem
+            ".... .... ...."1rem
+            ".... conC ...."3rem
+            ".... .... ...."1rem
+            ".... conR ...."200px
+            ".... .... ....".5rem
+            /.5rem 1fr .5rem;
+            .conR{
+              .wp-post-image,.no-image {
+              transition: none;
+              }
             }
-            .conR {
-              flex-basis: auto;
-              height: 300px;
-              width: 100%;
+            &:hover {
+              .conR {
+                img {
+                  opacity: 1;
+                  transform: scale(1);
+                }
+              }
             }
-          }
+          }  
         }
+
       }
     }
   }
@@ -267,6 +369,7 @@ element.style{
  }
 
 // demo.phpstart*******************************************************
+
 
 
 } //tablet end

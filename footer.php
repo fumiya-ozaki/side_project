@@ -12,7 +12,12 @@
             <a class="footer-icon hover-Uline" href="https://twitter.com/fumiya0414"><i class="fab fa-twitter fa-sm"></i></a>
             <!-- <a class="footer-icon hover-Uline" href=""><i class="fab fa-line fa-sm"></i></a> -->
           </div>
-          <div id="topBtn" class="topBtn">TOP</div>
+          
+          <?php if (is_page(array('demo'))) {?>
+          <?php }else{ ?>
+            <div id="topBtn" class="topBtn">TOP</div>
+          <?php } ?>
+
         </footer>
       </div> <!--#containerFromheader-->
     </div> <!--#global-containerFromheader-->

@@ -3,7 +3,6 @@
 Template Name: demo
 */
 ?>
-
 <?php get_header(); ?>  <!--header-import-->
 <main class="demo content-width">
 
@@ -206,9 +205,25 @@ Template Name: demo
   </section>
   <!--charanimationstart-->
 
-  <section class="demo-container scroll-area">
-    <p class="demo-con-title font-lr">スクロール</p>
+  <section class="demo-container tab-demo">
+    <p class="demo-con-title font-lr">タブ</p>
+    <div class="tab-demo__container">
+      <ul class="tab-demo__label">
+        <li><a href="#" class="active" data-id="tab-demo__info">サイトの情報</a></li>
+        <li><a href="#" data-id="tab-demo__product">商品情報</a></li>
+        <li><a href="#" data-id="tab-demo__contact">お問い合わせ</a></li>
+      </ul>
 
+      <section class="tab-demo__content active" id="tab-demo__info">
+        サイトの情報。サイトの情報。
+      </section>
+      <section class="tab-demo__content" id="tab-demo__product">
+        商品情報。商品情報。
+      </section>
+      <section class="tab-demo__content" id="tab-demo__contact">
+        お問い合わせ。お問い合わせ。
+      </section>
+    </div>
   </section>
 
 

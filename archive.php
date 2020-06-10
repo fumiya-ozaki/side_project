@@ -7,7 +7,7 @@
       </div>
       <?php if(have_posts()): while(have_posts()): the_post();?>
         <ul class="news-lists">
-        <li class="news-list">
+        <li class="news-list hover-scale">
                 <a class="news-link" href="<?php the_permalink(); ?>"> <!--content-link-->
                   <span class="conL">
                     <span class="tab <?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->slug; } ?>">
@@ -35,7 +35,7 @@
     </div>
     <?php if(have_posts()): while(have_posts()): the_post();?>
       <ul class="news-lists">
-      <li class="news-list">
+      <li class="news-list hover-scale">
                 <a class="news-link" href="<?php the_permalink(); ?>"> <!--content-link-->
                   <span class="conL">
                     <span class="tab <?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->slug; } ?>">
@@ -63,7 +63,7 @@
     </div>
     <?php if(have_posts()): while(have_posts()): the_post();?>
       <ul class="news-lists">
-      <li class="news-list">
+      <li class="news-list hover-scale">
                 <a class="news-link" href="<?php the_permalink(); ?>"> <!--content-link-->
                   <span class="conL">
                     <span class="tab <?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->slug; } ?>">

@@ -45,6 +45,25 @@
     transform: scale(1);
   }
 }
+.news{
+  .con-container {
+
+    .hover-scale{
+      transition: all .3s;
+      img{
+        transition: all 1s ease;
+      }
+      &:hover{
+        background-color: rgb(231, 228, 228);
+        img{
+          opacity: .7;
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+}
 
 }//PConlyend
 

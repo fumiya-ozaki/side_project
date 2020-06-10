@@ -1016,7 +1016,6 @@ footer .footer-icon {
   background-color: white;
   padding: 1em;
   margin-bottom: 1rem;
-  transition: all 0.3s ease;
 }
 
 .news .con-container .news-lists .news-list .news-link {
@@ -1041,17 +1040,7 @@ footer .footer-icon {
 .news .con-container .news-lists .news-list .news-link .conR .wp-post-image, .news .con-container .news-lists .news-list .news-link .conR .no-image {
   height: 100%;
   object-fit: cover;
-  transition: all 1s ease;
   width: 100%;
-}
-
-.news .con-container .news-lists .news-list:hover {
-  background-color: #e7e4e4;
-}
-
-.news .con-container .news-lists .news-list:hover .conR img {
-  opacity: 0.7;
-  transform: scale(1.1);
 }
 
 .news .con-container .news-btn {

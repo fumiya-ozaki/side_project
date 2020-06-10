@@ -386,7 +386,6 @@ footer {
         background-color: $cWhite;
         padding: 1em;
         margin-bottom: 1rem;
-        transition: all 0.3s ease;
         .news-link {
           display: grid;
           grid-template:
@@ -407,22 +406,13 @@ footer {
               .wp-post-image, .no-image {
                 height: 100%;
                 object-fit: cover;
-                transition: all 1s ease;
                 width: 100%;
               }
           }
         }
-        &:hover {
-          background-color: rgb(231, 228, 228);
-          .conR {
-            img {
-              opacity: 0.7;
-              transform: scale(1.1);
-            }
-          }
-        }
       }
     }
+
     .news-btn {
       background-color: $cWhite;
       border-radius: 3px;
@@ -439,6 +429,8 @@ footer {
     }
   }
 }
+
+
 
 .bottom-banners {
   display: flex;

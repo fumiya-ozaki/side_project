@@ -48,6 +48,19 @@
   .nav-previous:hover:before, .nav-next:hover:before {
     transform: scale(1);
   }
+  .news .con-container .hover-scale {
+    transition: all .3s;
+  }
+  .news .con-container .hover-scale img {
+    transition: all 1s ease;
+  }
+  .news .con-container .hover-scale:hover {
+    background-color: #e7e4e4;
+  }
+  .news .con-container .hover-scale:hover img {
+    opacity: .7;
+    transform: scale(1.1);
+  }
 }
 
 @media (max-width: 480px) {

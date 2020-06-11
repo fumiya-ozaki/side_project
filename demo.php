@@ -269,7 +269,38 @@ Template Name: demo
         <span class="closeBtn closeBtn2">閉じる</span>
       </dd>
     </dl>
+  </section>
+  <section class="demo-container modal-demo">
+    <p class="demo-con-title font-lr">モーダル</p>
+    <button class="modal__btn" id="modalOpen1">モーダル１</button>
+    <button class="modal__btn" id="modalOpen2">モーダル２</button>
+    <button class="modal__btn" id="modalOpen3">モーダル３</button>
+    <button class="modal__btn" id="modalOpen4">モーダル４</button>
+    <div class="modal-area content-width" id="modalArea">
+      <div class="modal" id="modal1">
+        <p>モーダル1</p>
+        <p>これはモーダル1です</p>
+      </div>
 
+      <div class="modal" id="modal2">
+        <p>モーダル2</p>
+        <p>これはモーダル２です</p>
+      </div>
+
+      <div class="modal" id="modal3">
+        <p>モーダル3</p>
+        <p>これはモーダル３です</p>
+      </div>
+      <div class="modal" id="modal4">
+        <p>モーダル4</p>
+        <p>これはモーダル４です</p>
+      </div>
+      <a id="modalClose" class="modalClose mobile-menu__btn">
+        <span></span>
+        <span></span>
+      </a>
+    </div>
+    <div class="mask" id="mask"></div>
   </section>
 
 

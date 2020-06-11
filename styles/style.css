@@ -2044,6 +2044,94 @@ footer .footer-icon {
   cursor: pointer;
 }
 
+.modal__btn {
+  background-color: white;
+  border: 1px solid #1f1f1d;
+  display: inline-block;
+  height: 4rem;
+  width: 10rem;
+  vertical-align: middle;
+}
+
+.modal-area {
+  background-color: white;
+  height: calc(100vh - 100px);
+  left: 50%;
+  opacity: 0;
+  overflow: auto;
+  padding: 1rem;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0.7);
+  transition: 0.3s;
+  visibility: hidden;
+  z-index: 10;
+}
+
+.modal-area .modal {
+  display: none;
+}
+
+.modal-area .modal.active {
+  display: block;
+}
+
+.modal-area .modalClose {
+  background-color: #f3f3f2;
+  border: 1px solid #1f1f1d;
+  cursor: pointer;
+  border-radius: 3px;
+  height: 50px;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  width: 50px;
+}
+
+.modal-area .modalClose span {
+  background-color: #1f1f1d;
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 35px;
+}
+
+.modal-area .modalClose span:nth-child(1) {
+  transform: translateX(-17px) rotate(45deg);
+}
+
+.modal-area .modalClose span:nth-child(2) {
+  transform: translateX(-17px) rotate(-45deg);
+}
+
+.modal-area.active {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  visibility: visible;
+}
+
+.mask {
+  background-color: rgba(31, 31, 31, 0.8);
+  cursor: pointer;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  transition: 0.3s;
+  visibility: hidden;
+  width: 100%;
+  z-index: 9;
+}
+
+.mask.active {
+  opacity: 0.8;
+  visibility: visible;
+}
+
 .e404 {
   height: calc(100vh - 200px);
 }

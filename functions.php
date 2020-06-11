@@ -109,3 +109,31 @@ register_nav_menus( //add menu-function
     $value = wp_trim_words( $value, $number, '...' );
     return $value;
   }
+
+
+  // カスタム投稿タイプの追加
+  function cpt_register_blog() {
+    $labels = [
+      "singular_name" => "blog",
+      "edit_item" => "blog",
+    ];
+    $args = [
+      "label" => "ブログ",
+      "labels" => $labels,
+      "description" => "",
+      "public" => true,
+      "rest_base" => "",
+      "rest_controller_class" => "WP_REST_Posts_Controller",
+      "has_archive" => true,
+      "delete_with_user" => false,
+      "exclude_from_search" => false,
+      "map_meta_cap" => true,
+      "hierarchical" => true,
+      "rewrite" => ["slug" => "blog","with_front"=>true],
+      "query_var" => true,
+      "menu_position" => 5,
+      "supports" => ["title","editor","thumbnail"],
+    ];
+    register_post_type("blog",$args);
+  }
+  add_action('init','cpt_register_blog');

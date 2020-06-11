@@ -109,53 +109,6 @@ Template Name: about
               <p class="textR">上手になりたい</p>
             </span>
           </span>
-          
-          <!-- <div class="modal-area content-width" id="modalArea">
-
-            <div class="modal" id="modal1">
-              <p>・デザイン</p>
-              <p>４原則（近接・整列・反復・コントラスト）を大切にしています</p>
-              <p>優れたデザインはひと目で情報を伝えるためです</p>
-              <p>要素やコンテンツの意味やまとまりを整え</p>
-              <p>人間の目の動きと負担を最小限にすることで</p>
-              <p>ユーザーへ情報を早く的確に伝えます</p>
-
-              <P>・色</P>
-              <P>イメージや好みなどの感覚と</P>
-              <P>色相環や色彩心理などの論理を</P>
-              <P>調和させた配色を大切にしています</P>
-
-              <p>・保守性</p>
-              <p>修正に負担がかからない制作を大切にしています</p>
-              <p>保守と安定を担保した制作をいたします</p>
-              
-              <p>・拡張性</p>
-              <p>ビジネスの拡大に沿って拡張可能な制作をいたします</p>
-              <p>コンテンツの追加や変更に強く</p>
-              <p>リリースに負担がかからない制作をいたします</p>
-
-            </div>
-
-            <div class="modal" id="modal2">
-              <p>モーダル2</p>
-              <p>これはモーダル２です</p>
-            </div>
-
-            <div class="modal" id="modal3">
-              <p>モーダル3</p>
-              <p>これはモーダル３です</p>
-            </div>
-            <div class="modal" id="modal4">
-              <p>モーダル4</p>
-              <p>これはモーダル４です</p>
-            </div>
-            <a id="modalClose" class="modalClose mobile-menu__btn">
-              <span></span>
-              <span></span>
-            </a>
-          </div>
-          <div class="mask" id="mask"></div> -->
-
         </div>
         <div class="under-arrow">
           <div class="arrow1"></div>

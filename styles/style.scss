@@ -664,86 +664,8 @@ footer {
         }
       }
     }
-    // &__btn {
-    //   background-color: $cWhite;
-    //   border: 1px solid $cBlack;
-    //   display: inline-block;
-    //   height: 4rem;
-    //   width: 4rem;
-    //   vertical-align: middle;
-    //   // @include hoverBbtn();
-    // }
   }
 }
-// .modal-area {
-//   background-color: $cWhite;
-//   height: calc(100vh - 100px);
-//   left: 50%;
-//   opacity: 0;
-//   overflow: auto;
-//   padding: 1rem;
-//   position: fixed;
-//   top: 50%;
-//   transform: translate(-50%, -50%) scale(0.7);
-//   transition: 0.3s;
-//   visibility: hidden;
-//   z-index: 10;
-//   .modal {
-//     display: none;
-//     &.active {
-//       display: block;
-//     }
-//   }
-//   .modalClose {
-//     background-color: $cLGray;
-//     border: 1px solid $cBlack;
-//     cursor: pointer;
-//     border-radius: 3px;
-//     height: 50px;
-//     position: absolute;
-//     right: 1rem;
-//     top: 1rem;
-//     width: 50px;
-//     span {
-//       background-color: $cBlack;
-//       display: block;
-//       height: 2px;
-//       left: 50%;
-//       position: absolute;
-//       top: 50%;
-//       transform: translate(-50%, -50%);
-//       width: 35px;
-//       &:nth-child(1) {
-//         transform: translateX(-17px) rotate(45deg);
-//       }
-//       &:nth-child(2) {
-//         transform: translateX(-17px) rotate(-45deg);
-//       }
-//     }
-//   }
-//   &.active {
-//     opacity: 1;
-//     transform: translate(-50%, -50%) scale(1);
-//     visibility: visible;
-//   }
-// }
-// .mask {
-//   background-color: $cOpblack;
-//   cursor: pointer;
-//   height: 100%;
-//   left: 0;
-//   opacity: 0;
-//   position: fixed;
-//   top: 0;
-//   transition: 0.3s;
-//   visibility: hidden;
-//   width: 100%;
-//   z-index: 9;
-//   &.active {
-//     opacity: 0.8;
-//     visibility: visible;
-//   }
-// }
 
 .about-who-content {
   position: relative;
@@ -1152,7 +1074,89 @@ footer {
     border-radius: 5px;
     cursor: pointer;
   }
-} 
+}
+
+
+
+.modal__btn {
+  background-color: $cWhite;
+  border: 1px solid $cBlack;
+  display: inline-block;
+  height: 4rem;
+  width: 10rem;
+  vertical-align: middle;
+  // @include hoverBbtn();
+}
+.modal-area {
+  background-color: $cWhite;
+  height: calc(100vh - 100px);
+  left: 50%;
+  opacity: 0;
+  overflow: auto;
+  padding: 1rem;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0.7);
+  transition: 0.3s;
+  visibility: hidden;
+  z-index: 10;
+  .modal {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+  .modalClose {
+    background-color: $cLGray;
+    border: 1px solid $cBlack;
+    cursor: pointer;
+    border-radius: 3px;
+    height: 50px;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    width: 50px;
+    span {
+      background-color: $cBlack;
+      display: block;
+      height: 2px;
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 35px;
+      &:nth-child(1) {
+        transform: translateX(-17px) rotate(45deg);
+      }
+      &:nth-child(2) {
+        transform: translateX(-17px) rotate(-45deg);
+      }
+    }
+  }
+  &.active {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    visibility: visible;
+  }
+}
+.mask {
+  background-color: $cOpblack;
+  cursor: pointer;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  transition: 0.3s;
+  visibility: hidden;
+  width: 100%;
+  z-index: 9;
+  &.active {
+    opacity: 0.8;
+    visibility: visible;
+  }
+}
+
 
 //demoend*****************************************************
 

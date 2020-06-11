@@ -22,7 +22,11 @@
                     <p class="content"><?php echo get_flexible_excerpt(15); ?></p>
                   </span><!--content-title-->
                   <span class="conR">
-                    <?php the_post_thumbnail('medium'); ?>
+                    <?php if(has_post_thumbnail()){
+                       the_post_thumbnail('medium');
+                    }else{?>
+                      <img class="no-image" src="<?php echo get_template_directory_uri();?>/img/business_06.jpeg" alt="thumbnail-pic">
+                      <?php }?>
                   </span><!--content-image-->
                 </a>
               </li>
@@ -50,7 +54,11 @@
                     <p class="content"><?php echo get_flexible_excerpt(15); ?></p>
                   </span><!--content-title-->
                   <span class="conR">
-                    <?php the_post_thumbnail('medium'); ?>
+                    <?php if(has_post_thumbnail()){
+                       the_post_thumbnail('medium');
+                    }else{?>
+                      <img class="no-image" src="<?php echo get_template_directory_uri();?>/img/business_06.jpeg" alt="thumbnail-pic">
+                      <?php }?>
                   </span><!--content-image-->
                 </a>
               </li>
@@ -78,7 +86,11 @@
                     <p class="content"><?php echo get_flexible_excerpt(15); ?></p>
                   </span><!--content-title-->
                   <span class="conR">
-                    <?php the_post_thumbnail('medium'); ?>
+                    <?php if(has_post_thumbnail()){
+                       the_post_thumbnail('medium');
+                    }else{?>
+                      <img class="no-image" src="<?php echo get_template_directory_uri();?>/img/business_06.jpeg" alt="thumbnail-pic">
+                      <?php }?>
                   </span><!--content-image-->
                 </a>
               </li>

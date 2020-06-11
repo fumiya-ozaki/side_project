@@ -139,6 +139,11 @@
             </ul>
             <a class="news-btn" href="<?php echo home_url('/category/news/'); ?>">VIEW MORE</a>
           </div>
+
+          
+
+
+
         </section>
       
         <section class="bottom-banners">

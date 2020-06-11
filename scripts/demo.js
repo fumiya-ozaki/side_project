@@ -252,21 +252,38 @@ tlCharAnimation.fromTo('#aniChar1', 1, { x:-50 , y:-50, opacity:0, scale:.9 },{ 
   })
 
   $(function(){
-    $('#acordion1 dt').on('click', function() {
+    //１つだけ開くアコーディオン
+    //タイトルクリックで開閉
+    $('#acordion1 dt').on('click',function(){
       $(this).next('dd').slideToggle();
       $(this).siblings('dt').removeClass('active');
+      $('.acordion__content1').not($(this).next('.acordion__content1')).slideUp();
       $(this).toggleClass("active");
-      $('dd').not($(this).next('dd')).slideUp();
-       });
-
-    $('#acordion2 dt').on('click', function() {
-      $(this).next('dd').slideToggle();
-      $(this).toggleClass("active");
-
+    });
+    
+    //閉じるボタンで閉
+    $('.closeBtn1').on('click',function(){
+      $(this).parent('dd').slideToggle();
+      $(this).siblings('dt').removeClass('active');
+      $('.acordion__content1').not($(this).next('.acordion__content1')).slideUp();
+      $('#acordion1 dt').removeClass('active');
     });
 
-  });
+    //複数開くアコーディオン
+    //タイトルクリックで開閉
+    $('#acordion2 dt').on('click', function() {
+      $(this).next().slideToggle();
+      $(this).toggleClass("active");
+    });
 
+    //閉じるボタンで閉
+    $('.closeBtn2').on('click',function(){
+      $(this).parent('dd').slideToggle();
+      $(this).parent().parent().find('dt').removeClass('active');
+    })
+
+    
+  });
 
 },false);//DOMloadEnd
             

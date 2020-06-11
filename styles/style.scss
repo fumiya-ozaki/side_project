@@ -1007,7 +1007,7 @@ footer {
     }
   }
   .playback_controls_row {
-    background-color: $cDGray;
+    background-color: $cGray;
     bottom: 0;
     display:grid;
     left: 0;
@@ -1123,26 +1123,34 @@ footer {
   }
 }
 
-
 .acordion{
   &__title{
     cursor:pointer;
     background-color: $cGray;
     border-radius: 5px;
-    margin: .5rem;
-    padding: .5rem;
+    margin: 1rem;
+    padding: 1rem;
+    text-align: center;
   }
   &__content{
     background-color: $cLGray;
     border-radius: 5px;
-    margin: .5rem;
-    padding: .5rem;
+    margin: 1rem;
+    padding: 1rem;
     display: none;
     line-height: 2;
   }
   .active{
     background-color: $cBlack;
     color: $cWhite;
+  }
+  .closeBtn{
+    text-align: center;
+    display:block;
+    background-color: $cDGray;
+    color: $cWhite;
+    border-radius: 5px;
+    cursor: pointer;
   }
 } 
 

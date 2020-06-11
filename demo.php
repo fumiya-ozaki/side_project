@@ -188,10 +188,6 @@ Template Name: demo
         <div class="block-animation">aliqua</div>
       </div>
     </div>
-    <p>文字アニメーションサンプルです</p>
-    <p>段落/単語/文字などアニメーション単位や</p>
-    <p>スピード/イージング/フェードなど</p>
-    <p>ご希望に合わせ対応可能です</p>
     <div class="playback_controls_row">
       <a href="#0" class="playbackButton playButton">Play</a>
       <a href="#0" class="playbackButton pauseButton">Pause</a>
@@ -227,45 +223,52 @@ Template Name: demo
   </section>
 
   <section class="demo-container acordion-demo">
-  <p class="demo-con-title font-lr">アコーディオン</p>
+    <p class="demo-con-title font-lr">アコーディオン</p>
 
-  <p>アコーディオン１（１つだけ開きます）</p>
-  <dl class="acordion" id="acordion1">
-    <dt class="acordion__title arrow">お問い合わせ１</dt>
-    <dd class="acordion__content">
-      回答１<br>
-      回答です
-    </dd>
-    <dt class="acordion__title arrow">お問い合わせ２</dt>
-    <dd class="acordion__content">
-      回答2<br>
-      回答です
-    </dd>
-    <dt class="acordion__title arrow">お問い合わせ３</dt>
-    <dd class="acordion__content">
-      回答3<br>
-      回答です
-    </dd>
-  </dl>
+    <p class="acordion-name">アコーディオン１（１つだけ開きます）</p>
+    <dl class="acordion" id="acordion1">
+      <dt class="acordion__title arrow">お問い合わせ１</dt>
+      <dd class="acordion__content acordion__content1">
+        回答１<br>
+        お問い合わせ１の回答です
+        <span class="closeBtn closeBtn1">閉じる</span>
+      </dd>
+      <dt class="acordion__title arrow">お問い合わせ２</dt>
+      <dd class="acordion__content acordion__content1">
+        回答2<br>
+        お問い合わせ２の回答です
+        <span class="closeBtn closeBtn1">閉じる</span>
+      </dd>
+      <dt class="acordion__title arrow">お問い合わせ３</dt>
+      <dd class="acordion__content acordion__content1">
+        回答3<br>
+        お問い合わせ３の回答です
+        <span class="closeBtn closeBtn1">閉じる</span>
+      </dd>
+    </dl>
 
-  <p>アコーディオン２ (複数開けられます)</p>
-  <dl class="acordion" id="acordion2">
-    <dt class="acordion__title arrow">お問い合わせ１</dt>
-    <dd class="acordion__content">
-      回答１<br>
-      回答です
-    </dd>
-    <dt class="acordion__title arrow">お問い合わせ２</dt>
-    <dd class="acordion__content">
-      回答2<br>
-      回答です
-    </dd>
-    <dt class="acordion__title arrow">お問い合わせ３</dt>
-    <dd class="acordion__content">
-      回答3<br>
-      回答です
-    </dd>
-  </dl>
+    <p class="acordion-name">アコーディオン２ (複数開けられます)</p>
+    <dl class="acordion" id="acordion2">
+      <dt class="acordion__title arrow">お問い合わせ１</dt>
+      <dd class="acordion__content acordion__content2">
+        回答１<br>
+        お問い合わせ１の回答です
+        <span class="closeBtn closeBtn2">閉じる</span>
+
+      </dd>
+      <dt class="acordion__title arrow">お問い合わせ２</dt>
+      <dd class="acordion__content acordion__content2">
+        回答2<br>
+        お問い合わせ２の回答です
+        <span class="closeBtn closeBtn2">閉じる</span>
+      </dd>
+      <dt class="acordion__title arrow">お問い合わせ３</dt>
+      <dd class="acordion__content acordion__content2">
+        回答3<br>
+        お問い合わせ３の回答です
+        <span class="closeBtn closeBtn2">閉じる</span>
+      </dd>
+    </dl>
 
   </section>
 

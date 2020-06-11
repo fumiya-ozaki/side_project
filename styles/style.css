@@ -1869,7 +1869,7 @@ footer .footer-icon {
 }
 
 .animation-area .playback_controls_row {
-  background-color: #9e9c9c;
+  background-color: #e7e4e4;
   bottom: 0;
   display: grid;
   left: 0;
@@ -2016,15 +2016,16 @@ footer .footer-icon {
   cursor: pointer;
   background-color: #e7e4e4;
   border-radius: 5px;
-  margin: .5rem;
-  padding: .5rem;
+  margin: 1rem;
+  padding: 1rem;
+  text-align: center;
 }
 
 .acordion__content {
   background-color: #f3f3f2;
   border-radius: 5px;
-  margin: .5rem;
-  padding: .5rem;
+  margin: 1rem;
+  padding: 1rem;
   display: none;
   line-height: 2;
 }
@@ -2032,6 +2033,15 @@ footer .footer-icon {
 .acordion .active {
   background-color: #1f1f1d;
   color: white;
+}
+
+.acordion .closeBtn {
+  text-align: center;
+  display: block;
+  background-color: #9e9c9c;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .e404 {

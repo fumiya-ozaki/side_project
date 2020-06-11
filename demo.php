@@ -209,21 +209,64 @@ Template Name: demo
     <p class="demo-con-title font-lr">タブ</p>
     <div class="tab-demo__container">
       <ul class="tab-demo__label">
-        <li><a href="#" class="active" data-id="tab-demo__info">サイトの情報</a></li>
-        <li><a href="#" data-id="tab-demo__product">商品情報</a></li>
-        <li><a href="#" data-id="tab-demo__contact">お問い合わせ</a></li>
+        <li><a href="#" class="active" data-id="tab-demo__info">タブ１</a></li>
+        <li><a href="#" data-id="tab-demo__product">タブ２</a></li>
+        <li><a href="#" data-id="tab-demo__contact">タブ３</a></li>
       </ul>
 
       <section class="tab-demo__content active" id="tab-demo__info">
-        サイトの情報。サイトの情報。
+        タブ１の情報
       </section>
       <section class="tab-demo__content" id="tab-demo__product">
-        商品情報。商品情報。
+        タブ２の情報
       </section>
       <section class="tab-demo__content" id="tab-demo__contact">
-        お問い合わせ。お問い合わせ。
+        タブ３の情報
       </section>
     </div>
+  </section>
+
+  <section class="demo-container acordion-demo">
+  <p class="demo-con-title font-lr">アコーディオン</p>
+
+  <p>アコーディオン１（１つだけ開きます）</p>
+  <dl class="acordion" id="acordion1">
+    <dt class="acordion__title arrow">お問い合わせ１</dt>
+    <dd class="acordion__content">
+      回答１<br>
+      回答です
+    </dd>
+    <dt class="acordion__title arrow">お問い合わせ２</dt>
+    <dd class="acordion__content">
+      回答2<br>
+      回答です
+    </dd>
+    <dt class="acordion__title arrow">お問い合わせ３</dt>
+    <dd class="acordion__content">
+      回答3<br>
+      回答です
+    </dd>
+  </dl>
+
+  <p>アコーディオン２ (複数開けられます)</p>
+  <dl class="acordion" id="acordion2">
+    <dt class="acordion__title arrow">お問い合わせ１</dt>
+    <dd class="acordion__content">
+      回答１<br>
+      回答です
+    </dd>
+    <dt class="acordion__title arrow">お問い合わせ２</dt>
+    <dd class="acordion__content">
+      回答2<br>
+      回答です
+    </dd>
+    <dt class="acordion__title arrow">お問い合わせ３</dt>
+    <dd class="acordion__content">
+      回答3<br>
+      回答です
+    </dd>
+  </dl>
+
   </section>
 
 

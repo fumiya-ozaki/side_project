@@ -9,6 +9,7 @@ function theme_script(){
   wp_deregister_script( 'jquery' ); //defaultjqueryreset
   wp_deregister_script( 'jquery-migrate' ); //defaultjqueryreset
 	wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js', array(), $version ); //latestjquery
+  wp_enqueue_script('mainjquery', get_template_directory_uri() . '/scripts/jquery.js', array('jquery'),$version ); //jquery
   wp_enqueue_script('main', get_template_directory_uri() . '/scripts/main.js', array('jquery'),$version ); //mainjs
   if(is_page( 'about' )){ //aboutページの分岐
     wp_enqueue_script('about', get_template_directory_uri() . '/scripts/about.js', array(),$version ); //aboutjs

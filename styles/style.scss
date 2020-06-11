@@ -425,12 +425,10 @@ footer {
       margin: 0 auto;
       text-align: center;
       width: 10rem;
-      @include hoverBbtn();
+      // @include hoverBbtn();
     }
   }
 }
-
-
 
 .bottom-banners {
   display: flex;
@@ -666,15 +664,15 @@ footer {
         }
       }
     }
-    &__btn {
-      background-color: $cWhite;
-      border: 1px solid $cBlack;
-      display: inline-block;
-      height: 4rem;
-      width: 4rem;
-      vertical-align: middle;
-      @include hoverBbtn();
-    }
+    // &__btn {
+    //   background-color: $cWhite;
+    //   border: 1px solid $cBlack;
+    //   display: inline-block;
+    //   height: 4rem;
+    //   width: 4rem;
+    //   vertical-align: middle;
+    //   // @include hoverBbtn();
+    // }
   }
 }
 // .modal-area {
@@ -831,6 +829,32 @@ footer {
     }
   }
 }
+
+.under-arrow{
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  @include animation(
+    $name:flow,
+    $iteration-count:infinite,
+    $duration:1.5s
+    );
+    .arrow1{
+      width: 30px;
+      height: 30px;
+      border: 5px solid;
+      border-color:  transparent transparent $cBlack $cBlack;
+      transform: translateX(-50%);
+      transform: rotate(-45deg);
+      transform-origin: (left bottom);
+  }
+}
+@keyframes flow {
+  0%{transform: translateY(0);}
+  50%{transform: translateY(-15px)}
+  100%{transform: translateY(0px)}
+}
+
 //aboutend********************************************************
 
 //archivestart****************************************************
@@ -977,7 +1001,7 @@ footer {
   position: relative;
   .animation-char{
     font-size: 2rem;
-    line-height: 5rem;
+    line-height: 2;
     .block-animation{
       display: inline-block;
     }
@@ -1100,6 +1124,27 @@ footer {
 }
 
 
+.acordion{
+  &__title{
+    cursor:pointer;
+    background-color: $cGray;
+    border-radius: 5px;
+    margin: .5rem;
+    padding: .5rem;
+  }
+  &__content{
+    background-color: $cLGray;
+    border-radius: 5px;
+    margin: .5rem;
+    padding: .5rem;
+    display: none;
+    line-height: 2;
+  }
+  .active{
+    background-color: $cBlack;
+    color: $cWhite;
+  }
+} 
 
 //demoend*****************************************************
 

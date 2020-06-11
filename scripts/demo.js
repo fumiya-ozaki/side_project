@@ -250,7 +250,23 @@ tlCharAnimation.fromTo('#aniChar1', 1, { x:-50 , y:-50, opacity:0, scale:.9 },{ 
       document.getElementById(clickedLabel.dataset.id).classList.add('active');
     })
   })
-              
-              
+
+  $(function(){
+    $('#acordion1 dt').on('click', function() {
+      $(this).next('dd').slideToggle();
+      $(this).siblings('dt').removeClass('active');
+      $(this).toggleClass("active");
+      $('dd').not($(this).next('dd')).slideUp();
+       });
+
+    $('#acordion2 dt').on('click', function() {
+      $(this).next('dd').slideToggle();
+      $(this).toggleClass("active");
+
+    });
+
+  });
+
+
 },false);//DOMloadEnd
             

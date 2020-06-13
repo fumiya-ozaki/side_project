@@ -136,4 +136,16 @@ register_nav_menus( //add menu-function
     ];
     register_post_type("test",$args);
   }
+
+  // pタグ自動挿入の削除
   add_action('init','cpt_register_test');
+
+  add_action('init', function() {
+    remove_filter('the_excerpt', 'wpautop');
+    remove_filter('the_content', 'wpautop');
+    });
+    add_filter('tiny_mce_before_init', function($init) {
+    $init['wpautop'] = false;
+    $init['apply_source_formatting'] = ture;
+    return $init;
+    });

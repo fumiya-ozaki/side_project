@@ -118,7 +118,7 @@ Template Name: about
 
     <section id="whosMe" class="about-who-content content-width content-height2">
       <p class="prof-title font-lg">Profile</p>
-      <span class="prof-con-wrapper">
+      <div class="prof-con-wrapper">
         <div class="prof-conL">
           <div class="prof-conL-wrapper">
             <img class="prof-picture" src="<?php echo get_template_directory_uri();?>/img/about_profile.jpeg" alt="写真">
@@ -128,7 +128,7 @@ Template Name: about
         </div>
         <div class="prof-conR history">
           <p class="history-title font-md">at present ...</p>
-          <span class="history-wrapper">
+          <div class="history-wrapper">
             <div class="history-date">
               <p>1980.4</p>
               <p>2006.3</p>
@@ -144,9 +144,9 @@ Template Name: about
               <p>LG electronics japan</p>
               <p>現在に至る</p>
             </div>
-          </span>
+          </div>
         </div>
-      </span>
+      </div>
       <div class="under-arrow">
         <div class="arrow1"></div>
       </div>

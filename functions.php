@@ -1,7 +1,9 @@
 <?php
 // head-import
 function theme_script(){
-  $version = wp_get_theme()->get( 'Version' );
+  $version = "1.0.0";
+  // $version = wp_get_theme()->get( 'Version' );
+  // $version = time();//バージョンをタイムスタンプにする(開発用)
   wp_enqueue_style('theme-reset', get_template_directory_uri() . '/styles/venders/_reset.css', array(),$version ); //resetcss
   wp_enqueue_style('theme-style', get_template_directory_uri() . '/styles/style.min.css', array(),$version ); //stylecss 
   wp_enqueue_style('responsive-style', get_template_directory_uri() . '/styles/responsive.min.css', array(),$version ); //responsivecss 
@@ -25,23 +27,23 @@ function theme_script(){
 add_action( 'wp_enqueue_scripts' ,'theme_script' );
 // head-import
 
-// Add thumbnail function
-add_theme_support('post-thumbnails');
-// Add title element.
-add_theme_support( 'title-tag' );
-// Add post-feed, comment-feed.
-add_theme_support( 'automatic-feed-links' );
 
-// Add custom menu function
-register_nav_menus( //add menu-function
-  array(
-    'place_global' => 'グローバル', //“メニュー英語名” =>”メニュー名”,
-    'mobile_global' => 'モバイル', //“メニュー英語名” =>”メニュー名”,
-    'place_utility' => 'ユーティリティ',
-    'place_sidebar' => 'サイドメニュー',
-    'place_footer' => 'フッター',
-  )
-);
+  // Add thumbnail function
+  add_theme_support('post-thumbnails');
+  // Add title element.
+  add_theme_support( 'title-tag' );
+  // Add post-feed, comment-feed.
+  add_theme_support( 'automatic-feed-links' );
+  // Add custom menu function
+  register_nav_menus( //add menu-function
+    array(
+      'place_global' => 'グローバル', //“メニュー英語名” =>”メニュー名”,
+      'mobile_global' => 'モバイル', //“メニュー英語名” =>”メニュー名”,
+      'place_utility' => 'ユーティリティ',
+      'place_sidebar' => 'サイドメニュー',
+      'place_footer' => 'フッター',
+    )
+  );
 
   // 不要な情報の削除
   function theme_remove_head(){
@@ -88,7 +90,7 @@ register_nav_menus( //add menu-function
       return $title;
   });
 
-  //省略の変更
+  //抜粋の省略表示変更
   function cms_excerpt_more() {
     return '...';
   }
@@ -98,7 +100,7 @@ register_nav_menus( //add menu-function
   function cms_excerpt_length() {
     return 80;
   }
-  add_filter( 'excerpt_mblength', 'cms_excerpt_length' ); //
+  add_filter( 'excerpt_mblength', 'cms_excerpt_length' );
   
   // 抜粋機能を固定ページに使えるよう設定
   add_post_type_support( 'page', 'excerpt' );
@@ -114,38 +116,36 @@ register_nav_menus( //add menu-function
   // カスタム投稿タイプの追加
   function cpt_register_test() {
     $labels = [
-      "singular_name" => "test",
-      "edit_item" => "test",
+      "name"          =>"テスト", //管理画面などで表示する名前
+      "singular_name" =>"テスト", //管理画面などで表示する名前（単数形）
+      "menu_name"     =>"テスト", //管理画面メニューで表示する名前（nameより優先される）
+      "add_new_item"  =>"新しい投稿", //新規作成ページのタイトルに表示される名前
+      "add_new"       =>"新規投稿", //新規作成ページのタイトルに表示される名前
+      "new_item"      =>"投稿の追加", //一覧ページの新規追加ボタンのラベル？
+      "edit_item"     =>"編集ページ", //編集ページのタイトルに表示される名前
+      "view_item"     =>"編集", //編集ページの投稿を表示ボタンのラベル
+      "search_item"   =>"テストの検索", //一覧ページの検索ボタンのラベル
+      "not_found"     =>"見つかりません", //一覧ページに投稿が見つからないときの表示
+      "not_found_in_trash"  =>"ゴミ箱にはありません" //ゴミ箱に何も入っていないときの表示
     ];
     $args = [
-      "label" => "テスト",
-      "labels" => $labels,
-      "description" => "",
-      "public" => true,
-      "rest_base" => "",
-      "rest_controller_class" => "WP_REST_Posts_Controller",
-      "has_archive" => true,
-      "delete_with_user" => false,
-      "exclude_from_search" => false,
-      "map_meta_cap" => true,
-      "hierarchical" => true,
-      "rewrite" => ["slug" => "test","with_front"=>test],
-      "query_var" => true,
-      "menu_position" => 5,
-      "supports" => ["title","editor","thumbnail"],
+      "label"                 => "テスト",
+      "labels"                => $labels,
+      "description"           => "",//カスタム投稿タイプの説明
+      "public"                => true,//ユーザーが内容を投稿する場合true(通常はtrue)
+      "rest_base"             => "", //REST API使用時URLのベースとなる名前 (省略時はカスタム投稿タイプ名)
+      "rest_controller_class" => "WP_REST_Posts_Controller", //REST API使用時処理するコントローラ名。基本省略でOK
+      "has_archive"           => true, //アーカイブページを作成する(trueでindexページを作成)
+      "delete_with_user"      => false,
+      "exclude_from_search"   => false, //検索機能から検索した場合、検索対象にするかどうか
+      "map_meta_cap"          => true, //WordPress が持つデフォルトのメタ権限処理を使用するかどうか。
+      "hierarchical"          => true,//記事の階層構造を許可
+      "rewrite"               => ["slug" => "test","with_front"=>true], //ページごとにパーマリンクを設定した場合有効にする
+      "query_var"             => true, //個別ページのURLフォーマット（投稿タイプ名＝記事のスラッグ）
+      "menu_position"         => 5,//管理画面左サイドメニュー表示位置
+      "supports"              => ["title","editor","thumbnail"],//投稿時に使用できる投稿用パーツ指定
+      "taxonomies"            => [],//投稿の分類に用いるカテゴリ・カスタムタグ（配列）
     ];
     register_post_type("test",$args);
   }
-
-  // pタグ自動挿入の削除
   add_action('init','cpt_register_test');
-
-  add_action('init', function() {
-    remove_filter('the_excerpt', 'wpautop');
-    remove_filter('the_content', 'wpautop');
-    });
-    add_filter('tiny_mce_before_init', function($init) {
-    $init['wpautop'] = false;
-    $init['apply_source_formatting'] = ture;
-    return $init;
-    });

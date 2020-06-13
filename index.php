@@ -139,9 +139,10 @@
             </ul>
             <a class="news-btn" href="<?php echo home_url('/category/news/'); ?>">VIEW MORE</a>
           </div>
+        </section>
 
 
-
+        <section class="content-width">
           <?php 
           $args = array(
             'post_type' => 'test',
@@ -149,7 +150,7 @@
             'paged' => $paged
           );
           $the_query = new WP_Query($args);if($the_query ->have_posts()):
-          ?>
+            ?>
           <ul>
             <?php while($the_query ->have_posts()): $the_query ->the_post()?>
             <li>
@@ -161,10 +162,10 @@
           <?php wp_reset_postdata();?>
           <?php else: ?>
           <?php endif;?>
-
-
-
         </section>
+
+
+
       
         <section class="bottom-banners">
           <a class="banner banner-1">

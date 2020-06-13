@@ -1078,14 +1078,33 @@ footer {
 
 
 
-.modal__btn {
-  background-color: $cWhite;
-  border: 1px solid $cBlack;
-  display: inline-block;
-  height: 4rem;
-  width: 10rem;
-  vertical-align: middle;
-  // @include hoverBbtn();
+.btn-container{
+  display: grid;
+  grid-template:
+  "... .... ... .... ... .... ... .... ... "1rem
+  "... btn1 ... btn2 ... btn3 ... btn4 ... "1fr
+  "... .... ... .... ... .... ... .... ... "1rem
+  /1rem 1fr 1rem 1fr 1rem 1fr 1rem 1fr 1rem;
+  .modal__btn {
+    background-color: $cWhite;
+    border: 1px solid $cBlack;
+    display: inline-block;
+    height: 4rem;
+    width: 100%;
+    vertical-align: middle;
+  }
+}
+#modalOpen1{
+  grid-area: btn1;
+}
+#modalOpen2{
+  grid-area: btn2;
+}
+#modalOpen3{
+  grid-area: btn3;
+}
+#modalOpen4{
+  grid-area: btn4;
 }
 .modal-area {
   background-color: $cWhite;

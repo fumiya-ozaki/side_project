@@ -112,13 +112,13 @@ register_nav_menus( //add menu-function
 
 
   // カスタム投稿タイプの追加
-  function cpt_register_blog() {
+  function cpt_register_test() {
     $labels = [
-      "singular_name" => "blog",
-      "edit_item" => "blog",
+      "singular_name" => "test",
+      "edit_item" => "test",
     ];
     $args = [
-      "label" => "ブログ",
+      "label" => "テスト",
       "labels" => $labels,
       "description" => "",
       "public" => true,
@@ -129,11 +129,11 @@ register_nav_menus( //add menu-function
       "exclude_from_search" => false,
       "map_meta_cap" => true,
       "hierarchical" => true,
-      "rewrite" => ["slug" => "blog","with_front"=>true],
+      "rewrite" => ["slug" => "test","with_front"=>test],
       "query_var" => true,
       "menu_position" => 5,
       "supports" => ["title","editor","thumbnail"],
     ];
-    register_post_type("blog",$args);
+    register_post_type("test",$args);
   }
-  add_action('init','cpt_register_blog');
+  add_action('init','cpt_register_test');

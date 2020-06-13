@@ -140,7 +140,27 @@
             <a class="news-btn" href="<?php echo home_url('/category/news/'); ?>">VIEW MORE</a>
           </div>
 
-          
+
+
+          <?php 
+          $args = array(
+            'post_type' => 'test',
+            'posts_pre_page' => 5,
+            'paged' => $paged
+          );
+          $the_query = new WP_Query($args);if($the_query ->have_posts()):
+          ?>
+          <ul>
+            <?php while($the_query ->have_posts()): $the_query ->the_post()?>
+            <li>
+              <?php echo get_the_date();?>
+              <a href="<?php the_permalink(); ?>"><?php the_title();?></a>
+            </li>
+            <?php endwhile;?>
+          </ul>
+          <?php wp_reset_postdata();?>
+          <?php else: ?>
+          <?php endif;?>
 
 
 

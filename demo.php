@@ -272,10 +272,12 @@ Template Name: demo
   </section>
   <section class="demo-container modal-demo">
     <p class="demo-con-title font-lr">モーダル</p>
-    <button class="modal__btn" id="modalOpen1">モーダル１</button>
-    <button class="modal__btn" id="modalOpen2">モーダル２</button>
-    <button class="modal__btn" id="modalOpen3">モーダル３</button>
-    <button class="modal__btn" id="modalOpen4">モーダル４</button>
+    <div class="btn-container">
+      <button class="modal__btn" id="modalOpen1">モーダル１</button>
+      <button class="modal__btn" id="modalOpen2">モーダル２</button>
+      <button class="modal__btn" id="modalOpen3">モーダル３</button>
+      <button class="modal__btn" id="modalOpen4">モーダル４</button>
+    </div>
     <div class="modal-area content-width" id="modalArea">
       <div class="modal" id="modal1">
         <p>モーダル1</p>

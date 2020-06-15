@@ -183,10 +183,6 @@ body {
   margin-left: 1rem;
 }
 
-.grobal-header .header-container .header-right .option-icon .svg-inline--fa {
-  font-size: 19px;
-}
-
 .grobal-header .header-container .header-right .option-icon.iconR .search-form {
   margin-top: .5rem;
   opacity: 0;
@@ -196,20 +192,6 @@ body {
   transition: all .5s;
   visibility: hidden;
   z-index: 5;
-}
-
-.grobal-header .header-container .header-right .option-icon.iconR .search-form .search-box {
-  display: flex;
-}
-
-.grobal-header .header-container .header-right .option-icon.iconR .search-form .search-box .button-submit {
-  cursor: pointer;
-}
-
-.grobal-header .header-container .header-right .option-icon.iconR .search-form .search-input {
-  font-size: 15px;
-  height: 40px;
-  padding-left: .5rem;
 }
 
 .grobal-header .header-container .header-right .option-icon.iconR .search-form.active {
@@ -246,6 +228,29 @@ body {
 .grobal-header .header-container .header-right .option-icon.iconL .language-box a:hover {
   background-color: #1f1f1d;
   color: white;
+}
+
+.search-form .search-box {
+  display: flex;
+}
+
+.search-form .search-box .search-input {
+  font-size: 15px;
+  height: 40px;
+  border: solid 1px #e7e4e4;
+  height: 3rem;
+  padding-left: 1rem;
+  vertical-align: text-top;
+}
+
+.search-form .search-box .button-submit {
+  background-color: #f3f3f2;
+  border: solid 1px #e7e4e4;
+  cursor: pointer;
+  font-size: 1.5rem;
+  height: 3rem;
+  vertical-align: text-top;
+  width: 3rem;
 }
 
 #mobile-menu-btn {
@@ -2177,23 +2182,6 @@ footer .footer-icon {
   display: inline-block;
   margin-top: 1rem;
   padding: .5rem;
-}
-
-.e404 .search-form .search-box .search-input {
-  border: solid 1px #e7e4e4;
-  height: 3rem;
-  padding-left: 1rem;
-  vertical-align: text-top;
-}
-
-.e404 .search-form .search-box .button-submit {
-  background-color: #f3f3f2;
-  border: solid 1px #e7e4e4;
-  cursor: pointer;
-  font-size: 2rem;
-  height: 3rem;
-  vertical-align: text-top;
-  width: 3rem;
 }
 
 .privacy-main .privacy-title, .privacy-main .privacy-text {

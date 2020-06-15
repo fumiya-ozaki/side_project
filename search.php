@@ -4,7 +4,8 @@
     <p class="font-lg">
       SEARCH
     </p>
-    <form class="search-form" method="get" role="search"  action="<?php echo esc_url( home_url() );?>">
+
+    <form class="search-form fixed" method="get" role="search"  action="<?php echo esc_url( home_url() );?>">
       <div class="search-box">
         <input type="text" name="s" class="search-input" placeholder="キーワードを入力" value="<?php the_search_query();?>">
         <button type="submit" class="button button-submit"><i class="fas fa-search fa-sm"></i></button>
@@ -15,7 +16,7 @@
       <?php if ( get_search_query() ): ?>
         <div class="serchResult-head">
           <h1><?php the_search_query();?>の検索結果</h1>
-          <div class="total"><?php echo $wp_query->found_posts; ?>件</div>
+          <span class="total"><?php echo $wp_query->found_posts; ?>件</span>
         </div>  
       <?php endif; ?>  
     </div>
@@ -63,16 +64,16 @@
         </li>
       </ul>
       <?php endwhile;?>
-      
-      <div class="pager">
-        <ul class="pagerList">
-          <?php
-            if(function_exists( 'page_navi' )):
-              page_navi();
-            endif;
-          ?> 
-        </ul>
-      </div>
+
+      <?php 
+        the_posts_pagination( array(
+          'before_page_number' => '',
+          'next_text'          => 'Next',
+          'prev_text'          => 'Prev',
+          'show_all'           => __return_true(),
+          'screen_reader_text' => 'Post Navigation'
+        ));
+      ?>
 
     <?php elseif(! get_search_query() ):?>
       <p>検索ワードが入力されていません</p>

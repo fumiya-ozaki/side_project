@@ -54,7 +54,6 @@
         &:hover:before {
           transform: scale(1);
         }
-      
         a {
           color: $cWhite;
         }
@@ -68,9 +67,6 @@
       .option-icon {
         line-height: 19px;
         margin-left: 1rem;
-        .svg-inline--fa {
-          font-size: 19px;
-        }
         &.iconR{
           .search-form{
             margin-top: .5rem;
@@ -81,17 +77,6 @@
             transition:all .5s ;
             visibility: hidden;
             z-index: 5;
-            .search-box{
-              display: flex;
-              .button-submit{
-                cursor: pointer;
-              }
-            }
-            .search-input{
-              font-size: 15px;
-              height: 40px;
-              padding-left: .5rem;
-            }
             &.active{
               opacity: 1;
               transform: translateY(0);
@@ -131,6 +116,30 @@
     }
   }
 }
+  
+.search-form{
+  .search-box{
+    display: flex;
+    .search-input{
+      font-size: 15px;
+      height: 40px;
+      border: solid 1px $cGray;
+      height: 3rem;
+      padding-left: 1rem;
+      vertical-align: text-top;
+    }
+    .button-submit{
+      background-color: $cLGray;
+      border: solid 1px $cGray;
+      cursor: pointer;
+      font-size: 1.5rem;
+      height: 3rem;
+      vertical-align: text-top;
+      width: 3rem;
+    }
+  }
+}
+
 
 #mobile-menu-btn {
   display: none;
@@ -1192,25 +1201,6 @@ footer {
       display: inline-block;
       margin-top: 1rem;
       padding: .5rem;
-    }
-  }
-  .search-form{
-    .search-box{
-      .search-input{
-        border: solid 1px $cGray;
-        height: 3rem;
-        padding-left: 1rem;
-        vertical-align: text-top;
-      }
-      .button-submit{
-        background-color: $cLGray;
-        border: solid 1px $cGray;
-        cursor: pointer;
-        font-size: 2rem;
-        height: 3rem;
-        vertical-align: text-top;
-        width: 3rem;
-      }
     }
   }
 }

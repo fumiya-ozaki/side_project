@@ -227,19 +227,37 @@ Template Name: demo
 
     <p class="acordion-name">アコーディオン１（１つだけ開きます）</p>
     <dl class="acordion" id="acordion1">
-      <dt class="acordion__title arrow">お問い合わせ１</dt>
+      <dt class="acordion__title">
+        お問い合わせ１
+        <div class="btnClose">
+            <span></span>
+            <span></span>
+        </div>
+      </dt>
       <dd class="acordion__content acordion__content1">
         回答１<br>
         お問い合わせ１の回答です
         <span class="closeBtn closeBtn1">閉じる</span>
       </dd>
-      <dt class="acordion__title arrow">お問い合わせ２</dt>
+      <dt class="acordion__title">
+        お問い合わせ２
+        <div class="btnClose">
+            <span></span>
+            <span></span>
+        </div>
+      </dt>
       <dd class="acordion__content acordion__content1">
         回答2<br>
         お問い合わせ２の回答です
         <span class="closeBtn closeBtn1">閉じる</span>
       </dd>
-      <dt class="acordion__title arrow">お問い合わせ３</dt>
+      <dt class="acordion__title">
+        お問い合わせ３
+        <div class="btnClose">
+            <span></span>
+            <span></span>
+        </div>
+      </dt>
       <dd class="acordion__content acordion__content1">
         回答3<br>
         お問い合わせ３の回答です
@@ -249,20 +267,38 @@ Template Name: demo
 
     <p class="acordion-name">アコーディオン２ (複数開けられます)</p>
     <dl class="acordion" id="acordion2">
-      <dt class="acordion__title arrow">お問い合わせ１</dt>
+      <dt class="acordion__title arrow">
+        お問い合わせ１
+        <div class="btnClose">
+            <span></span>
+            <span></span>
+        </div>
+      </dt>
       <dd class="acordion__content acordion__content2">
         回答１<br>
         お問い合わせ１の回答です
         <span class="closeBtn closeBtn2">閉じる</span>
 
       </dd>
-      <dt class="acordion__title arrow">お問い合わせ２</dt>
+      <dt class="acordion__title arrow">
+        お問い合わせ２
+        <div class="btnClose">
+            <span></span>
+            <span></span>
+        </div>
+      </dt>
       <dd class="acordion__content acordion__content2">
         回答2<br>
         お問い合わせ２の回答です
         <span class="closeBtn closeBtn2">閉じる</span>
       </dd>
-      <dt class="acordion__title arrow">お問い合わせ３</dt>
+      <dt class="acordion__title arrow">
+        お問い合わせ３
+        <div class="btnClose">
+            <span></span>
+            <span></span>
+        </div>
+      </dt>
       <dd class="acordion__content acordion__content2">
         回答3<br>
         お問い合わせ３の回答です

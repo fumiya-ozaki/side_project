@@ -37,10 +37,10 @@ body {
 
 /* category-tab */
 .tab {
+  display: inline-block;
   border-radius: 5px;
-  margin-right: 1rem;
+  margin-bottom: .5rem;
   padding: 0 1rem;
-  width: 5rem;
 }
 
 .tab.news {
@@ -53,6 +53,15 @@ body {
 
 .tab.blog {
   background-color: #ff260d;
+}
+
+.tab.date {
+  background-color: #f3f3f2;
+}
+
+.tab.tag {
+  background-color: #1f1f1d;
+  color: white;
 }
 
 /* <br class="br-pc"> tablet */

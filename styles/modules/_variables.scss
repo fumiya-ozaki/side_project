@@ -29,13 +29,18 @@ body {font-family: "Kameron", "Noto Sans JP", sans-serif;}
 
 /* category-tab */
 .tab{
+  display: inline-block;
   border-radius: 5px;
-  margin-right: 1rem;
+  margin-bottom: .5rem;
   padding: 0 1rem;
-  width: 5rem;
   &.news{background-color: #f7ff08;}
   &.works{background-color: #ff0df2;}
   &.blog{background-color: #ff260d;}
+  &.date{background-color:$cLGray;}
+  &.tag{
+    background-color:$cBlack;
+    color: $cWhite;
+  }
 }
 
 /* <br class="br-pc"> tablet */

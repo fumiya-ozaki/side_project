@@ -1,8 +1,8 @@
 <?php
 // head-import
 function theme_script(){
-  $version = "1.0.0";
-  // $version = wp_get_theme()->get( 'Version' );
+  // $version = "1.0.0";
+  $version = wp_get_theme()->get( 'Version' );
   // $version = time();//バージョンをタイムスタンプにする(開発用)
   wp_enqueue_style('theme-reset', get_template_directory_uri() . '/styles/venders/_reset.css', array(),$version ); //resetcss
   wp_enqueue_style('theme-style', get_template_directory_uri() . '/styles/style.min.css', array(),$version ); //stylecss 
@@ -116,9 +116,9 @@ add_action( 'wp_enqueue_scripts' ,'theme_script' );
   // カスタム投稿タイプの追加
   function cpt_register_test() {
     $labels = [
-      "name"          =>"テスト", //管理画面などで表示する名前
-      "singular_name" =>"テスト", //管理画面などで表示する名前（単数形）
-      "menu_name"     =>"テスト", //管理画面メニューで表示する名前（nameより優先される）
+      "name"          =>"コラム", //管理画面などで表示する名前
+      "singular_name" =>"コラム", //管理画面などで表示する名前（単数形）
+      "menu_name"     =>"コラム", //管理画面メニューで表示する名前（nameより優先される）
       "add_new_item"  =>"新しい投稿", //新規作成ページのタイトルに表示される名前
       "add_new"       =>"新規投稿", //新規作成ページのタイトルに表示される名前
       "new_item"      =>"投稿の追加", //一覧ページの新規追加ボタンのラベル？
@@ -129,7 +129,7 @@ add_action( 'wp_enqueue_scripts' ,'theme_script' );
       "not_found_in_trash"  =>"ゴミ箱にはありません" //ゴミ箱に何も入っていないときの表示
     ];
     $args = [
-      "label"                 => "テスト",
+      "label"                 => "コラム",
       "labels"                => $labels,
       "description"           => "",//カスタム投稿タイプの説明
       "public"                => true,//ユーザーが内容を投稿する場合true(通常はtrue)
@@ -140,12 +140,33 @@ add_action( 'wp_enqueue_scripts' ,'theme_script' );
       "exclude_from_search"   => false, //検索機能から検索した場合、検索対象にするかどうか
       "map_meta_cap"          => true, //WordPress が持つデフォルトのメタ権限処理を使用するかどうか。
       "hierarchical"          => true,//記事の階層構造を許可
-      "rewrite"               => ["slug" => "test","with_front"=>true], //ページごとにパーマリンクを設定した場合有効にする
+      "rewrite"               => ["slug" => "column","with_front"=>true], //ページごとにパーマリンクを設定した場合有効にする
       "query_var"             => true, //個別ページのURLフォーマット（投稿タイプ名＝記事のスラッグ）
       "menu_position"         => 5,//管理画面左サイドメニュー表示位置
       "supports"              => ["title","editor","thumbnail"],//投稿時に使用できる投稿用パーツ指定
       "taxonomies"            => [],//投稿の分類に用いるカテゴリ・カスタムタグ（配列）
     ];
-    register_post_type("test",$args);
+    register_post_type("column",$args);
   }
   add_action('init','cpt_register_test');
+
+
+  function column_posts($query){
+    //管理画面、メインクエリに鑑賞させない
+    if(is_admin()||!$query->is_main_query()){
+      return;
+    }
+    //カスタム投稿設定で作成した一覧ページ表示件数変更
+    if($query->is_post_type_archive('column')){
+      $query->set('posts_per_page','10');
+      return;
+    }
+  }
+  add_action('pre_get_posts','column_posts');
+
+  //WordPressファイル更新日をバージョンに設定
+  function default_style_version( $styles ) {
+    $version = filemtime( get_template_directory() . '/style.css' );
+    $styles->default_version = $version;
+  }
+  add_action( 'wp_default_styles', 'default_style_version' );

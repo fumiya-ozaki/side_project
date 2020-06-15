@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function(){ //DOMloadStart
-
+  "use script"
 //sliderstart***********************************************************************
 const slider1 = new Swiper ('#swiper-1', {
   // Optional parameters
@@ -252,6 +252,7 @@ tlCharAnimation.fromTo('#aniChar1', 1, { x:-50 , y:-50, opacity:0, scale:.9 },{ 
   })
 
   $(function(){
+    "use script"
     //１つだけ開くアコーディオン
     //タイトルクリックで開閉
     $('#acordion1 dt').on('click',function(){
@@ -281,8 +282,6 @@ tlCharAnimation.fromTo('#aniChar1', 1, { x:-50 , y:-50, opacity:0, scale:.9 },{ 
       $(this).parent('dd').slideToggle();
       $(this).parent().parent().find('dt').removeClass('active');
     })
-
-    
   });
 
 

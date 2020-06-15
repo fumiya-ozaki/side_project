@@ -8,9 +8,14 @@
 <main class="main-contents content-width content-height">
   <ul class="content-info">
     <li class="content-info__category">
-      <span class="tab <?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->slug; } ?>">
-        <?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->cat_name; } ?>
-      </span>
+
+      <?php if (is_singular('column')) {?><!--カスタム投稿ページ条件分岐-->
+      <?php }else{ ?>
+        <span class="tab <?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->slug; } ?>">
+          <?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->cat_name; } ?>
+        </span>
+      <?php } ?>
+
     </li>
     <li class="content-info__date">
       <time datetime="<?php the_time('Y-m-d'); ?>"> <!--time-tag-->

@@ -141,16 +141,17 @@
           </div>
         </section>
 
+        <?php get_template_part("sec","about");?>
 
         <section class="content-width">
           <?php 
           $args = array(
-            'post_type' => 'test',
-            'posts_pre_page' => 5,
+            'post_type' => 'column',
+            'posts_per_page' => 5,
             'paged' => $paged
           );
           $the_query = new WP_Query($args);if($the_query ->have_posts()):
-            ?>
+          ?>
           <ul>
             <?php while($the_query ->have_posts()): $the_query ->the_post()?>
             <li>
@@ -162,6 +163,9 @@
           <?php wp_reset_postdata();?>
           <?php else: ?>
           <?php endif;?>
+          <div>
+            <a href="<?php echo home_url(); ?>/column">リンク</a>
+          </div>
         </section>
 
 

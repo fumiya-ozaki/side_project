@@ -27,11 +27,19 @@
         <li class="news-list hover-scale">
           <a class="news-link" href="<?php the_permalink(); ?>"> <!--content-link-->
             <div class="conL">
-              <div>
-                <span class="tab <?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->slug; } ?>">
-                  <?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->cat_name; } ?>
-                </span>
-              </div>
+              <?php if (get_post_type() === 'column') {?><!--カスタム投稿ページ条件分岐-->
+                <div>
+                  <span class="tab <?php echo esc_html(get_post_type_object(get_post_type())->name); ?>">
+                    <?php echo esc_html(get_post_type_object(get_post_type())->name); ?>
+                  </span>
+                </div>
+              <?php }else{ ?>
+                <div>
+                  <span class="tab <?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->slug; } ?>">
+                    <?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->cat_name; } ?>
+                  </span>
+                </div>
+              <?php } ?>
               <time> <!--time-tag-->
                 <span class="tab date" datetime="<?php the_time('Y-m-d'); ?>">
                   <?php the_time( get_option( 'date_format' )); ?><!--content-date-->
@@ -51,7 +59,7 @@
             </div>
             <div class="conC">
               <p class="title"><?php the_title(); ?></p>
-              <p class="content"><?php echo get_flexible_excerpt(15); ?></p>
+              <p class="content"><?php the_excerpt(); ?></p>
             </div><!--content-title-->
             <div class="conR">
               <?php if(has_post_thumbnail()){

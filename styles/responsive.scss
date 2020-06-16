@@ -159,11 +159,11 @@ smartphoneで適用
             display: grid;
             grid-template:
             ".... .... ....".5rem
-            ".... conL ...."5rem
+            ".... conL ...."
             ".... .... ....".5rem
-            ".... conC ...."3rem
+            ".... conC ...."
             ".... .... ....".5rem
-            ".... conR ...."150px
+            ".... conR ...."
             ".... .... ....".5rem
             /.5rem 1fr .5rem;
             .conR{
@@ -347,29 +347,23 @@ tabletで適用
             display: grid;
             grid-template:
             ".... .... ....".5rem
-            ".... conL ...."5rem
+            ".... conL ...."
             ".... .... ...."1rem
-            ".... conC ...."3rem
+            ".... conC ...."
             ".... .... ...."1rem
-            ".... conR ...."200px
+            ".... conR ...."
             ".... .... ....".5rem
             /.5rem 1fr .5rem;
-            .conR{
-              .wp-post-image,.no-image {
-              transition: none;
-              }
-            }
-            &:hover {
-              .conR {
-                img {
-                  opacity: 1;
-                  transform: scale(1);
-                }
+            .conC{
+              overflow: hidden;
+              white-space: nowrap;
+              .wrapper{
+                .title{
+                }  
               }
             }
           }  
         }
-
       }
     }
   }

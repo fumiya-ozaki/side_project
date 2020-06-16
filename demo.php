@@ -236,6 +236,7 @@ Template Name: demo
       </dt>
       <dd class="acordion__content acordion__content1">
         回答１<br>
+        お問合わせありがとうございます。<br>
         お問い合わせ１の回答です
         <span class="closeBtn closeBtn1">閉じる</span>
       </dd>
@@ -248,6 +249,7 @@ Template Name: demo
       </dt>
       <dd class="acordion__content acordion__content1">
         回答2<br>
+        お問合わせありがとうございます。<br>
         お問い合わせ２の回答です
         <span class="closeBtn closeBtn1">閉じる</span>
       </dd>
@@ -260,6 +262,7 @@ Template Name: demo
       </dt>
       <dd class="acordion__content acordion__content1">
         回答3<br>
+        お問合わせありがとうございます。<br>
         お問い合わせ３の回答です
         <span class="closeBtn closeBtn1">閉じる</span>
       </dd>
@@ -268,7 +271,7 @@ Template Name: demo
     <p class="acordion-name">アコーディオン２ (複数開けられます)</p>
     <dl class="acordion" id="acordion2">
       <dt class="acordion__title arrow">
-        お問い合わせ１
+        お問い合わせ１<br>
         <div class="btnClose">
             <span></span>
             <span></span>
@@ -276,6 +279,7 @@ Template Name: demo
       </dt>
       <dd class="acordion__content acordion__content2">
         回答１<br>
+        お問合わせありがとうございます。<br>
         お問い合わせ１の回答です
         <span class="closeBtn closeBtn2">閉じる</span>
 
@@ -289,6 +293,7 @@ Template Name: demo
       </dt>
       <dd class="acordion__content acordion__content2">
         回答2<br>
+        お問合わせありがとうございます。<br>
         お問い合わせ２の回答です
         <span class="closeBtn closeBtn2">閉じる</span>
       </dd>
@@ -301,6 +306,7 @@ Template Name: demo
       </dt>
       <dd class="acordion__content acordion__content2">
         回答3<br>
+        お問合わせありがとうございます。<br>
         お問い合わせ３の回答です
         <span class="closeBtn closeBtn2">閉じる</span>
       </dd>

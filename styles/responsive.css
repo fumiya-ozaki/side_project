@@ -136,7 +136,7 @@ smartphoneで適用
   }
   .news .con-container .news-lists .news-list .news-link {
     display: grid;
-    grid-template: ".... .... ...." 0.5rem ".... conL ...." 5rem ".... .... ...." 0.5rem ".... conC ...." 3rem ".... .... ...." 0.5rem ".... conR ...." 150px ".... .... ...." 0.5rem/0.5rem 1fr 0.5rem;
+    grid-template: ".... .... ...." 0.5rem ".... conL ...." ".... .... ...." 0.5rem ".... conC ...." ".... .... ...." 0.5rem ".... conR ...." ".... .... ...." 0.5rem/0.5rem 1fr 0.5rem;
   }
   .news .con-container .news-lists .news-list .news-link .conR .wp-post-image, .news .con-container .news-lists .news-list .news-link .conR .no-image {
     transition: none;
@@ -231,14 +231,11 @@ tabletで適用
   }
   .news .con-container .news-lists .news-list .news-link {
     display: grid;
-    grid-template: ".... .... ...." 0.5rem ".... conL ...." 5rem ".... .... ...." 1rem ".... conC ...." 3rem ".... .... ...." 1rem ".... conR ...." 200px ".... .... ...." 0.5rem/0.5rem 1fr 0.5rem;
+    grid-template: ".... .... ...." 0.5rem ".... conL ...." ".... .... ...." 1rem ".... conC ...." ".... .... ...." 1rem ".... conR ...." ".... .... ...." 0.5rem/0.5rem 1fr 0.5rem;
   }
-  .news .con-container .news-lists .news-list .news-link .conR .wp-post-image, .news .con-container .news-lists .news-list .news-link .conR .no-image {
-    transition: none;
-  }
-  .news .con-container .news-lists .news-list .news-link:hover .conR img {
-    opacity: 1;
-    transform: scale(1);
+  .news .con-container .news-lists .news-list .news-link .conC {
+    overflow: hidden;
+    white-space: nowrap;
   }
   footer {
     flex-direction: column;

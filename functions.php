@@ -1,8 +1,8 @@
 <?php
 // head-import
 function theme_script(){
-  // $version = "1.0.0";
-  $version = wp_get_theme()->get( 'Version' );
+  $version = filemtime( get_template_directory() . '/style.css' );
+  // $version = wp_get_theme()->get( 'Version' );//style.css記述のversionで管理する
   // $version = time();//バージョンをタイムスタンプにする(開発用)
   wp_enqueue_style('theme-reset', get_template_directory_uri() . '/styles/venders/_reset.css', array(),$version ); //resetcss
   wp_enqueue_style('theme-style', get_template_directory_uri() . '/styles/style.min.css', array(),$version ); //stylecss 
@@ -103,7 +103,7 @@ add_action( 'wp_enqueue_scripts' ,'theme_script' );
   add_filter( 'excerpt_mblength', 'cms_excerpt_length' );
   
   // 抜粋機能を固定ページに使えるよう設定
-  add_post_type_support( 'page', 'excerpt' );
+  // add_post_type_support( 'page', 'excerpt' );
   
   //関数で抜粋文に文字数を渡して処理
   function get_flexible_excerpt( $number ) {
@@ -111,7 +111,6 @@ add_action( 'wp_enqueue_scripts' ,'theme_script' );
     $value = wp_trim_words( $value, $number, '...' );
     return $value;
   }
-
 
   // カスタム投稿タイプの追加
   function cpt_register_test() {
@@ -170,3 +169,18 @@ add_action( 'wp_enqueue_scripts' ,'theme_script' );
     $styles->default_version = $version;
   }
   add_action( 'wp_default_styles', 'default_style_version' );
+
+
+
+function theme_search_mark( $str ) {
+	if ( is_search() ) {
+		$search_query = trim( get_search_query() );
+		$search_query = mb_convert_kana( $search_query, 'as', 'UTF-8' );
+		if ( !empty( $search_query ) ) {
+			$str = str_replace( $search_query, '<mark>' . $search_query . '</mark>', $str );
+		}
+	}
+	return $str;
+}
+add_action( 'the_title',   'theme_search_mark' );
+add_action( 'the_excerpt', 'theme_search_mark' );

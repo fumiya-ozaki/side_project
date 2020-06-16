@@ -34,7 +34,7 @@
             </div>
             <div class="conC">
               <p class="title"><?php the_title(); ?></p>
-              <p class="content"><?php echo get_flexible_excerpt(15); ?></p>
+              <p class="content"><?php echo get_flexible_excerpt(30); ?></p>
             </div><!--content-title-->
             <div class="conR">
               <?php if(has_post_thumbnail()){
@@ -81,7 +81,7 @@
             </div>
             <div class="conC">
               <p class="title"><?php the_title(); ?></p>
-              <p class="content"><?php echo get_flexible_excerpt(15); ?></p>
+              <p class="content"><?php echo get_flexible_excerpt(30); ?></p>
             </div><!--content-title-->
             <div class="conR">
               <?php if(has_post_thumbnail()){
@@ -128,7 +128,7 @@
             </div>
             <div class="conC">
               <p class="title"><?php the_title(); ?></p>
-              <p class="content"><?php echo get_flexible_excerpt(15); ?></p>
+              <p class="content"><?php echo get_flexible_excerpt(30); ?></p>
             </div><!--content-title-->
             <div class="conR">
               <?php if(has_post_thumbnail()){

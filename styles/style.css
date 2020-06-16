@@ -55,6 +55,10 @@ body {
   background-color: #ff260d;
 }
 
+.tab.column {
+  background-color: #3dea3d;
+}
+
 .tab.date {
   background-color: #f3f3f2;
 }
@@ -924,7 +928,7 @@ footer .footer-icon {
 
 .news .con-container .news-lists .news-list .news-link {
   display: grid;
-  grid-template: ".... .... .... .... .... .... ...." 0.5rem ".... conL .... conC .... conR ...." 100px ".... .... .... .... .... .... ...." 0.5rem/0.5rem 1fr 0.5rem 2fr 0.5rem 1fr 0.5rem;
+  grid-template: ".... .... .... .... .... .... ...." 0.5rem ".... conL .... conC .... conR ...." 100px ".... .... .... .... .... .... ...." 0.5rem/0.5rem 1fr 0.5rem 4fr 0.5rem 1fr 0.5rem;
 }
 
 .news .con-container .news-lists .news-list .news-link .conL {
@@ -935,10 +939,16 @@ footer .footer-icon {
 
 .news .con-container .news-lists .news-list .news-link .conC {
   grid-area: conC;
+  overflow: hidden;
+}
+
+.news .con-container .news-lists .news-list .news-link .conC .title {
+  white-space: nowrap;
 }
 
 .news .con-container .news-lists .news-list .news-link .conR {
   grid-area: conR;
+  overflow: hidden;
 }
 
 .news .con-container .news-lists .news-list .news-link .conR .wp-post-image, .news .con-container .news-lists .news-list .news-link .conR .no-image {

@@ -5,7 +5,10 @@
 
 <section class="post-image content-width"></section>
 
-<main class="main-contents content-width content-height">
+<main class="main-contents content-width content-height sidebar-wrapper">
+<?php get_sidebar(); ?>  <!--sidebar-import-->
+<div class="left-contents">
+
   <ul class="content-info">
     <li class="content-info__category">
       <?php if (is_singular('column')) {?><!--カスタム投稿ページ条件分岐-->
@@ -48,8 +51,11 @@
       <?php the_content(); ?><!--content-->
     </li>
   </ul>
+  </div>
   
-  <!--pagenavigationstart-->
+</main>
+<!--pagenavigationstart-->
+<div class="content-width">
   <?php while( have_posts() ) : the_post(); ?>
   <article class="post">
     <h2><?php the_title(); ?></h2>
@@ -65,8 +71,7 @@
       )
     ); ?>
   <!--pagenavigationend-->
-
-</main>
+</div>
 
 </article><!--getpostinfoend-->
 <?php endif; ?><!--mainloopend-->

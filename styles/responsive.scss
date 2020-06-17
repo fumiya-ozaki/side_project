@@ -125,7 +125,14 @@ smartphoneで適用
       }
     }
   }  
-  
+  .sidebar-wrapper{
+    display: grid;
+    grid-template:
+    "conL";
+    .left-contents{grid-area:conL;}
+    .side-bar{display: none;}
+  }
+    
   // index.htmlstart******************************************************
   .contents {
     grid-template:

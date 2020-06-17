@@ -35,6 +35,14 @@ body {
   padding: 100px 0 100px 0;
 }
 
+.content-top {
+  padding-top: 50px;
+}
+
+.content-bottom {
+  padding-bottom: 50px;
+}
+
 /* category-tab */
 .tab {
   display: inline-block;
@@ -1782,27 +1790,27 @@ footer .footer-icon {
   line-height: 2;
 }
 
-.main-contents .post-navigation .screen-reader-text {
+.post-navigation .screen-reader-text {
   border-top: 3px solid #e7e4e4;
   color: #1f1f1d;
   display: inline-block;
-  margin: 100px 0 2rem 0;
+  margin: 0 0 2rem 0;
   padding: 1rem 0;
   text-align: center;
   width: 100%;
 }
 
-.main-contents .post-navigation .nav-links {
-  background-color: #f3f3f2;
+.post-navigation .nav-links {
   position: relative;
+  height: 50px;
 }
 
-.main-contents .post-navigation .nav-links .nav-previous {
+.post-navigation .nav-links .nav-previous {
   left: 0;
   position: absolute;
 }
 
-.main-contents .post-navigation .nav-links .nav-next {
+.post-navigation .nav-links .nav-next {
   position: absolute;
   right: 0;
 }
@@ -2238,4 +2246,58 @@ footer .footer-icon {
   font-weight: bolder;
   padding-left: 1rem;
   margin: .5rem 0;
+}
+
+.sidebar-wrapper {
+  display: grid;
+  grid-template: "conL ... conR" 1fr/4fr 1rem 1fr;
+}
+
+.sidebar-wrapper .left-contents {
+  grid-area: conL;
+}
+
+.sidebar-wrapper .side-bar {
+  grid-area: conR;
+}
+
+.side-bar__container {
+  display: grid;
+  grid-template: "... .... ..." 1rem "... con1 ..." "... .... ..." 1rem "... con2 ..." "... .... ..." 1rem "... con3 ..." "... .... ..." 1rem "... con4 ..." "... .... ..." 1rem "... con5 ..." "... .... ..." 1rem/1rem 1fr 1rem;
+}
+
+.side-bar__container .side-author {
+  grid-area: con1;
+}
+
+.side-bar__container .side-recommend {
+  grid-area: con2;
+}
+
+.side-bar__container .side-category {
+  grid-area: con3;
+}
+
+.side-bar__container .side-tag {
+  grid-area: con4;
+}
+
+.side-bar__container .side-link {
+  grid-area: con5;
+}
+
+.side-content {
+  background-color: white;
+  padding: 2rem;
+  border: solid 1px #e7e4e4;
+}
+
+.side-content .side-title {
+  margin-bottom: 1rem;
+  color: #9e9c9c;
+}
+
+.side-content p {
+  margin-left: .5rem;
+  line-height: 2;
 }

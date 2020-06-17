@@ -840,30 +840,31 @@ footer {
       }
     }
   }
-  .post-navigation{
-    .screen-reader-text{
-      border-top: 3px solid $cGray;
-      color: $cBlack;
-      display: inline-block;
-      margin: 100px 0 2rem 0;
-      padding: 1rem 0;
-      text-align: center;
-      width: 100%;
-    }
-    .nav-links{
-      background-color:$cLGray;
-      position: relative;
-      .nav-previous{
-        left: 0;
-        position: absolute;
-      }
-      .nav-next{
-        position: absolute;
-        right: 0;
-      }
-    }
-  }
 }
+    .post-navigation{
+      .screen-reader-text{
+        border-top: 3px solid $cGray;
+        color: $cBlack;
+        display: inline-block;
+        margin: 0 0 2rem 0;
+        padding: 1rem 0;
+        text-align: center;
+        width: 100%;
+      }
+      .nav-links{
+        // background-color:$cLGray;
+        position: relative;
+        height: 50px;
+        .nav-previous{
+          left: 0;
+          position: absolute;
+        }
+        .nav-next{
+          position: absolute;
+          right: 0;
+        }
+      }
+    }
 //singleend*****************************************************
 
 //demostart*****************************************************
@@ -1240,7 +1241,7 @@ footer {
 }
 
 //404end******************************************************
-//privacy.phpstart******************************************************
+//privacystart******************************************************
 .privacy-main{
   .privacy-title, .privacy-text{
     margin-bottom: 25px;
@@ -1252,5 +1253,52 @@ footer {
     margin: .5rem 0;
   }
 }
-//privacy.phpend******************************************************
+//privacyend******************************************************
+//sidebarstart******************************************************
+
+.sidebar-wrapper{
+  display: grid;
+  grid-template:
+  "conL ... conR"1fr
+  /4fr 1rem 1fr;
+  .left-contents{grid-area:conL;}
+  .side-bar{grid-area:conR;}
+}
+
+.side-bar__container{
+  display: grid;
+  grid-template:
+  "... .... ..."1rem
+  "... con1 ..."
+  "... .... ..."1rem
+  "... con2 ..."
+  "... .... ..."1rem
+  "... con3 ..."
+  "... .... ..."1rem
+  "... con4 ..."
+  "... .... ..."1rem
+  "... con5 ..."
+  "... .... ..."1rem
+  /1rem 1fr 1rem;
+  .side-author{grid-area: con1;}
+  .side-recommend{grid-area: con2;}
+  .side-category{grid-area: con3;}
+  .side-tag{grid-area: con4;}
+  .side-link{grid-area: con5;}
+}
+
+.side-content{
+  background-color: $cWhite;
+  padding: 2rem;
+  border: solid 1px $cGray;
+  .side-title{
+    margin-bottom: 1rem;
+    color: $cDGray;
+  }
+  p{
+    margin-left: .5rem;
+    line-height: 2;
+  }
+}
+//sidebarend******************************************************
 

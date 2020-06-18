@@ -10,7 +10,7 @@ const slider1 = new Swiper ('#swiper-1', {
   },
   effect: "slide",  //スライドエフェクト "slide", "fade", "cube", "coverflow","flip"
   speed:3000,  //スライドスピード
-  grabCursor:true, //グラブポインター
+  // grabCursor:true, //グラブポインター
   direction: "horizontal",  // 横スライド'horizontal' 縦スライド'vertical'
   initialSlide:0, //初期スライド 0スタート
   spaceBetween: 50, //スライド間余白
@@ -20,6 +20,7 @@ const slider1 = new Swiper ('#swiper-1', {
   // freeModeMomentum:true,  //slide慣性有無
   // freeModeMomentumRatio: 1, //slide慣性距離 数字が大きいほど強い
   // freeModeMomentumVelocityRatio: 1, //slide慣性速度 数字が大きいほど強い
+  allowTouchMove: false, //スマホスワイプ/pcドラッグ許可falseでナビやサムネイルのみの操作
   //pagination
   pagination: {
     el: '.swiper-pagination',
@@ -49,6 +50,7 @@ const slider2 = new Swiper ('#swiper-2', {
   spaceBetween: 0, //スライド間余白
   slidesPerView: 1,  //１枚のスライドに入れる画像枚数
   slidesPerGroup: 1,  //１回のスライドで流れる画像枚数
+  allowTouchMove: false, //スマホスワイプ/pcドラッグ許可falseでナビやサムネイルのみの操作
   //pagination
   pagination: {
     el: '.swiper-pagination',
@@ -76,7 +78,7 @@ const slider3 = new Swiper ('#swiper-3', {
   spaceBetween: 0, //スライド間余白
   slidesPerView: 1,  //１枚のスライドに入れる画像枚数
   slidesPerGroup: 1,  //１回のスライドで流れる画像枚数
-  grabCursor:true, //グラブポインター
+  allowTouchMove: false, //スマホスワイプ/pcドラッグ許可falseでナビやサムネイルのみの操作
   //pagination
   pagination: {
     el: '.swiper-pagination',
@@ -104,7 +106,7 @@ const slider4 = new Swiper ('#swiper-4', {
   spaceBetween: 0, //スライド間余白
   slidesPerView: 1,  //１枚のスライドに入れる画像枚数
   slidesPerGroup: 1,  //１回のスライドで流れる画像枚数
-  grabCursor:true, //グラブポインター
+  allowTouchMove: false, //スマホスワイプ/pcドラッグ許可falseでナビやサムネイルのみの操作
   //pagination
   pagination: {
     el: '.swiper-pagination',
@@ -132,7 +134,7 @@ const slider5 = new Swiper ('#swiper-5', {
   spaceBetween: 20, //スライド間余白
   slidesPerView: 3,  //１枚のスライドに入れる画像枚数
   slidesPerGroup: 2,  //１回のスライドで流れる画像枚数
-  grabCursor:true, //グラブポインター
+  allowTouchMove: false, //スマホスワイプ/pcドラッグ許可falseでナビやサムネイルのみの操作
   //pagination
   pagination: {
     el: '.swiper-pagination',
@@ -162,7 +164,7 @@ const slider6 = new Swiper ('#swiper-6', {
   initialSlide:1, //初期スライド 0スタート
   slidesPerView: 3,  //１枚のスライドに入れる画像枚数
   slidesPerGroup: 1,  //１回のスライドで流れる画像枚数
-  grabCursor:true, //グラブポインター
+  allowTouchMove: false, //スマホスワイプ/pcドラッグ許可falseでナビやサムネイルのみの操作
   //pagination
   pagination: {
     el: '.swiper-pagination',

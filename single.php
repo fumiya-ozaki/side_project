@@ -6,7 +6,7 @@
 <section class="post-image content-width"></section>
 
 <main class="main-contents content-width content-height sidebar-wrapper">
-<?php get_sidebar(); ?>  <!--sidebar-import-->
+<?php /*get_sidebar(); */?>  <!--sidebar-import-->
 <div class="left-contents">
 
   <ul class="content-info">

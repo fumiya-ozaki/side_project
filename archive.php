@@ -1,151 +1,149 @@
 <?php get_header(); ?>  <!--header-import-->
 <main class="news">
-  <div class="con-container content-width content-top sidebar-wrapper">
-    <?php get_sidebar(); ?>  <!--sidebar-import-->
-    <div class="left-contents">
-
-      <?php if (in_category(array('works'))) {?>
-        <div class="archive-title font-lg">
-          <?php the_archive_title(); ?>
-        </div>
-        <?php if(have_posts()): while(have_posts()): the_post();?>
-        <ul class="news-lists">
-          <li class="news-list hover-scale">
-            <a class="news-link" href="<?php the_permalink(); ?>"> <!--content-link-->
-              <div class="conL">
-                <div>
-                  <span class="tab <?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->slug; } ?>">
-                    <?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->cat_name; } ?>
-                  </span>
-                </div>
-                <time> <!--time-tag-->
-                  <span class="tab date" datetime="<?php the_time('Y-m-d'); ?>">
-                    <?php the_time( get_option( 'date_format' )); ?><!--content-date-->
-                  </span>
-                </time>
-                <div>
-                  <span class="tab tag">
-                    <?php $posttags = get_the_tags(); //タグの取得
-                      if ($posttags) {
-                        foreach($posttags as $tag) {
-                          echo $tag->name . ' ';
-                        }
-                      }
-                    ?>
-                  </span>
-                </div>
-              </div>
-              <div class="conC">
-                <p class="title"><?php the_title(); ?></p>
-                <p class="content"><?php echo get_flexible_excerpt(30); ?></p>
-              </div><!--content-title-->
-              <div class="conR">
-                <?php if(has_post_thumbnail()){
-                   the_post_thumbnail('medium');
-                }else{?>
-                  <img class="no-image" src="<?php echo get_template_directory_uri();?>/img/business_06.jpeg" alt="thumbnail-pic">
-                  <?php }?>
-              </div><!--content-image-->
-            </a>
-          </li>
-        </ul>
-      <?php endwhile; endif; ?>
-
-      <?php } elseif(in_category(array('news'))){ ?>
-      <div class="archive-title font-lg">
-        <?php the_archive_title(); ?>
-      </div>
-      <?php if(have_posts()): while(have_posts()): the_post();?>
-        <ul class="news-lists">
-          <li class="news-list hover-scale">
-            <a class="news-link" href="<?php the_permalink(); ?>"> <!--content-link-->
-              <div class="conL">
-                <div>
-                  <span class="tab <?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->slug; } ?>">
-                    <?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->cat_name; } ?>
-                  </span>
-                </div>
-                <time> <!--time-tag-->
-                  <span class="tab date" datetime="<?php the_time('Y-m-d'); ?>">
-                    <?php the_time( get_option( 'date_format' )); ?><!--content-date-->
-                  </span>
-                </time>
-                <div>
-                  <span class="tab tag">
-                    <?php $posttags = get_the_tags(); //タグの取得
-                      if ($posttags) {
-                        foreach($posttags as $tag) {
-                          echo $tag->name . ' ';
-                        }
-                      }
-                    ?>
-                  </span>
-                </div>
-              </div>
-              <div class="conC">
-                <p class="title"><?php the_title(); ?></p>
-                <p class="content"><?php echo get_flexible_excerpt(30); ?></p>
-              </div><!--content-title-->
-              <div class="conR">
-                <?php if(has_post_thumbnail()){
-                   the_post_thumbnail('medium');
-                }else{?>
-                  <img class="no-image" src="<?php echo get_template_directory_uri();?>/img/business_06.jpeg" alt="thumbnail-pic">
-                  <?php }?>
-              </div><!--content-image-->
-            </a>
-          </li>
-        </ul>
-      <?php endwhile; endif; ?>
-
-      <?php } elseif(in_category(array('blog'))){ ?>
-      <div class="archive-title font-lg">
-        <?php the_archive_title(); ?>
-      </div>
-      <?php if(have_posts()): while(have_posts()): the_post();?>
-        <ul class="news-lists">
-          <li class="news-list hover-scale">
-            <a class="news-link" href="<?php the_permalink(); ?>"> <!--content-link-->
-              <div class="conL">
-                <div>
-                  <span class="tab <?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->slug; } ?>">
-                    <?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->cat_name; } ?>
-                  </span>
-                </div>
-                <time> <!--time-tag-->
-                  <span class="tab date" datetime="<?php the_time('Y-m-d'); ?>">
-                    <?php the_time( get_option( 'date_format' )); ?><!--content-date-->
-                  </span>
-                </time>
-                <div>
-                  <span class="tab tag">
-                    <?php $posttags = get_the_tags(); //タグの取得
-                      if ($posttags) {
-                        foreach($posttags as $tag) {
-                          echo $tag->name . ' ';
-                        }
-                      }
-                    ?>
-                  </span>
-                </div>
-              </div>
-              <div class="conC">
-                <p class="title"><?php the_title(); ?></p>
-                <p class="content"><?php echo get_flexible_excerpt(30); ?></p>
-              </div><!--content-title-->
-              <div class="conR">
-                <?php if(has_post_thumbnail()){
-                   the_post_thumbnail('medium');
-                }else{?>
-                  <img class="no-image" src="<?php echo get_template_directory_uri();?>/img/business_06.jpeg" alt="thumbnail-pic">
-                  <?php }?>
-              </div><!--content-image-->
-            </a>
-          </li>
-        </ul>
-      <?php endwhile; endif; ?>
-      <?php } ?>
+  <div class="con-container content-width content-top ">
+    <div class="archive-title font-lg">
+      <?php the_archive_title(); ?>
     </div>
+    <div class="sidebar-wrapper">
+      <?php /*get_sidebar(); */?>  <!--sidebar-import-->
+      <div class="left-contents">
+        <?php if (in_category(array('works'))) {?>
+          <?php if(have_posts()): while(have_posts()): the_post();?>
+          <ul class="news-lists">
+            <li class="news-list hover-scale">
+              <a class="news-link" href="<?php the_permalink(); ?>"> <!--content-link-->
+                <div class="conL">
+                  <div>
+                    <span class="tab <?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->slug; } ?>">
+                      <?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->cat_name; } ?>
+                    </span>
+                  </div>
+                  <time> <!--time-tag-->
+                    <span class="tab date" datetime="<?php the_time('Y-m-d'); ?>">
+                      <?php the_time( get_option( 'date_format' )); ?><!--content-date-->
+                    </span>
+                  </time>
+                  <div>
+                    <span class="tab tag">
+                      <?php $posttags = get_the_tags(); //タグの取得
+                        if ($posttags) {
+                          foreach($posttags as $tag) {
+                            echo $tag->name . ' ';
+                          }
+                        }
+                      ?>
+                    </span>
+                  </div>
+                </div>
+                <div class="conC">
+                  <p class="title"><?php the_title(); ?></p>
+                  <p class="content"><?php echo get_flexible_excerpt(30); ?></p>
+                </div><!--content-title-->
+                <div class="conR">
+                  <?php if(has_post_thumbnail()){
+                     the_post_thumbnail('medium');
+                  }else{?>
+                    <img class="no-image" src="<?php echo get_template_directory_uri();?>/img/business_06.jpeg" alt="thumbnail-pic">
+                    <?php }?>
+                </div><!--content-image-->
+              </a>
+            </li>
+          </ul>
+        <?php endwhile; endif; ?>
+
+        <?php } elseif(in_category(array('news'))){ ?>
+        <?php if(have_posts()): while(have_posts()): the_post();?>
+          <ul class="news-lists">
+            <li class="news-list hover-scale">
+              <a class="news-link" href="<?php the_permalink(); ?>"> <!--content-link-->
+                <div class="conL">
+                  <div>
+                    <span class="tab <?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->slug; } ?>">
+                      <?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->cat_name; } ?>
+                    </span>
+                  </div>
+                  <time> <!--time-tag-->
+                    <span class="tab date" datetime="<?php the_time('Y-m-d'); ?>">
+                      <?php the_time( get_option( 'date_format' )); ?><!--content-date-->
+                    </span>
+                  </time>
+                  <div>
+                    <span class="tab tag">
+                      <?php $posttags = get_the_tags(); //タグの取得
+                        if ($posttags) {
+                          foreach($posttags as $tag) {
+                            echo $tag->name . ' ';
+                          }
+                        }
+                      ?>
+                    </span>
+                  </div>
+                </div>
+                <div class="conC">
+                  <p class="title"><?php the_title(); ?></p>
+                  <p class="content"><?php echo get_flexible_excerpt(30); ?></p>
+                </div><!--content-title-->
+                <div class="conR">
+                  <?php if(has_post_thumbnail()){
+                     the_post_thumbnail('medium');
+                  }else{?>
+                    <img class="no-image" src="<?php echo get_template_directory_uri();?>/img/business_06.jpeg" alt="thumbnail-pic">
+                    <?php }?>
+                </div><!--content-image-->
+              </a>
+            </li>
+          </ul>
+        <?php endwhile; endif; ?>
+
+        <?php } elseif(in_category(array('blog'))){ ?>
+        <?php if(have_posts()): while(have_posts()): the_post();?>
+          <ul class="news-lists">
+            <li class="news-list hover-scale">
+              <a class="news-link" href="<?php the_permalink(); ?>"> <!--content-link-->
+                <div class="conL">
+                  <div>
+                    <span class="tab <?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->slug; } ?>">
+                      <?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->cat_name; } ?>
+                    </span>
+                  </div>
+                  <time> <!--time-tag-->
+                    <span class="tab date" datetime="<?php the_time('Y-m-d'); ?>">
+                      <?php the_time( get_option( 'date_format' )); ?><!--content-date-->
+                    </span>
+                  </time>
+                  <div>
+                    <span class="tab tag">
+                      <?php if(has_tag()==true):?>
+                        <?php $posttags = get_the_tags(); //タグの取得
+                          if ($posttags) {
+                            foreach($posttags as $tag) {
+                              echo $tag->name . ' ';
+                            }
+                          }
+                        ?>
+                      <?php endif; ?>
+                    </span>
+                  </div>
+                </div>
+                <div class="conC">
+                  <p class="title"><?php the_title(); ?></p>
+                  <p class="content"><?php echo get_flexible_excerpt(30); ?></p>
+                </div><!--content-title-->
+                <div class="conR">
+                  <?php if(has_post_thumbnail()){
+                     the_post_thumbnail('medium');
+                  }else{?>
+                    <img class="no-image" src="<?php echo get_template_directory_uri();?>/img/business_06.jpeg" alt="thumbnail-pic">
+                    <?php }?>
+                </div><!--content-image-->
+              </a>
+            </li>
+          </ul>
+        <?php endwhile; endif; ?>
+        <?php } ?>
+      </div>
+    </div>
+
 
     <!--pagenavigation-->
   </div>

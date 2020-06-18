@@ -30,7 +30,12 @@
 
           <!-- main-header -->
           <nav class="header-container content-width">
-            <div class="header-left"><a class="link-logo" href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri();?>/img/logo.png" alt=""></a></div>
+            <div class="header-left">
+              <a class="link-logo" href="<?php echo home_url(); ?>">
+                <img src="<?php echo get_template_directory_uri();?>/img/logo.png" alt="">
+                <p>TOP</p>
+              </a>
+            </div>
               <ul class="header-center">
                 <?php
                   wp_nav_menu( array(

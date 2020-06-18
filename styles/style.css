@@ -135,14 +135,25 @@ body {
 }
 
 .grobal-header .header-container .header-left {
-  line-height: 50px;
-  height: 30px;
+  background-color: white;
+  border-radius: 3px;
+  height: 40px;
+  width: 50px;
+}
+
+.grobal-header .header-container .header-left .link-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .grobal-header .header-container .header-left .link-logo img {
-  background-color: white;
-  border-radius: 3px;
-  height: 30px;
+  height: 25px;
+}
+
+.grobal-header .header-container .header-left .link-logo p {
+  font-size: 15px;
 }
 
 .grobal-header .header-container .header-center {
@@ -375,7 +386,7 @@ body {
 }
 
 .menu-open .mobile-menu__btn span:nth-child(2) {
-  transform: translateX(-18px) scaleX(0);
+  transform: scaleX(0);
 }
 
 .menu-open .mobile-menu__btn span:nth-child(3) {

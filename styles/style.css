@@ -1472,7 +1472,7 @@ footer .footer-icon {
 
 .about-what-content .about-what-grid {
   display: grid;
-  grid-template: "... .... ... .... ..." 1rem "... con1 ... con2 ..." 1fr "... .... ... .... ..." 20px "... con3 ... con4 ..." 1fr "... .... ... .... ..." 1rem /0 1fr 20px 1fr 0;
+  grid-template: "... tri1 ... tri2 ..." 1rem "... con1 ... con2 ..." 1fr "... tri3 ... tri4 ..." 20px "... con3 ... con4 ..." 1fr "... .... ... .... ..." 1rem /0 1fr 20px 1fr 0;
 }
 
 .about-what-content .about-con1 {
@@ -1491,7 +1491,27 @@ footer .footer-icon {
   grid-area: con4;
 }
 
+.about-what-content #scrollTrigger1 {
+  grid-area: tri1;
+}
+
+.about-what-content #scrollTrigger2 {
+  grid-area: tri2;
+}
+
+.about-what-content #scrollTrigger3 {
+  grid-area: tri3;
+}
+
+.about-what-content #scrollTrigger4 {
+  grid-area: tri4;
+}
+
 .about-what-content .what-con {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(50px);
+  transition: all 1s;
   background-color: #f3f3f2;
   box-shadow: 0 0 15px #555454;
   padding: 1rem;
@@ -1530,6 +1550,12 @@ footer .footer-icon {
   line-height: 1.5rem;
   margin-bottom: 0.5rem;
   margin-left: 2rem;
+}
+
+.about-what-content .what-con.fade-in {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 .about-who-content {

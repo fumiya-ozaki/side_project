@@ -14,6 +14,9 @@ function theme_script(){
   wp_enqueue_script('mainjquery', get_template_directory_uri() . '/scripts/jquery.js', array('jquery'),$version ); //jquery
   wp_enqueue_script('main', get_template_directory_uri() . '/scripts/main.js', array('jquery'),$version ); //mainjs
   if(is_page( 'about' )){ //aboutページの分岐
+    wp_enqueue_script( 'GSAP', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js', array('jquery'),$version ); //GSAP
+    wp_enqueue_script( 'scrollmagic', 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js', array('jquery'),$version ); //scrollmagic
+    wp_enqueue_script( 'scrollmagic-debug', 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js', array('jquery'),$version ); //scrollmagicdebug
     wp_enqueue_script('about', get_template_directory_uri() . '/scripts/about.js', array(),$version ); //aboutjs
   }else if(is_page( 'demo' )){ //demoページの分岐
     wp_enqueue_style('swiper-css','https://unpkg.com/swiper/css/swiper.min.css', array(),$version ); //swipercss 

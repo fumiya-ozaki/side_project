@@ -15,7 +15,7 @@ Template Name: about
       </div>
     </section>
     <span class="sticky-container">
-     
+
     <div class="about-nav ">
       <ul class="about-nav-lists font-md content-width">
         <li class="about-nav-list"><a class="a-nav-text" href="#whatsMe"><span class="hover-Uline">What's me</span></a></li>
@@ -27,88 +27,94 @@ Template Name: about
     <section id="whatsMe" class="about-what-content content-width content-height2">
       <p class="about-what-title font-lg">What's me</p>
       <main class="about-what-grid">
-        <div class="what-con about-con1">
+        <span id="scrollTrigger1"></span>
+        <div class="what-con about-con1" id="scrollelement1">
           <p class="what-con-title font-lg">WORK</p>
             <!-- <button class="what-con__btn" id="modalOpen1">MORE</button> -->
-          <span class="text-wrapper">
-            <span class="what-conL">
-              <p class="textL"><i class="fas fa-pen-nib" data-fa-transform="shrink-5"></i> design</p>
-              <p class="textL"><i class="fas fa-fill-drip" data-fa-transform="shrink-5"></i> color</p>
-              <p class="textL"><i class="fas fa-tools" data-fa-transform="shrink-5"></i> maint</p>
-              <p class="textL"><i class="fas fa-cogs" data-fa-transform="shrink-5"></i> exp.</p>
-            </span>
-            <span class="what-conR">
-              <p class="textR">シンプルで美しく機能的なデザイン</p>
-              <p class="textR">イメージとロジックで効果的な配色</p>
-              <p class="textR">保守・運用コストのかからない制作</p>
-              <p class="textR">拡張できるコーディング</p>
-            </span>
-          </span>
-
+          <div class="text-wrapper">
+            <ul class="what-conL">
+              <li class="textL"><i class="fas fa-pen-nib" data-fa-transform="shrink-5"></i> design</li>
+              <li class="textL"><i class="fas fa-fill-drip" data-fa-transform="shrink-5"></i> color</li>
+              <li class="textL"><i class="fas fa-tools" data-fa-transform="shrink-5"></i> maint</li>
+              <li class="textL"><i class="fas fa-cogs" data-fa-transform="shrink-5"></i> exp.</li>
+            </ul>
+            <ul class="what-conR">
+              <li class="textR">シンプルで美しく機能的なデザイン</li>
+              <li class="textR">イメージとロジックで効果的な配色</li>
+              <li class="textR">保守・運用コストのかからない制作</li>
+              <li class="textR">拡張できるコーディング</li>
+            </ul>
+          </div>
         </div>
-        <div class="what-con about-con2">
+
+        <span id="scrollTrigger2"></span>
+        <div class="what-con about-con2" id="scrollelement2">
           <p class="title font-lg">SKILL</p>
           <!-- <button class="what-con__btn" id="modalOpen2">MORE</button> -->
-          <span class="text-wrapper">
-            <span class="what-conL">
-              <p class="textL"><i class="fab fa-html5" data-fa-transform="shrink-5"></i> HTML</p>
-              <p class="textL"><i class="fab fa-css3-alt" data-fa-transform="shrink-5"></i> CSS(SCSS)</p>
-              <p class="textL"><i class="fab fa-js" data-fa-transform="shrink-5"></i> JavaScript</p>
-              <p class="textL"><i class="fab fa-vuejs" data-fa-transform="shrink-5"></i> Vue.js</p>
-              <p class="textL"><i class="fab fa-wordpress" data-fa-transform="shrink-5"></i> Wordpress</p>
-              <p class="textL"><i class="fab fa-github-square" data-fa-transform="shrink-5"></i> Git etc</p>
-            </span>
-            <span class="what-conR">
-              <p class="textR">★★★★★★★★★★★</p>
-              <p class="textR">★★★★★★★★★★★</p>
-              <p class="textR">★★★★★★★★★★</p>
-              <p class="textR">★★★★★★★★</p>
-              <p class="textR">★★★★★★★★★★</p>
-              <p class="textR">★★★★★★★★★★★</p>
-            </span>
-          </span>
+          <div class="text-wrapper">
+            <ul class="what-conL">
+              <li class="textL"><i class="fab fa-html5" data-fa-transform="shrink-5"></i> HTML</li>
+              <li class="textL"><i class="fab fa-css3-alt" data-fa-transform="shrink-5"></i> CSS(SCSS)</li>
+              <li class="textL"><i class="fab fa-js" data-fa-transform="shrink-5"></i> JavaScript</li>
+              <li class="textL"><i class="fab fa-vuejs" data-fa-transform="shrink-5"></i> Vue.js</li>
+              <li class="textL"><i class="fab fa-wordpress" data-fa-transform="shrink-5"></i> Wordpress</li>
+              <li class="textL"><i class="fab fa-github-square" data-fa-transform="shrink-5"></i> Git etc</li>
+            </ul>
+            <ul class="what-conR">
+              <li class="textR">★★★★★★★★★★★</li>
+              <li class="textR">★★★★★★★★★★★</li>
+              <li class="textR">★★★★★★★★★★</li>
+              <li class="textR">★★★★★★★★</li>
+              <li class="textR">★★★★★★★★★★</li>
+              <li class="textR">★★★★★★★★★★★</li>
+            </ul>
+          </div>
 
         </div>
-        <div class="what-con about-con3">
+
+        <span id="scrollTrigger3"></span>
+        <div class="what-con about-con3" id="scrollelement3">
           <p class="title font-lg">TOOL</p>
           <!-- <button class="what-con__btn" id="modalOpen3">MORE</button> -->
-          <span class="text-wrapper">
-            <span class="what-conL">
-              <p class="textL"><i class="fas fa-laptop" data-fa-transform="shrink-5"></i> PC</p>
-              <p class="textL"><i class="fas fa-edit" data-fa-transform="shrink-5"></i> editor</p>
-              <p class="textL"><i class="fas fa-camera-retro" data-fa-transform="shrink-5"></i>camera</p>
-              <p class="textL"><i class="fas fa-microphone-alt" data-fa-transform="shrink-5"></i>mic</p>
-              <p class="textL"><i class="fas fa-guitar" data-fa-transform="shrink-5"></i>guiter</p>
-            </span>
-            <span class="what-conR">
-              <p class="textR">MacBook Pro (13-inch)</p>
-              <p class="textR">VS CODE</p>
-              <p class="textR">Sony NEX-5N</p>
-              <p class="textR">Under consideration</p>
-              <p class="textR">Fender Telecaster</p>
-            </span>
-          </span>
+          <div class="text-wrapper">
+            <ul class="what-conL">
+              <li class="textL"><i class="fas fa-laptop" data-fa-transform="shrink-5"></i> PC</li>
+              <li class="textL"><i class="fas fa-edit" data-fa-transform="shrink-5"></i> editor</li>
+              <li class="textL"><i class="fas fa-camera-retro" data-fa-transform="shrink-5"></i>camera</li>
+              <li class="textL"><i class="fas fa-microphone-alt" data-fa-transform="shrink-5"></i>mic</li>
+              <li class="textL"><i class="fas fa-guitar" data-fa-transform="shrink-5"></i>guiter</li>
+            </ul>
+            <ul class="what-conR">
+              <li class="textR">MacBook Pro (13-inch)</li>
+              <li class="textR">VS CODE</li>
+              <li class="textR">Sony NEX-5N</li>
+              <li class="textR">Under consideration</li>
+              <li class="textR">Fender Telecaster</li>
+            </ul>
+          </div>
 
         </div>
-        <div class="what-con about-con4">
+
+        <span id="scrollTrigger4"></span>
+        <div class="what-con about-con4" id="scrollelement4">
           <p class="title font-lg">HOBBY</p>
           <!-- <button class="what-con__btn" id="modalOpen4">MORE</button> -->
-          <span class="text-wrapper">
-            <span class="what-conL">
-              <p class="textL"><i class="fas fa-golf-ball" data-fa-transform="shrink-5"></i> golf</p>
-              <p class="textL"><i class="fas fa-music" data-fa-transform="shrink-5"></i> music</p>
-              <p class="textL"><i class="fas fa-film" data-fa-transform="shrink-5"></i>  movie</p>
-              <p class="textL"><i class="fas fa-book" data-fa-transform="shrink-5"></i> book</p>
-              <p class="textL"><i class="fas fa-graduation-cap" data-fa-transform="shrink-5"></i> english</p>
-            </span>
-            <span class="what-conR">
-              <p class="textR">永遠のアマチュアゴルファー</p>
-              <p class="textR">20代はプレーヤー30代はリスナー</p>
-              <p class="textR">サスペンスが大好物</p>
-              <p class="textR">ビジネス書 / ミステリー小説</p>
-              <p class="textR">上手になりたい</p>
-            </span>
-          </span>
+          <div class="text-wrapper">
+            <ul class="what-conL">
+              <li class="textL"><i class="fas fa-golf-ball" data-fa-transform="shrink-5"></i> golf</li>
+              <li class="textL"><i class="fas fa-music" data-fa-transform="shrink-5"></i> music</li>
+              <li class="textL"><i class="fas fa-film" data-fa-transform="shrink-5"></i>  movie</li>
+              <li class="textL"><i class="fas fa-book" data-fa-transform="shrink-5"></i> book</li>
+              <li class="textL"><i class="fas fa-graduation-cap" data-fa-transform="shrink-5"></i> english</li>
+            </ul>
+            <ul class="what-conR">
+              <li class="textR">永遠のアマチュアゴルファー</li>
+              <li class="textR">20代はプレーヤー30代はリスナー</li>
+              <li class="textR">サスペンスが大好物</li>
+              <li class="textR">ビジネス書 / ミステリー小説</li>
+              <li class="textR">上手になりたい</li>
+            </ul>
+          </div>
         </div>
         <div class="under-arrow">
           <div class="arrow1"></div>

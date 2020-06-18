@@ -642,9 +642,9 @@ footer {
   .about-what-grid {
     display: grid;
     grid-template:
-      "... .... ... .... ..." 1rem
+      "... tri1 ... tri2 ..." 1rem
       "... con1 ... con2 ..." 1fr
-      "... .... ... .... ..." 20px
+      "... tri3 ... tri4 ..." 20px
       "... con3 ... con4 ..." 1fr
       "... .... ... .... ..." 1rem
       /0 1fr 20px 1fr 0;
@@ -654,8 +654,24 @@ footer {
       grid-area: con#{$i};
     }
   }
+  #scrollTrigger1{
+    grid-area:tri1;
+  }
+  #scrollTrigger2{
+    grid-area:tri2;
+  }
+  #scrollTrigger3{
+    grid-area:tri3;
+  }
+  #scrollTrigger4{
+    grid-area:tri4;
+  }
 
   .what-con {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(50px);
+    transition: all 1s;
     background-color: $cLGray;
     box-shadow: 0 0 15px rgb(85, 84, 84);
     padding: 1rem;
@@ -687,6 +703,12 @@ footer {
           margin-left: 2rem;
         }
       }
+    }
+    &.fade-in{
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+
     }
   }
 }

@@ -167,7 +167,7 @@ smartphoneで適用
     width: 100%;
   }
   .about-what-content .about-what-grid {
-    grid-template: "... .... ..." 1rem "... con1 ..." 1fr "... .... ..." 1rem "... con2 ..." 1fr "... .... ..." 1rem "... con3 ..." 1fr "... .... ..." 1rem "... con4 ..." 1fr "... .... ..." 1rem /0  1fr 0;
+    grid-template: "... tri1 ..." 1rem "... con1 ..." 1fr "... tri2 ..." 1rem "... con2 ..." 1fr "... tri3 ..." 1rem "... con3 ..." 1fr "... tri4 ..." 1rem "... con4 ..." 1fr "... .... ..." 1rem /0  1fr 0;
   }
   .about-what-content .what-con .text-wrapper {
     font-size: 10px;
@@ -262,7 +262,7 @@ tabletで適用
     flex-direction: column;
   }
   .about-what-content .about-what-grid {
-    grid-template: "... .... ..." 1rem "... con1 ..." 1fr "... .... ..." 1rem "... con2 ..." 1fr "... .... ..." 1rem "... con3 ..." 1fr "... .... ..." 1rem "... con4 ..." 1fr "... .... ..." 1rem /0  1fr 0;
+    grid-template: "... tri1 ..." 1rem "... con1 ..." 1fr "... tri2 ..." 1rem "... con2 ..." 1fr "... tri3 ..." 1rem "... con3 ..." 1fr "... tri4 ..." 1rem "... con4 ..." 1fr "... .... ..." 1rem /0  1fr 0;
   }
   .about-who-content .prof-con-wrapper {
     flex-direction: column;

@@ -208,17 +208,16 @@ smartphoneで適用
 
 // about.htmlstart*******************************************************
 
-
   .about-what-content {
     .about-what-grid {
       grid-template:
-        "... .... ..." 1rem
+        "... tri1 ..." 1rem
         "... con1 ..." 1fr
-        "... .... ..." 1rem
+        "... tri2 ..." 1rem
         "... con2 ..." 1fr
-        "... .... ..." 1rem
+        "... tri3 ..." 1rem
         "... con3 ..." 1fr
-        "... .... ..." 1rem
+        "... tri4 ..." 1rem
         "... con4 ..." 1fr
         "... .... ..." 1rem
         /0  1fr 0;
@@ -398,13 +397,13 @@ tabletで適用
 .about-what-content {
   .about-what-grid {
     grid-template:
-      "... .... ..." 1rem
+      "... tri1 ..." 1rem
       "... con1 ..." 1fr
-      "... .... ..." 1rem
+      "... tri2 ..." 1rem
       "... con2 ..." 1fr
-      "... .... ..." 1rem
+      "... tri3 ..." 1rem
       "... con3 ..." 1fr
-      "... .... ..." 1rem
+      "... tri4 ..." 1rem
       "... con4 ..." 1fr
       "... .... ..." 1rem
       /0  1fr 0;

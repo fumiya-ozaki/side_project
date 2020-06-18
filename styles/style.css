@@ -129,22 +129,23 @@ body {
 }
 
 .grobal-header .header-container {
+  align-items: center;
   display: flex;
+  height: 50px;
 }
 
 .grobal-header .header-container .header-left {
   line-height: 50px;
-  text-align: center;
-  width: 100px;
+  height: 30px;
 }
 
-.grobal-header .header-container .header-left .link-logo {
-  color: white;
+.grobal-header .header-container .header-left .link-logo img {
+  background-color: white;
+  border-radius: 3px;
+  height: 30px;
 }
 
 .grobal-header .header-container .header-center {
-  align-items: center;
-  display: flex;
   flex-grow: 5;
   flex-wrap: wrap;
 }
@@ -188,6 +189,7 @@ body {
   display: flex;
   flex-grow: 3;
   flex-wrap: wrap;
+  height: 50px;
 }
 
 .grobal-header .header-container .header-right .option-icon {
@@ -2263,7 +2265,7 @@ footer .footer-icon {
 
 .side-bar__container {
   display: grid;
-  grid-template: "... .... ..." 1rem "... con1 ..." "... .... ..." 1rem "... con2 ..." "... .... ..." 1rem "... con3 ..." "... .... ..." 1rem "... con4 ..." "... .... ..." 1rem "... con5 ..." "... .... ..." 1rem/1rem 1fr 1rem;
+  grid-template: "... .... ..." "... con1 ..." "... .... ..." 1rem "... con2 ..." "... .... ..." 1rem "... con3 ..." "... .... ..." 1rem "... con4 ..." "... .... ..." 1rem "... con5 ..." "... .... ..." 1rem/1rem 1fr 1rem;
 }
 
 .side-bar__container .side-author {
@@ -2300,4 +2302,64 @@ footer .footer-icon {
 .side-content p {
   margin-left: .5rem;
   line-height: 2;
+}
+
+.side-category-content {
+  position: relative;
+  display: block;
+  margin-bottom: .5rem;
+  border: 1px solid #1f1f1d;
+  border-radius: 3px;
+}
+
+.side-category-label {
+  margin-left: 1rem;
+}
+
+.side-category-amt {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #1f1f1d;
+  color: white;
+  padding: 0 1rem;
+}
+
+body.login {
+  background: url("../img/index-banner_01.jpeg") no-repeat center center;
+  background-size: cover;
+}
+
+/* ログイン画面の背景 */
+/* ログインフォームの幅、デフォルトでは320pxに指定 */
+/* ログイン画面のロゴを囲む、指定されているのはtext-align: center;のみ */
+/* ロゴ画像変更、ロゴに関するCSSはこのセレクタを使用 */
+/* ログインフォーム全体のセレクタ */
+/* フォーム入力欄のlabelとinputを囲むpタグ */
+/* フォーム入力欄のラベル */
+/* フォーム入力欄とログインボタン */
+/* ユーザー名入力欄のみのセレクタ */
+/*　パスワード入力欄のみのセレクタ　*/
+/* ログイン状態を保存するチェックボックスとテキストを囲むpタグ */
+/* 「ログイン状態を保存する」テキスト */
+/* ログインボタンを囲むpタグ */
+/* ログインボタン */
+body.login div#login p#nav {
+  background-color: white;
+  border-radius: 3px;
+}
+
+/* 「パスワードをお忘れですか」を囲むpタグ */
+/* 「パスワードをお忘れですか」のaタグ */
+body.login div#login p#backtoblog {
+  background-color: white;
+  border-radius: 3px;
+}
+
+/* 「～へ戻る」を囲むpタグ */
+/* 「～へ戻る」のaタグ */
+.privacy-policy-link {
+  background-color: white;
+  border-radius: 3px;
+  padding: 0 1rem;
 }

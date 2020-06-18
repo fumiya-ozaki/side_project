@@ -25,9 +25,16 @@ function theme_script(){
   }
 }
 add_action( 'wp_enqueue_scripts' ,'theme_script' );
+
+//ログイン画面カスタマイズ
+function my_login_stylesheet() {
+  wp_enqueue_style( 'custom-login', get_template_directory_uri() . '/styles/style.min.css');
+  wp_enqueue_script( 'custom-login', get_template_directory_uri() .  '/scripts/main.js');
+  }
+  add_action( 'login_enqueue_scripts', 'my_login_stylesheet' );
+
+
 // head-import
-
-
   // Add thumbnail function
   add_theme_support('post-thumbnails');
   // Add title element.

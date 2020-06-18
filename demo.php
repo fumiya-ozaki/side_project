@@ -97,7 +97,7 @@ Template Name: demo
           <p>立方体が回転するように入れ替わります</p>
           <p>立体感のあるサイトにおすすめです</p>
         </div>
-        <div class="SAwrapper__right">
+        <div class="SAwrapper__right cube-wrapper">
           <div class="swiper-container" id="swiper-3">
             <div class="swiper-wrapper">
               <div class="swiper-slide slide1"></div>

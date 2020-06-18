@@ -215,6 +215,9 @@ smartphoneで適用
   .SAwrapper__right {
     width: 100% !important;
   }
+  .SAwrapper__right.cube-wrapper .swiper-container {
+    width: 70% !important;
+  }
   .SAwrapper__right .swiper-container {
     margin: 0 auto;
   }

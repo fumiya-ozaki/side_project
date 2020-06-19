@@ -1,6 +1,9 @@
         <footer>
           <div class="content Lfooter">
+          <?php if (is_page(array('contact'))) {?>
+          <?php }else{ ?>
             <a class="hover-Uline" href="<?php echo home_url('/contact'); ?>"><i class="far fa-envelope fa-sm"></i> contact</a>
+          <?php } ?>
           </div>
           <div class="content Cfooter">
             <a class="hover-Uline" href="<?php echo home_url('/privacypolicy'); ?>">privacy policy</a>

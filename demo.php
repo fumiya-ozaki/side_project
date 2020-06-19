@@ -11,7 +11,7 @@ Template Name: demo
     <p class="top-content__text">制作のデモコンテンツです</p>
   </div>
 
-    <!--sliderdemostart-->
+  <!--sliderdemostart-->
   <section class="demo-container">  
     <p class="demo-con-title font-lr">スライダー</p>
 
@@ -33,8 +33,6 @@ Template Name: demo
               <div class="swiper-slide slide6"></div>
             </div>
             <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
           </div>
         </div>
       </div>
@@ -58,8 +56,6 @@ Template Name: demo
               <div class="swiper-slide slide6"></div>
             </div>
             <div class="swiper-scrollbar"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
           </div>
         </div>
       </div>
@@ -83,8 +79,6 @@ Template Name: demo
               <div class="swiper-slide slide6"></div>
             </div>
             <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
           </div>
         </div>
       </div>
@@ -108,8 +102,6 @@ Template Name: demo
               <div class="swiper-slide slide6"></div>
             </div>
             <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
           </div>
         </div>
       </div>
@@ -133,8 +125,6 @@ Template Name: demo
               <div class="swiper-slide slide6"></div>
             </div>
             <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
           </div>
         </div>
       </div>
@@ -158,8 +148,6 @@ Template Name: demo
               <div class="swiper-slide slide6"></div>
             </div>
             <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
           </div>
         </div>
       </div>

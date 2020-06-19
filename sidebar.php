@@ -17,7 +17,6 @@
       if($posts):?>
         <?php foreach($posts as $post):
           setup_postdata($post);?>
-          <p class="rec-date"><?php the_time('Y.m.d');?></p>
           <p class="rec-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
         <?php endforeach?>
       <?php endif;wp_reset_postdata();?>

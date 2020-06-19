@@ -181,16 +181,16 @@ function my_login_stylesheet() {
   add_action( 'wp_default_styles', 'default_style_version' );
 
 
-
+  //検索結果のハイライト
 function theme_search_mark( $str ) {
-	if ( is_search() ) {
-		$search_query = trim( get_search_query() );
-		$search_query = mb_convert_kana( $search_query, 'as', 'UTF-8' );
-		if ( !empty( $search_query ) ) {
-			$str = str_replace( $search_query, '<mark>' . $search_query . '</mark>', $str );
-		}
-	}
-	return $str;
+  if ( is_search() ) {
+    $search_query = trim( get_search_query() );
+    $search_query = mb_convert_kana( $search_query, 'as', 'UTF-8' );
+    if ( !empty( $search_query ) ) {
+      $str = str_replace( $search_query, '<mark>' . $search_query . '</mark>', $str );
+    }
+  }
+  return $str;
 }
 add_action( 'the_title',   'theme_search_mark' );
 add_action( 'the_excerpt', 'theme_search_mark' );

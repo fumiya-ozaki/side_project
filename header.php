@@ -9,63 +9,15 @@
   <body <?php body_class(); ?>> <!--bodystartpoint-->
   <?php wp_body_open(); ?> <!--bodyfookpoint-->
 
-  <?php
-				wp_nav_menu( array(
-					'theme_location' => 'place_global'
-				) );
-				?>
-
-
-
     <!-- mobile-slide-link -->
     <div id="global-container">
       <nav class="mobile-menu">
-        <ul class="mobile-menu__main">
-          <li class="mobile-menu__item">
-            <a class="mobile-menu__link" href="<?php echo home_url(); ?>">
-              <span class="main-title">HOME</span>
-              <span class="sub-title">トップへ戻る</span>
-            </a>
-          </li>
-          <li class="mobile-menu__item">
-            <a class="mobile-menu__link" href="<?php echo home_url('/works'); ?>">
-              <span class="main-title">WORKS</span>
-              <span class="sub-title">実績</span>
-            </a>
-          </li>
-          <li class="mobile-menu__item">
-          <a class="mobile-menu__link" href="<?php echo home_url('/news'); ?>">
-              <span class="main-title">NEWS</span>
-              <span class="sub-title">お知らせ</span>
-            </a>
-          </li>
-          <li class="mobile-menu__item">
-            <a class="mobile-menu__link" href="<?php echo home_url('/blog'); ?>">
-              <span class="main-title">BLOG</span>
-              <span class="sub-title">ブログ</span>
-            </a>
-          </li>
-          <li class="mobile-menu__item">
-            <a class="mobile-menu__link" href="<?php echo home_url('/about'); ?>">
-              <span class="main-title">ABOUT</span>
-              <span class="sub-title">ご紹介</span>
-            </a>
-          </li>
-          <li class="mobile-menu__item">
-            <a class="mobile-menu__link" href="<?php echo home_url('/demo')?>">
-              <span class="main-title">DEMO</span>
-              <span class="sub-title">デモページ</span>
-            </a>
-          </li>
-          <li class="mobile-menu__item">
-            <a class="mobile-menu__link" href="<?php echo home_url('/contact'); ?>">
-              <span class="main-title">CONTACT</span>
-              <span class="sub-title">お問い合わせ</span>
-            </a>
-          </li>
-        </ul>
+        <?php
+          wp_nav_menu( array(
+          'theme_location' => 'mobile_global'
+          ));
+        ?>
       </nav>
-
       <div id="container">
         <div class="mobile-menu__cover"></div>
         <header class="grobal-header font-md">
@@ -75,25 +27,22 @@
             <span></span>
             <span></span>
           </button>
-          
+
           <!-- main-header -->
           <nav class="header-container content-width">
-            <div class="header-left"><a class="link-logo" href="<?php echo home_url(); ?>">GO home</a></div>
-            <ul class="header-center">
-            <!-- メニューPHP化 -->
-            <?php /* wp_nav_menu( array(
-              'theme_location'=>'place_global', 
-              'container'     =>'', 
-              'menu_class'    =>'',
-              'items_wrap' => '%3$s',//<ul>を出力しない
-            ));*/ ?>
-              <li class="link-text hover-Uline"><a href="<?php echo home_url('works'); ?>">WORKS</a></li>
-              <li class="link-text hover-Uline"><a href="<?php echo home_url('news'); ?>">NEWS</a></li>
-              <li class="link-text hover-Uline"><a href="<?php echo home_url('blog'); ?>">BLOG</a></li>
-              <li class="link-text hover-Uline"><a href="<?php echo home_url('about'); ?>">ABOUT</a></li>
-              <li class="link-text hover-Uline"><a href="<?php echo home_url('demo'); ?>">DEMO</a></li>
-              <li class="link-text hover-Uline"><a href="<?php echo home_url('contact'); ?>">CONTACT</a></li>
-            </ul>
+            <div class="header-left">
+              <a class="link-logo" href="<?php echo home_url(); ?>">
+                <img src="<?php echo get_template_directory_uri();?>/img/logo.png" alt="">
+                <p>TOP</p>
+              </a>
+            </div>
+              <ul class="header-center">
+                <?php
+                  wp_nav_menu( array(
+                  'theme_location' => 'place_global'
+                  ));
+                ?>
+              </ul>
             <div class="header-right">
               <div class="option-icon iconL hover-Uline">
                 <span class="language-selector" id="langSelector">
@@ -117,7 +66,4 @@
               </div>
             </div>
           </nav>
-
-          <div id="scrollValue"></div> <!--スクロール値デバッグ用-->
-
         </header>

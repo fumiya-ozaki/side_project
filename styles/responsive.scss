@@ -1,4 +1,116 @@
+@import "modules/colors";
+
+@media (min-width:960px) { //PConly start
+
+  /* hover-animation */
+.hover-Uline{
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  &:before{
+    content: "";
+    background-color: $cDGray;
+    bottom: -5px; /*線の上下位置*/
+    height: 2px; /*線の太さ*/
+    left: 0;
+    position: absolute;
+    right: 0;
+    transform: scale(0,1);
+    transform-origin: center;
+    transition: transform .2s;
+    width: 100%; /*線の長さ*/
+  }
+  &:hover:before {
+    transform: scale(1);
+  }
+}
+
+.nav-previous,.nav-next{
+  cursor: pointer;
+  text-decoration: none;
+  &:before{
+    background-color: $cDGray;
+    bottom: -5px; /*線の上下位置*/
+    content: "";
+    height: 2px; /*線の太さ*/
+    left: 0;
+    position: absolute;
+    right: 0;
+    transform: scale(0);
+    transform-origin: center;
+    transition: transform .2s;
+    width: 100%; /*線の長さ*/
+  }
+  &:hover:before {
+    transform: scale(1);
+  }
+}
+.news{
+  .con-container {
+    .hover-scale{
+      transition: all .3s;
+      img{
+        transition: all 1s ease;
+      }
+      &:hover{
+        background-color: rgb(231, 228, 228);
+        img{
+          opacity: .7;
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+  .news-btn {
+    transition: all 0.5s ease;
+    &:hover {
+      cursor: pointer;
+      background-color: $cBlack;
+      box-shadow: none;
+      color: white;
+    }  
+  }
+
+}
+
+}//PConlyend
+
+/******************************************************************
+smartphoneで適用
+******************************************************************/
+
 @media (max-width:480px) { //smartphone start
+/* <br class="br-sp"> smartphone */
+.br-pc {
+  display: none;
+}
+.br-sp {
+  display: block;
+}
+.font-sm {
+  font-size: 14px;
+}
+.font-md {
+  font-size: 17px;
+}
+.font-lr {
+  font-size: 17px;
+}
+.font-lg {
+  font-size: 25px;
+}
+.mb-sm {
+  margin-bottom: 16px ;
+}
+.mb-lg {
+  margin-bottom: 80px ;
+}
+.pb-sm {
+  padding-bottom: 16px ;
+}
+.pb-lg {
+  padding-bottom: 80px ;
+}
 
   #mobile-menu-btn{display: block;}
   .content-width{width: 95%;}
@@ -12,9 +124,15 @@
         display: none;
       }
     }
+  }  
+  .sidebar-wrapper{
+    display: grid;
+    grid-template:
+    "conL";
+    .left-contents{grid-area:conL;}
+    .side-bar{display: none;}
   }
-
-  
+    
   // index.htmlstart******************************************************
   .contents {
     grid-template:
@@ -45,15 +163,31 @@
         .news-list {
           padding: 0;
           .news-link {
-            display: flex;
-            flex-direction: column;
-            .conL {
-              padding-bottom: 0;
+            display: grid;
+            grid-template:
+            ".... .... ....".5rem
+            ".... conL ...."
+            ".... .... ....".5rem
+            ".... conC ...."
+            ".... .... ....".5rem
+            ".... conR ...."
+            ".... .... ....".5rem
+            /.5rem 1fr .5rem;
+            .conR{
+              .wp-post-image,.no-image {
+              transition: none;
+              }
             }
+          &:hover {
             .conR {
-              width: 100%;
+              img {
+                opacity: 1;
+                transform: scale(1);
+              }
             }
           }
+
+          }  
         }
       }
     }
@@ -74,17 +208,16 @@
 
 // about.htmlstart*******************************************************
 
-
   .about-what-content {
     .about-what-grid {
       grid-template:
-        "... .... ..." 1rem
+        "... tri1 ..." 1rem
         "... con1 ..." 1fr
-        "... .... ..." 1rem
+        "... tri2 ..." 1rem
         "... con2 ..." 1fr
-        "... .... ..." 1rem
+        "... tri3 ..." 1rem
         "... con3 ..." 1fr
-        "... .... ..." 1rem
+        "... tri4 ..." 1rem
         "... con4 ..." 1fr
         "... .... ..." 1rem
         /0  1fr 0;
@@ -123,7 +256,31 @@
     " con8 con8 con8" 
     / 1fr ;
 }
+.wpcf7-form-control{
+  display: flex;
+  flex-direction: column;
+}
 
+.cubic-btn {
+  display: none;
+}
+
+.mobile-btn{
+  align-items: center;
+  display: block;
+  display: flex;
+  justify-content: center;
+  .submit-btn{
+    align-items: center;
+    background-color: $cBlack;
+    color: $cWhite;
+    display: flex;
+    margin-top: 1rem;
+    justify-content: center;
+    padding: .5rem;
+    width: 100%;
+  }
+}
 
 // contact.htmlstart*******************************************************
 // demo.phpstart*******************************************************
@@ -135,6 +292,11 @@
   }
   &__right {
     width: 100%!important;
+    &.cube-wrapper{
+      .swiper-container{
+        width: 70%!important;
+      }
+    }
     .swiper-container{
       margin: 0 auto;
     }
@@ -145,11 +307,16 @@
  }
 // demo.phpstart*******************************************************
 
-
-
 } //smartphone end
 
+
+/******************************************************************
+tabletで適用
+******************************************************************/
+
 @media screen and (min-width:481px) and (max-width:959px){ //tablet start
+
+
   .grobal-header{
     .header-container{
       .header-center{
@@ -160,7 +327,6 @@
   #mobile-menu-btn{
     display: block;
   }
-
 // index.htmlstart*******************************************************
 
   .contents {
@@ -189,17 +355,25 @@
         .news-list {
           padding: 0;
           .news-link {
-            display: flex;
-            flex-direction: column;
-            .conL {
-              padding-bottom: 0;
+            display: grid;
+            grid-template:
+            ".... .... ....".5rem
+            ".... conL ...."
+            ".... .... ...."1rem
+            ".... conC ...."
+            ".... .... ...."1rem
+            ".... conR ...."
+            ".... .... ....".5rem
+            /.5rem 1fr .5rem;
+            .conC{
+              overflow: hidden;
+              white-space: nowrap;
+              .wrapper{
+                .title{
+                }  
+              }
             }
-            .conR {
-              flex-basis: auto;
-              height: 300px;
-              width: 100%;
-            }
-          }
+          }  
         }
       }
     }
@@ -223,13 +397,13 @@
 .about-what-content {
   .about-what-grid {
     grid-template:
-      "... .... ..." 1rem
+      "... tri1 ..." 1rem
       "... con1 ..." 1fr
-      "... .... ..." 1rem
+      "... tri2 ..." 1rem
       "... con2 ..." 1fr
-      "... .... ..." 1rem
+      "... tri3 ..." 1rem
       "... con3 ..." 1fr
-      "... .... ..." 1rem
+      "... tri4 ..." 1rem
       "... con4 ..." 1fr
       "... .... ..." 1rem
       /0  1fr 0;
@@ -267,8 +441,6 @@ element.style{
  }
 
 // demo.phpstart*******************************************************
-
-
 } //tablet end
 
 

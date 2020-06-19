@@ -3,7 +3,6 @@
 Template Name: demo
 */
 ?>
-
 <?php get_header(); ?>  <!--header-import-->
 <main class="demo content-width">
 
@@ -12,7 +11,7 @@ Template Name: demo
     <p class="top-content__text">制作のデモコンテンツです</p>
   </div>
 
-    <!--sliderdemostart-->
+  <!--sliderdemostart-->
   <section class="demo-container">  
     <p class="demo-con-title font-lr">スライダー</p>
 
@@ -34,8 +33,6 @@ Template Name: demo
               <div class="swiper-slide slide6"></div>
             </div>
             <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
           </div>
         </div>
       </div>
@@ -59,8 +56,6 @@ Template Name: demo
               <div class="swiper-slide slide6"></div>
             </div>
             <div class="swiper-scrollbar"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
           </div>
         </div>
       </div>
@@ -84,8 +79,6 @@ Template Name: demo
               <div class="swiper-slide slide6"></div>
             </div>
             <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
           </div>
         </div>
       </div>
@@ -98,7 +91,7 @@ Template Name: demo
           <p>立方体が回転するように入れ替わります</p>
           <p>立体感のあるサイトにおすすめです</p>
         </div>
-        <div class="SAwrapper__right">
+        <div class="SAwrapper__right cube-wrapper">
           <div class="swiper-container" id="swiper-3">
             <div class="swiper-wrapper">
               <div class="swiper-slide slide1"></div>
@@ -109,8 +102,6 @@ Template Name: demo
               <div class="swiper-slide slide6"></div>
             </div>
             <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
           </div>
         </div>
       </div>
@@ -134,8 +125,6 @@ Template Name: demo
               <div class="swiper-slide slide6"></div>
             </div>
             <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
           </div>
         </div>
       </div>
@@ -159,8 +148,6 @@ Template Name: demo
               <div class="swiper-slide slide6"></div>
             </div>
             <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
           </div>
         </div>
       </div>
@@ -189,10 +176,6 @@ Template Name: demo
         <div class="block-animation">aliqua</div>
       </div>
     </div>
-    <p>文字アニメーションサンプルです</p>
-    <p>段落/単語/文字などアニメーション単位や</p>
-    <p>スピード/イージング/フェードなど</p>
-    <p>ご希望に合わせ対応可能です</p>
     <div class="playback_controls_row">
       <a href="#0" class="playbackButton playButton">Play</a>
       <a href="#0" class="playbackButton pauseButton">Pause</a>
@@ -206,9 +189,150 @@ Template Name: demo
   </section>
   <!--charanimationstart-->
 
-  <section class="demo-container scroll-area">
-    <p class="demo-con-title font-lr">スクロール</p>
+  <section class="demo-container tab-demo">
+    <p class="demo-con-title font-lr">タブ</p>
+    <div class="tab-demo__container">
+      <ul class="tab-demo__label">
+        <li><a href="#" class="active" data-id="tab-demo__info">タブ１</a></li>
+        <li><a href="#" data-id="tab-demo__product">タブ２</a></li>
+        <li><a href="#" data-id="tab-demo__contact">タブ３</a></li>
+      </ul>
 
+      <section class="tab-demo__content active" id="tab-demo__info">
+        タブ１の情報
+      </section>
+      <section class="tab-demo__content" id="tab-demo__product">
+        タブ２の情報
+      </section>
+      <section class="tab-demo__content" id="tab-demo__contact">
+        タブ３の情報
+      </section>
+    </div>
+  </section>
+
+  <section class="demo-container acordion-demo">
+    <p class="demo-con-title font-lr">アコーディオン</p>
+
+    <p class="acordion-name">アコーディオン１（１つだけ開きます）</p>
+    <dl class="acordion" id="acordion1">
+      <dt class="acordion__title">
+        お問い合わせ１
+        <div class="btnClose">
+            <span></span>
+            <span></span>
+        </div>
+      </dt>
+      <dd class="acordion__content acordion__content1">
+        回答１<br>
+        お問合わせありがとうございます。<br>
+        お問い合わせ１の回答です
+        <span class="closeBtn closeBtn1">閉じる</span>
+      </dd>
+      <dt class="acordion__title">
+        お問い合わせ２
+        <div class="btnClose">
+            <span></span>
+            <span></span>
+        </div>
+      </dt>
+      <dd class="acordion__content acordion__content1">
+        回答2<br>
+        お問合わせありがとうございます。<br>
+        お問い合わせ２の回答です
+        <span class="closeBtn closeBtn1">閉じる</span>
+      </dd>
+      <dt class="acordion__title">
+        お問い合わせ３
+        <div class="btnClose">
+            <span></span>
+            <span></span>
+        </div>
+      </dt>
+      <dd class="acordion__content acordion__content1">
+        回答3<br>
+        お問合わせありがとうございます。<br>
+        お問い合わせ３の回答です
+        <span class="closeBtn closeBtn1">閉じる</span>
+      </dd>
+    </dl>
+
+    <p class="acordion-name">アコーディオン２ (複数開けられます)</p>
+    <dl class="acordion" id="acordion2">
+      <dt class="acordion__title arrow">
+        お問い合わせ１<br>
+        <div class="btnClose">
+            <span></span>
+            <span></span>
+        </div>
+      </dt>
+      <dd class="acordion__content acordion__content2">
+        回答１<br>
+        お問合わせありがとうございます。<br>
+        お問い合わせ１の回答です
+        <span class="closeBtn closeBtn2">閉じる</span>
+
+      </dd>
+      <dt class="acordion__title arrow">
+        お問い合わせ２
+        <div class="btnClose">
+            <span></span>
+            <span></span>
+        </div>
+      </dt>
+      <dd class="acordion__content acordion__content2">
+        回答2<br>
+        お問合わせありがとうございます。<br>
+        お問い合わせ２の回答です
+        <span class="closeBtn closeBtn2">閉じる</span>
+      </dd>
+      <dt class="acordion__title arrow">
+        お問い合わせ３
+        <div class="btnClose">
+            <span></span>
+            <span></span>
+        </div>
+      </dt>
+      <dd class="acordion__content acordion__content2">
+        回答3<br>
+        お問合わせありがとうございます。<br>
+        お問い合わせ３の回答です
+        <span class="closeBtn closeBtn2">閉じる</span>
+      </dd>
+    </dl>
+  </section>
+  <section class="demo-container modal-demo">
+    <p class="demo-con-title font-lr">モーダル</p>
+    <div class="btn-container">
+      <button class="modal__btn" id="modalOpen1">モーダル１</button>
+      <button class="modal__btn" id="modalOpen2">モーダル２</button>
+      <button class="modal__btn" id="modalOpen3">モーダル３</button>
+      <button class="modal__btn" id="modalOpen4">モーダル４</button>
+    </div>
+    <div class="modal-area content-width" id="modalArea">
+      <div class="modal" id="modal1">
+        <p>モーダル1</p>
+        <p>これはモーダル1です</p>
+      </div>
+
+      <div class="modal" id="modal2">
+        <p>モーダル2</p>
+        <p>これはモーダル２です</p>
+      </div>
+
+      <div class="modal" id="modal3">
+        <p>モーダル3</p>
+        <p>これはモーダル３です</p>
+      </div>
+      <div class="modal" id="modal4">
+        <p>モーダル4</p>
+        <p>これはモーダル４です</p>
+      </div>
+      <a id="modalClose" class="modalClose mobile-menu__btn">
+        <span></span>
+        <span></span>
+      </a>
+    </div>
+    <div class="mask" id="mask"></div>
   </section>
 
 

@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function(){ //DOMloadStart
-
+  "use script"
 //sliderstart***********************************************************************
 const slider1 = new Swiper ('#swiper-1', {
   // Optional parameters
@@ -10,7 +10,7 @@ const slider1 = new Swiper ('#swiper-1', {
   },
   effect: "slide",  //スライドエフェクト "slide", "fade", "cube", "coverflow","flip"
   speed:3000,  //スライドスピード
-  grabCursor:true, //グラブポインター
+  // grabCursor:true, //グラブポインター
   direction: "horizontal",  // 横スライド'horizontal' 縦スライド'vertical'
   initialSlide:0, //初期スライド 0スタート
   spaceBetween: 50, //スライド間余白
@@ -20,6 +20,7 @@ const slider1 = new Swiper ('#swiper-1', {
   // freeModeMomentum:true,  //slide慣性有無
   // freeModeMomentumRatio: 1, //slide慣性距離 数字が大きいほど強い
   // freeModeMomentumVelocityRatio: 1, //slide慣性速度 数字が大きいほど強い
+  allowTouchMove: false, //スマホスワイプ/pcドラッグ許可falseでナビやサムネイルのみの操作
   //pagination
   pagination: {
     el: '.swiper-pagination',
@@ -49,6 +50,7 @@ const slider2 = new Swiper ('#swiper-2', {
   spaceBetween: 0, //スライド間余白
   slidesPerView: 1,  //１枚のスライドに入れる画像枚数
   slidesPerGroup: 1,  //１回のスライドで流れる画像枚数
+  allowTouchMove: false, //スマホスワイプ/pcドラッグ許可falseでナビやサムネイルのみの操作
   //pagination
   pagination: {
     el: '.swiper-pagination',
@@ -76,7 +78,7 @@ const slider3 = new Swiper ('#swiper-3', {
   spaceBetween: 0, //スライド間余白
   slidesPerView: 1,  //１枚のスライドに入れる画像枚数
   slidesPerGroup: 1,  //１回のスライドで流れる画像枚数
-  grabCursor:true, //グラブポインター
+  allowTouchMove: false, //スマホスワイプ/pcドラッグ許可falseでナビやサムネイルのみの操作
   //pagination
   pagination: {
     el: '.swiper-pagination',
@@ -104,7 +106,7 @@ const slider4 = new Swiper ('#swiper-4', {
   spaceBetween: 0, //スライド間余白
   slidesPerView: 1,  //１枚のスライドに入れる画像枚数
   slidesPerGroup: 1,  //１回のスライドで流れる画像枚数
-  grabCursor:true, //グラブポインター
+  allowTouchMove: false, //スマホスワイプ/pcドラッグ許可falseでナビやサムネイルのみの操作
   //pagination
   pagination: {
     el: '.swiper-pagination',
@@ -132,7 +134,7 @@ const slider5 = new Swiper ('#swiper-5', {
   spaceBetween: 20, //スライド間余白
   slidesPerView: 3,  //１枚のスライドに入れる画像枚数
   slidesPerGroup: 2,  //１回のスライドで流れる画像枚数
-  grabCursor:true, //グラブポインター
+  allowTouchMove: false, //スマホスワイプ/pcドラッグ許可falseでナビやサムネイルのみの操作
   //pagination
   pagination: {
     el: '.swiper-pagination',
@@ -162,7 +164,7 @@ const slider6 = new Swiper ('#swiper-6', {
   initialSlide:1, //初期スライド 0スタート
   slidesPerView: 3,  //１枚のスライドに入れる画像枚数
   slidesPerGroup: 1,  //１回のスライドで流れる画像枚数
-  grabCursor:true, //グラブポインター
+  allowTouchMove: false, //スマホスワイプ/pcドラッグ許可falseでナビやサムネイルのみの操作
   //pagination
   pagination: {
     el: '.swiper-pagination',
@@ -232,11 +234,90 @@ tlCharAnimation.fromTo('#aniChar1', 1, { x:-50 , y:-50, opacity:0, scale:.9 },{ 
   $('.progressButton').click(function(){
     tlCharAnimation.progress(0.5);
   });
-//textanimationend***********************************************************************
+  //textanimationend***********************************************************************
   
+  const tabLabels = document.querySelectorAll('.tab-demo__label li a');
+  const tabContents = document.querySelectorAll('.tab-demo__content');
 
-              
-              
-              
+  tabLabels.forEach(function(clickedLabel){
+    clickedLabel.addEventListener('click',function(e){
+      e.preventDefault();
+      tabLabels.forEach(function(label){
+        label.classList.remove('active');
+      });
+      clickedLabel.classList.add('active');
+      tabContents.forEach(function(content){
+        content.classList.remove('active');
+      });
+      document.getElementById(clickedLabel.dataset.id).classList.add('active');
+    })
+  })
+
+  $(function(){
+    "use script"
+    //１つだけ開くアコーディオン
+    //タイトルクリックで開閉
+    $('#acordion1 dt').on('click',function(){
+      $(this).next('dd').slideToggle();
+      $(this).siblings('dt').removeClass('active');
+      $('.acordion__content1').not($(this).next('.acordion__content1')).slideUp();
+      $(this).toggleClass("active");
+    });
+    
+    //閉じるボタンで閉
+    $('.closeBtn1').on('click',function(){
+      $(this).parent('dd').slideToggle();
+      $(this).siblings('dt').removeClass('active');
+      $('.acordion__content1').not($(this).next('.acordion__content1')).slideUp();
+      $('#acordion1 dt').removeClass('active');
+    });
+
+    //複数開くアコーディオン
+    //タイトルクリックで開閉
+    $('#acordion2 dt').on('click', function() {
+      $(this).next().slideToggle();
+      $(this).toggleClass("active");
+    });
+
+    //閉じるボタンで閉
+    $('.closeBtn2').on('click',function(){
+      $(this).parent('dd').slideToggle();
+      $(this).parent().parent().find('dt').removeClass('active');
+    })
+  });
+
+
+//   // modalstart
+  const modalAreaAction = () => document.getElementById("modalArea").classList.toggle("active"),
+  maskAction = () =>  document.getElementById("mask").classList.toggle("active"),
+  modalArry = ["modal1","modal2","modal3","modal4"],
+  modalBtnArry = ["modalOpen1","modalOpen2","modalOpen3","modalOpen4"];
+  
+  const modalOpen = function(el){
+    for (let i=0; i<modalArry.length; i++){
+      document.getElementById(modalBtnArry[i]).addEventListener("click",function(){
+        modalAreaAction();
+        maskAction();
+        document.getElementById(modalArry[i]).classList.add("active");
+      })
+    }
+  }
+  modalOpen()
+  
+  const modalClose = function(el){
+    document.getElementById(el).addEventListener("click",function(){
+      modalAreaAction();
+      maskAction();
+      for (let i=0; i< modalArry.length; i++){
+        document.getElementById(modalArry[i]).classList.remove("active");
+      }
+    })
+  }
+  modalClose("modalClose")
+  modalClose("mask")
+//   // modalend
+
+
+
 },false);//DOMloadEnd
             

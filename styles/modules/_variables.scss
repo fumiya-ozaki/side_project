@@ -26,39 +26,23 @@ body {font-family: "Kameron", "Noto Sans JP", sans-serif;}
 /* section-height */
 .content-height {padding: 50px 0 50px 0;}
 .content-height2 {padding: 100px 0 100px 0;}
+.content-top{padding-top:50px;}
+.content-bottom{padding-bottom:50px;}
 
 /* category-tab */
 .tab{
-  width: 5rem;
+  display: inline-block;
   border-radius: 5px;
-  margin-right: 1rem;
+  margin-bottom: .5rem;
   padding: 0 1rem;
   &.news{background-color: #f7ff08;}
   &.works{background-color: #ff0df2;}
   &.blog{background-color: #ff260d;}
-}
-
-
-/* hover-animation */
-.hover-Uline{
-  position: relative;
-  cursor: pointer;
-  text-decoration: none;
-  &:before{
-    content: "";
-    background-color: $cDGray;
-    bottom: -5px; /*線の上下位置*/
-    height: 2px; /*線の太さ*/
-    left: 0;
-    position: absolute;
-    right: 0;
-    transform: scale(0,1);
-    transform-origin: center;
-    transition: transform .2s;
-    width: 100%; /*線の長さ*/
-  }
-  &:hover:before {
-    transform: scale(1);
+  &.column{background-color:rgb(61, 234, 61);}
+  &.date{background-color:$cLGray;}
+  &.tag{
+    background-color:$cBlack;
+    color: $cWhite;
   }
 }
 
@@ -94,48 +78,11 @@ body {font-family: "Kameron", "Noto Sans JP", sans-serif;}
   padding-bottom: 150px ;
 }
 
-/******************************************************************
-tabletで適用
-******************************************************************/
 
 @media screen and (min-width: 481px) and (max-width: 959px) {
   //tablet start
 }
 
-/******************************************************************
-smartphoneで適用
-******************************************************************/
 
 @media screen and (max-width: 480px) {
-  /* <br class="br-sp"> smartphone */
-  .br-pc {
-    display: none;
-  }
-  .br-sp {
-    display: block;
-  }
-  .font-sm {
-    font-size: 14px;
-  }
-  .font-md {
-    font-size: 17px;
-  }
-  .font-lr {
-    font-size: 17px;
-  }
-  .font-lg {
-    font-size: 25px;
-  }
-  .mb-sm {
-    margin-bottom: 16px ;
-  }
-  .mb-lg {
-    margin-bottom: 80px ;
-  }
-  .pb-sm {
-    padding-bottom: 16px ;
-  }
-  .pb-lg {
-    padding-bottom: 80px ;
-  }
 }

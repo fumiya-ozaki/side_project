@@ -1,4 +1,112 @@
+@charset "UTF-8";
+@media (min-width: 960px) {
+  /* hover-animation */
+  .hover-Uline {
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .hover-Uline:before {
+    content: "";
+    background-color: #9e9c9c;
+    bottom: -5px;
+    /*線の上下位置*/
+    height: 2px;
+    /*線の太さ*/
+    left: 0;
+    position: absolute;
+    right: 0;
+    transform: scale(0, 1);
+    transform-origin: center;
+    transition: transform .2s;
+    width: 100%;
+    /*線の長さ*/
+  }
+  .hover-Uline:hover:before {
+    transform: scale(1);
+  }
+  .nav-previous, .nav-next {
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .nav-previous:before, .nav-next:before {
+    background-color: #9e9c9c;
+    bottom: -5px;
+    /*線の上下位置*/
+    content: "";
+    height: 2px;
+    /*線の太さ*/
+    left: 0;
+    position: absolute;
+    right: 0;
+    transform: scale(0);
+    transform-origin: center;
+    transition: transform .2s;
+    width: 100%;
+    /*線の長さ*/
+  }
+  .nav-previous:hover:before, .nav-next:hover:before {
+    transform: scale(1);
+  }
+  .news .con-container .hover-scale {
+    transition: all .3s;
+  }
+  .news .con-container .hover-scale img {
+    transition: all 1s ease;
+  }
+  .news .con-container .hover-scale:hover {
+    background-color: #e7e4e4;
+  }
+  .news .con-container .hover-scale:hover img {
+    opacity: .7;
+    transform: scale(1.05);
+  }
+  .news .news-btn {
+    transition: all 0.5s ease;
+  }
+  .news .news-btn:hover {
+    cursor: pointer;
+    background-color: #1f1f1d;
+    box-shadow: none;
+    color: white;
+  }
+}
+
+/******************************************************************
+smartphoneで適用
+******************************************************************/
 @media (max-width: 480px) {
+  /* <br class="br-sp"> smartphone */
+  .br-pc {
+    display: none;
+  }
+  .br-sp {
+    display: block;
+  }
+  .font-sm {
+    font-size: 14px;
+  }
+  .font-md {
+    font-size: 17px;
+  }
+  .font-lr {
+    font-size: 17px;
+  }
+  .font-lg {
+    font-size: 25px;
+  }
+  .mb-sm {
+    margin-bottom: 16px;
+  }
+  .mb-lg {
+    margin-bottom: 80px;
+  }
+  .pb-sm {
+    padding-bottom: 16px;
+  }
+  .pb-lg {
+    padding-bottom: 80px;
+  }
   #mobile-menu-btn {
     display: block;
   }
@@ -17,6 +125,16 @@
   .grobal-header .header-container .header-center, .grobal-header .header-container .header-right {
     display: none;
   }
+  .sidebar-wrapper {
+    display: grid;
+    grid-template: "conL";
+  }
+  .sidebar-wrapper .left-contents {
+    grid-area: conL;
+  }
+  .sidebar-wrapper .side-bar {
+    display: none;
+  }
   .contents {
     grid-template: "con1 con1 con1" 1fr "con1 con1 con1" 10px "con1 con1 con1" 1fr ".... .... ...." 10px "con5 .... con6" 1fr ".... .... ...." 10px "con9 .... con10" 1fr ".... .... ...." 10px "con3 .... con4" 1fr ".... .... ...." 10px "con7 .... con8" 1fr ".... .... ...." 10px "con2 con2 con2" "con2 con2 con2" "con2 con2 con2"/1fr 10px 1fr;
   }
@@ -27,14 +145,15 @@
     padding: 0;
   }
   .news .con-container .news-lists .news-list .news-link {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template: ".... .... ...." 0.5rem ".... conL ...." ".... .... ...." 0.5rem ".... conC ...." ".... .... ...." 0.5rem ".... conR ...." ".... .... ...." 0.5rem/0.5rem 1fr 0.5rem;
   }
-  .news .con-container .news-lists .news-list .news-link .conL {
-    padding-bottom: 0;
+  .news .con-container .news-lists .news-list .news-link .conR .wp-post-image, .news .con-container .news-lists .news-list .news-link .conR .no-image {
+    transition: none;
   }
-  .news .con-container .news-lists .news-list .news-link .conR {
-    width: 100%;
+  .news .con-container .news-lists .news-list .news-link:hover .conR img {
+    opacity: 1;
+    transform: scale(1);
   }
   .bottom-banners {
     flex-direction: column;
@@ -48,7 +167,7 @@
     width: 100%;
   }
   .about-what-content .about-what-grid {
-    grid-template: "... .... ..." 1rem "... con1 ..." 1fr "... .... ..." 1rem "... con2 ..." 1fr "... .... ..." 1rem "... con3 ..." 1fr "... .... ..." 1rem "... con4 ..." 1fr "... .... ..." 1rem /0  1fr 0;
+    grid-template: "... tri1 ..." 1rem "... con1 ..." 1fr "... tri2 ..." 1rem "... con2 ..." 1fr "... tri3 ..." 1rem "... con3 ..." 1fr "... tri4 ..." 1rem "... con4 ..." 1fr "... .... ..." 1rem /0  1fr 0;
   }
   .about-what-content .what-con .text-wrapper {
     font-size: 10px;
@@ -64,6 +183,29 @@
   .contact-form-grid {
     grid-template: " .... .... ...." 1rem " con1 .... ...." 1fr " con2 .... ...." 1fr " con3 .... ...." 1fr " con4 .... ...." 1fr " con5 .... ...." 1fr " con6 .... ...." 1fr " .... .... ...." 1rem " con7 con7 con7" 1fr " .... .... ...." 1rem " con8 con8 con8"  / 1fr;
   }
+  .wpcf7-form-control {
+    display: flex;
+    flex-direction: column;
+  }
+  .cubic-btn {
+    display: none;
+  }
+  .mobile-btn {
+    align-items: center;
+    display: block;
+    display: flex;
+    justify-content: center;
+  }
+  .mobile-btn .submit-btn {
+    align-items: center;
+    background-color: #1f1f1d;
+    color: white;
+    display: flex;
+    margin-top: 1rem;
+    justify-content: center;
+    padding: .5rem;
+    width: 100%;
+  }
   .SAwrapper {
     flex-direction: column;
   }
@@ -73,6 +215,9 @@
   .SAwrapper__right {
     width: 100% !important;
   }
+  .SAwrapper__right.cube-wrapper .swiper-container {
+    width: 70% !important;
+  }
   .SAwrapper__right .swiper-container {
     margin: 0 auto;
   }
@@ -81,6 +226,9 @@
   }
 }
 
+/******************************************************************
+tabletで適用
+******************************************************************/
 @media screen and (min-width: 481px) and (max-width: 959px) {
   .grobal-header .header-container .header-center {
     display: none;
@@ -95,16 +243,12 @@
     padding: 0;
   }
   .news .con-container .news-lists .news-list .news-link {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template: ".... .... ...." 0.5rem ".... conL ...." ".... .... ...." 1rem ".... conC ...." ".... .... ...." 1rem ".... conR ...." ".... .... ...." 0.5rem/0.5rem 1fr 0.5rem;
   }
-  .news .con-container .news-lists .news-list .news-link .conL {
-    padding-bottom: 0;
-  }
-  .news .con-container .news-lists .news-list .news-link .conR {
-    flex-basis: auto;
-    height: 300px;
-    width: 100%;
+  .news .con-container .news-lists .news-list .news-link .conC {
+    overflow: hidden;
+    white-space: nowrap;
   }
   footer {
     flex-direction: column;
@@ -118,7 +262,7 @@
     flex-direction: column;
   }
   .about-what-content .about-what-grid {
-    grid-template: "... .... ..." 1rem "... con1 ..." 1fr "... .... ..." 1rem "... con2 ..." 1fr "... .... ..." 1rem "... con3 ..." 1fr "... .... ..." 1rem "... con4 ..." 1fr "... .... ..." 1rem /0  1fr 0;
+    grid-template: "... tri1 ..." 1rem "... con1 ..." 1fr "... tri2 ..." 1rem "... con2 ..." 1fr "... tri3 ..." 1rem "... con3 ..." 1fr "... tri4 ..." 1rem "... con4 ..." 1fr "... .... ..." 1rem /0  1fr 0;
   }
   .about-who-content .prof-con-wrapper {
     flex-direction: column;

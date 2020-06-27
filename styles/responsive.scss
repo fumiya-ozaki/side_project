@@ -305,6 +305,23 @@ smartphoneで適用
  element.style{
   width: 100%;
  }
+
+ .btn-container{
+  display: grid;
+  grid-template:
+  "... .... ..."1rem
+  "... btn1 ..."1fr
+  "... .... ..."1rem
+  "... btn2 ..."1fr
+  "... .... ..."1rem
+  "... btn3 ..."1fr
+  "... .... ..."1rem
+  "... btn4 ..."1fr
+  "... .... ..."1rem
+  /0 1fr 0;
+  
+}
+
 // demo.phpstart*******************************************************
 
 } //smartphone end

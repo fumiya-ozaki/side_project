@@ -282,7 +282,8 @@ tlCharAnimation.fromTo('#aniChar1', 1, { x:-50 , y:-50, opacity:0, scale:.9 },{ 
     //閉じるボタンで閉
     $('.closeBtn2').on('click',function(){
       $(this).parent('dd').slideToggle();
-      $(this).parent().parent().find('dt').removeClass('active');
+      console.log( $(this).parent("dd").index($("#acordion2")) );
+      $(this).parent('dd').prev().removeClass('active');
     })
   });
 

@@ -19,7 +19,7 @@
           setup_postdata($post);?>
           <p class="rec-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
         <?php endforeach?>
-      <?php endif;wp_reset_postdata();?>
+      <?php endif;wp_reset_postdata();wp_reset_query(); ?>
     </li>
     <li class="side-category side-content">
       <h1 class="side-title font-lr">CATEGORY</h1>

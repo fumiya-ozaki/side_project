@@ -1854,6 +1854,10 @@ footer .footer-icon {
   right: 0;
 }
 
+.wp-embedded-content {
+  max-width: 100%;
+}
+
 .demo {
   margin-top: 50px;
 }
@@ -2162,6 +2166,7 @@ footer .footer-icon {
   height: 4rem;
   width: 100%;
   vertical-align: middle;
+  cursor: pointer;
 }
 
 #modalOpen1 {

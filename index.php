@@ -110,7 +110,7 @@
     <div class="con-container content-width content-height">
       <div class="news-title font-lg">information</div>
       <div class="sidebar-wrapper">
-        <?php /*get_sidebar();*/ ?>  <!--sidebar-import-->
+        <?php get_sidebar(); ?>  <!--sidebar-import-->
         <div class="left-contents">
           <ul class="news-lists">
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?> <!--roopstart-->

@@ -13,13 +13,13 @@
           'order'=>'DESC',
           'tag'=>'recommend'
         );
-      $posts = get_posts($arg);
-      if($posts):?>
-        <?php foreach($posts as $post):
-          setup_postdata($post);?>
+      $recposts = get_posts($arg);
+      if($recposts):?>
+        <?php foreach($recposts as $post):
+          ?>
           <p class="rec-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
         <?php endforeach?>
-      <?php endif;wp_reset_postdata();wp_reset_query(); ?>
+      <?php endif;wp_reset_postdata();?>
     </li>
     <li class="side-category side-content">
       <h1 class="side-title font-lr">CATEGORY</h1>

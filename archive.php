@@ -5,7 +5,7 @@
       <?php the_archive_title(); ?>
     </div>
     <div class="sidebar-wrapper">
-      <?php /*get_sidebar(); */?>  <!--sidebar-import-->
+      <?php get_sidebar(); ?>  <!--sidebar-import-->
       <div class="left-contents">
         <?php if (in_category(array('works'))) {?>
           <?php if(have_posts()): while(have_posts()): the_post();?>
